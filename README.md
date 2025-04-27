@@ -1,2 +1,2 @@
 # MeuPlebiscito
-Repositório para o projeto da disciplina Engenharia de Software II
+A plataforma de Busca e Letramento Político, voltada para levar ao usuário as informações sobre como funcionam as estruturas da República 

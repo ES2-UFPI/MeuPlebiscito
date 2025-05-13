@@ -1,2 +1,2 @@
 # MeuPlebiscito
-A plataforma de Busca e Letramento Político, voltada para levar ao usuário as informações sobre como funcionam as estruturas da República.
+A plataforma de Busca e Letramento Político, voltada para levar ao usuário as informações sobre como funcionam as estruturas da República..

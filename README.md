@@ -2,6 +2,12 @@
 
 A plataforma de Busca e Letramento Político, voltada para levar ao usuário as informações sobre como funcionam as estruturas da República.....
 
+## 🚀 Tecnologias Utilizadas
+
+- React.js
+- Vite
+- [Outras tecnologias]
+
 # Para rodar localmente:
 
 ```bash

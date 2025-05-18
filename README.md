@@ -6,7 +6,7 @@ A plataforma de Busca e Letramento Político, voltada para levar ao usuário as 
 
 - React.js
 - Vite
-- [Outras tecnologias]
+- Node.js
 
 # Para rodar localmente:
 

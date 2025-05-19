@@ -30,4 +30,5 @@ async def buscar_deputado_por_id(deputado_id: int):
         resposta = await cliente.get(f"{URL_BASE}/deputados/{deputado_id}")
         resposta.raise_for_status()
         return resposta.json()
-    test
+    
+    #ssds

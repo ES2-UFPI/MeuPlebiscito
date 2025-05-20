@@ -1,7 +1,10 @@
 import React from "react";
 import fotoPerfil from "../assets/Foto-Usuario.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const isLoggedIn = false;
+
   return (
     <div className="header">
       <div className="header__menu">
@@ -22,11 +25,29 @@ const Header = () => {
         </button>
       </div>
 
-      <h1 className="header__titulo">MEU PLEBISCITO</h1>
+      <Link to="/" className="header__titulo">
+        MEU PLEBISCITO
+      </Link>
 
       <div className="header__usuario">
-        <img src={fotoPerfil} alt="Usuário" className="usuario__foto" />
-        <span className="usuario__nome">Usuário</span>
+        {isLoggedIn ? (
+          <button
+            className="usuario__botao"
+            onClick={() => alert("Abrir pop-up de perfil")}
+          >
+            <img src={fotoPerfil} alt="Usuário" className="usuario__foto" />
+            <span className="usuario__nome">Usuário</span>
+          </button>
+        ) : (
+          <div className="header__auth">
+            <Link to="/login" className="auth__link">
+              Fazer Login
+            </Link>
+            <Link to="/cadastro" className="auth__link">
+              Cadastrar-se
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

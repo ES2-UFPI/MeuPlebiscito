@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from data.routes import router as rota_deputados
+from app.data.routes import router as rota_deputados
 
 app = FastAPI(title="API MeuPlebiscito")
 

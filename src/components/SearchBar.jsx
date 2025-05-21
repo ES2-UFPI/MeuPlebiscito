@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -11,6 +11,7 @@ import {
   AudioLines,
 } from "lucide-react";
 import useDebounce from "../hooks/UseDebounce";
+import { useNavigate } from "react-router-dom";
 
 const allActions = [
   {
@@ -58,10 +59,17 @@ const SearchBar = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [selectedAction, setSelectedAction] = useState(null);
 
+  const navigate = useNavigate();
+
   const debouncedQuery = useDebounce(query, 200);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && query.trim().length > 1) {
+      navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
+    }
+  };
 
   useEffect(() => {
-    if (!isFocused) {
+    if (!isFocused || !debouncedQuery) {
       setResult([]);
       return;
     }
@@ -84,6 +92,7 @@ const SearchBar = () => {
             setIsFocused(true);
             setSelectedAction(null);
           }}
+          onKeyDown={handleKeyDown}
           onBlur={() => setTimeout(() => setIsFocused(false), 200)}
           placeholder="Buscar comandos, leis, ações..."
           className="searchbar-input"

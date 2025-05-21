@@ -40,10 +40,11 @@ const Header = () => {
           </button>
         ) : (
           <div className="header__auth">
-            <Link to="/login" className="auth__link">
+            <Link to="/login" className="autenticacao__link">
               Fazer Login
             </Link>
-            <Link to="/cadastro" className="auth__link">
+            <span className="autenticacao__separador"> | </span>
+            <Link to="/cadastro" className="autenticacao__link">
               Cadastrar-se
             </Link>
           </div>

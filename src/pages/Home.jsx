@@ -4,7 +4,11 @@ import MainNav from "../components/MainNav";
 import SearchBar from "../components/SearchBar";
 import Logo from "../assets/Meu-Plebiscito_Logo.png";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
+  const isLoggedIn = true; // Simulação de estado de login
+
   return (
     <div className="home-container">
       <main className="main-content">
@@ -23,6 +27,19 @@ const Home = () => {
         </section>
 
         <SearchBar />
+        {isLoggedIn ? (
+          <h1 />
+        ) : (
+          <div className="header__auth">
+            <Link to="/login" className="autenticacao__link_Home">
+              Fazer Login
+            </Link>
+            <span className="autenticacao__separador"> | </span>
+            <Link to="/cadastro" className="autenticacao__link_Home">
+              Cadastrar-se
+            </Link>
+          </div>
+        )}
       </main>
     </div>
   );

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -55,58 +55,131 @@ const allActions = [
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
+  const [searchType, setSearchType] = useState("nome");
   const [result, setResult] = useState([]);
   const [isFocused, setIsFocused] = useState(false);
-  const [selectedAction, setSelectedAction] = useState(null);
-
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const blurTimeout = useRef(null);
   const navigate = useNavigate();
 
-  const debouncedQuery = useDebounce(query, 200);
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && query.trim().length > 1) {
-      navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
-    }
+  const handleFocus = () => {
+    if (blurTimeout.current) clearTimeout(blurTimeout.current);
+    setIsFocused(true);
+    setSelectedItem(null);
   };
 
-  useEffect(() => {
-    if (!isFocused || !debouncedQuery) {
+  const handleBlur = () => {
+    blurTimeout.current = setTimeout(() => setIsFocused(false), 200);
+  };
+
+  const clearSelection = () => {
+    setSelectedItem(null);
+    setQuery("");
+    setResult([]);
+  };
+
+  const buscarDeputados = async () => {
+    if (!query.trim()) {
       setResult([]);
       return;
     }
 
-    const filtered = allActions.filter((action) =>
-      action.label.toLowerCase().includes(debouncedQuery.toLowerCase().trim())
-    );
+    setLoading(true);
+    try {
+      const params = new URLSearchParams();
+      if (searchType === "nome") params.append("nome", query);
+      else if (searchType === "sigla_partido")
+        params.append("sigla_partido", query);
 
+      const res = await fetch(
+        `http://localhost:8000/deputados/?${params.toString()}`
+      );
+      if (!res.ok) throw new Error("Erro ao buscar deputados");
+      const data = await res.json();
+
+      const dadosFormatados = Array.isArray(data.dados)
+        ? data.dados
+        : Array.isArray(data)
+        ? data
+        : [];
+      setResult(dadosFormatados);
+      setIsFocused(true);
+    } catch (err) {
+      console.error(err);
+      setResult([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const buscarComandos = () => {
+    const filtered = allActions.filter((action) =>
+      action.label.toLowerCase().includes(query.toLowerCase().trim())
+    );
     setResult(filtered);
-  }, [debouncedQuery, isFocused]);
+    setIsFocused(true);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      if (searchType === "nome" || searchType === "sigla_partido") {
+        buscarDeputados();
+      } else {
+        buscarComandos();
+      }
+    }
+  };
+
+  const handleSearchClick = () => {
+    if (searchType === "nome" || searchType === "sigla_partido") {
+      buscarDeputados();
+    } else {
+      buscarComandos();
+    }
+  };
+
+  const handleSelect = (item) => {
+    setSelectedItem(item);
+    setResult([]);
+    setQuery(item.nome || item.label || "");
+    setIsFocused(false);
+  };
 
   return (
     <div className="searchbar-container">
       <div className="searchbar-input-wrapper">
+        <select
+          value={searchType}
+          onChange={(e) => setSearchType(e.target.value)}
+          className="searchbar-select"
+        >
+          <option value="nome">Deputado: Nome</option>
+          <option value="sigla_partido">Deputado: Partido</option>
+          <option value="comandos">Comandos</option>
+        </select>
+
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => {
-            setIsFocused(true);
-            setSelectedAction(null);
-          }}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           onKeyDown={handleKeyDown}
-          onBlur={() => setTimeout(() => setIsFocused(false), 200)}
-          placeholder="Buscar comandos, leis, ações..."
+          placeholder="Buscar por nome, partido ou comandos..."
           className="searchbar-input"
         />
-        <div className="searchbar-icon">
+
+        <div className="searchbar-icon-button" onClick={handleSearchClick}>
           <AnimatePresence mode="wait">
-            {query.length > 0 ? (
+            {loading ? (
               <motion.div
-                key="send"
+                key="loading"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <Send size={16} />
+                <div className="loading-spinner" />
               </motion.div>
             ) : (
               <motion.div
@@ -115,7 +188,7 @@ const SearchBar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <Search size={16} />
+                {query.length > 0 ? <Send size={16} /> : <Search size={16} />}
               </motion.div>
             )}
           </AnimatePresence>
@@ -123,27 +196,69 @@ const SearchBar = () => {
       </div>
 
       <AnimatePresence>
-        {isFocused && result.length > 0 && !selectedAction && (
+        {isFocused && result.length > 0 && !selectedItem && (
           <motion.ul
             className="searchbar-results"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
           >
-            {result.map((action) => (
+            {result.map((item) => (
               <li
-                key={action.id}
+                key={item.id || item.label}
                 className="searchbar-item"
-                onClick={() => setSelectedAction(action)}
+                onClick={() => handleSelect(item)}
               >
-                <span>{action.icon}</span>
-                <span>{action.label}</span>
-                <small>{action.description}</small>
+                {searchType === "comandos" ? (
+                  <>
+                    <span>{item.icon}</span>
+                    <span>{item.label}</span>
+                    <small>{item.description}</small>
+                  </>
+                ) : (
+                  <>
+                    <span>{item.nome || "Nome não disponível"}</span>
+                    <small>
+                      {item.siglaPartido || "?"} - {item.siglaUf || "?"}
+                    </small>
+                  </>
+                )}
               </li>
             ))}
           </motion.ul>
         )}
       </AnimatePresence>
+
+      {selectedItem && searchType !== "comandos" && (
+        <motion.div
+          className="deputado-detalhes"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <h3>{selectedItem.nome || "Nome não disponível"}</h3>
+          <p>
+            Partido: <strong>{selectedItem.siglaPartido || "?"}</strong>
+          </p>
+          <p>
+            Estado: <strong>{selectedItem.siglaUf || "?"}</strong>
+          </p>
+          {selectedItem.uri && (
+            <p>
+              <a
+                href={selectedItem.uri}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-perfil"
+              >
+                Perfil no site da Câmara
+              </a>
+            </p>
+          )}
+          <button onClick={clearSelection} className="clear-button">
+            Limpar seleção
+          </button>
+        </motion.div>
+      )}
     </div>
   );
 };

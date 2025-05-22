@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
@@ -10,8 +10,8 @@ import {
   PlaneTakeoff,
   AudioLines,
 } from "lucide-react";
-import useDebounce from "../hooks/UseDebounce";
 import { useNavigate } from "react-router-dom";
+// import useDebounce from "../hooks/UseDebounce";
 
 const allActions = [
   {
@@ -62,6 +62,7 @@ const SearchBar = () => {
   const [loading, setLoading] = useState(false);
   const blurTimeout = useRef(null);
   const navigate = useNavigate();
+  // const debouncedQuery = useDebounce(query, 300);
 
   const handleFocus = () => {
     if (blurTimeout.current) clearTimeout(blurTimeout.current);
@@ -79,6 +80,7 @@ const SearchBar = () => {
     setResult([]);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const buscarDeputados = async () => {
     if (!query.trim()) {
       setResult([]);
@@ -98,10 +100,8 @@ const SearchBar = () => {
       if (!res.ok) throw new Error("Erro ao buscar deputados");
       const data = await res.json();
 
-      const dadosFormatados = Array.isArray(data.dados)
-        ? data.dados
-        : Array.isArray(data)
-        ? data
+      const dadosFormatados = Array.isArray(data.deputados)
+        ? data.deputados
         : [];
       setResult(dadosFormatados);
       setIsFocused(true);
@@ -123,19 +123,19 @@ const SearchBar = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      if (searchType === "nome" || searchType === "sigla_partido") {
-        buscarDeputados();
-      } else {
+      if (searchType === "comandos") {
         buscarComandos();
+      } else {
+        navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
       }
     }
   };
 
   const handleSearchClick = () => {
-    if (searchType === "nome" || searchType === "sigla_partido") {
-      buscarDeputados();
-    } else {
+    if (searchType === "comandos") {
       buscarComandos();
+    } else {
+      navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
     }
   };
 
@@ -219,7 +219,7 @@ const SearchBar = () => {
                   <>
                     <span>{item.nome || "Nome não disponível"}</span>
                     <small>
-                      {item.siglaPartido || "?"} - {item.siglaUf || "?"}
+                      {item.sigla_partido || "?"} - {item.sigla_uf || "?"}
                     </small>
                   </>
                 )}
@@ -237,10 +237,10 @@ const SearchBar = () => {
         >
           <h3>{selectedItem.nome || "Nome não disponível"}</h3>
           <p>
-            Partido: <strong>{selectedItem.siglaPartido || "?"}</strong>
+            Partido: <strong>{selectedItem.sigla_partido || "?"}</strong>
           </p>
           <p>
-            Estado: <strong>{selectedItem.siglaUf || "?"}</strong>
+            Estado: <strong>{selectedItem.sigla_uf || "?"}</strong>
           </p>
           {selectedItem.uri && (
             <p>

@@ -83,7 +83,8 @@ const SearchBar = () => {
   // eslint-disable-next-line no-unused-vars
   const buscarDeputados = async () => {
     if (!query.trim()) {
-      setResult([]);
+      setResult(allActions);
+      setIsFocused(true);
       return;
     }
 

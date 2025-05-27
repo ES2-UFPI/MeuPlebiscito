@@ -24,8 +24,8 @@ const Searched = () => {
     fetch(`http://localhost:8000/deputados?nome=${encodeURIComponent(query)}`)
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.deputados) {
-          setResultados(data.deputados);
+        if (data && data.dados) {
+          setResultados(data.dados);
         } else {
           setResultados([]);
         }

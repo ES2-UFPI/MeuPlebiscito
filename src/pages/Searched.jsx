@@ -16,7 +16,7 @@ const Searched = () => {
   const [carregandoExplicacao, setCarregandoExplicacao] = useState(false);
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q");
-
+  // fatapi dev main
   useEffect(() => {
     if (!query) return;
 

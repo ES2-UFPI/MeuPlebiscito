@@ -116,7 +116,7 @@
 
 .searchbar-input {
   width: 100%;
-  padding: 10px 40px 10px 14px;
+  padding: 10px 80px 10px 14px;
   border: 1px solid #ccc;
   border-radius: 9999px;
   font-size: 14px;
@@ -132,10 +132,23 @@
 .searchbar-icon-button {
   position: absolute;
   top: 68%;
-  right: 15px;
+  right: 8px;
   transform: translateY(-50%);
   cursor: pointer;
   color: #999;
+}
+.searchbar-filter-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  color: #6b3f26;
+  transition: background-color 0.2s;
 }
 
 .searchbar-results {
@@ -151,17 +164,22 @@
   z-index: 10;
 }
 
-.searchbar-item {
-  padding: 10px 16px;
+.searchbar-icon-button {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-bottom: 1px solid #eee;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #6b3f26;
+  border: none;
   cursor: pointer;
+  color: white;
+  transition: background-color 0.2s;
 }
 
-.searchbar-item:hover {
-  background-color: #f7f7f7;
+.searchbar-icon-button:hover {
+  background-color: #8b5e45;
 }
 
 .loading-spinner {
@@ -177,6 +195,367 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* >>>>>>>>> BuscaDetalhada.jsx <<<<<<<<<<*/
+.busca-detalhada-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.busca-detalhada-modal {
+  background-color: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.busca-detalhada__cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.busca-detalhada__titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b3f26;
+}
+
+.busca-detalhada__titulo h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.busca-detalhada__fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: background-color 0.2s;
+}
+
+.busca-detalhada__fechar:hover {
+  background-color: #e5e7eb;
+}
+
+.busca-detalhada__formulario {
+  padding: 24px;
+}
+
+.busca-detalhada__secao {
+  margin-bottom: 32px;
+}
+
+.busca-detalhada__secao-titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.busca-detalhada__campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.campo-input,
+.campo-select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.campo-input:focus,
+.campo-select:focus {
+  outline: none;
+  border-color: #6b3f26;
+  box-shadow: 0 0 0 2px rgba(107, 63, 38, 0.1);
+}
+
+.busca-detalhada__acoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.botao-secundario {
+  padding: 10px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: white;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.botao-secundario:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.botao-primario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #6b3f26;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-primario:hover {
+  background-color: #8b5e45;
+}
+
+/* >>>>>>>>> SearchResultItem.jsx (Novo Visual) <<<<<<<<<<*/
+.card-deputado-moderno {
+  display: block;
+  border-radius: 24px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-deputado-moderno::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+.card-deputado-moderno:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-deputado-moderno__conteudo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-deputado-moderno__foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-deputado-moderno__imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-deputado-moderno__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-deputado-moderno__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-deputado-moderno__nome {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-deputado-moderno__detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-deputado-moderno__linha {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.separador {
+  opacity: 0.6;
+  font-size: 10px;
+}
+
+/* >>>>>>>>> Searched.jsx <<<<<<<<<<*/
+.pagina-busca {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.pagina-busca__cabecalho {
+  margin-bottom: 24px;
+}
+
+.pagina-busca__barra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.pagina-busca__conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagina-busca__resultados {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pagina-busca__info {
+  margin-bottom: 24px;
+}
+
+.pagina-busca__titulo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.filtros-ativos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.filtros-ativos__label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.filtro-ativo-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #6b3f26;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pagina-busca__carregando,
+.pagina-busca__sem-resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+  color: #666;
+}
+
+.pagina-busca__carregando .loading-spinner {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+.pagina-busca__lista-moderna {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagina-busca__item-moderno {
+  transition: transform 0.2s;
 }
 
 /* >>>>>>>>> HomeBox.jsx <<<<<<<<<<*/
@@ -411,6 +790,95 @@
   font-weight: 500;
 }
 
+/* >>>>>>>>> CardDeputado.jsx <<<<<<<<<<*/
+.result-item {
+  display: block;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.result-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #6b3f26;
+}
+
+.result-item__conteudo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.result-item__foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.result-item__imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-item__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #9ca3af;
+}
+
+.result-item__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.result-item__nome {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.result-item__metadados {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #777;
+}
+
+.result-item__partido,
+.result-item__estado {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.result-item__detalhes {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.result-item__cargo {
+  font-weight: 500;
+}
 /* /////////////////////////// PAGES //////////////////////*/
 
 /* >>>>>>>>> Home.jsx <<<<<<<<<<*/
@@ -582,15 +1050,15 @@
   z-index: 100;
 }
 
-/* >>>>>>>>> ResultadoBusca.jsx <<<<<<<<<<*/
-.resultado-busca {
+/* >>>>>>>>> SearchResult.jsx <<<<<<<<<<*/
+.result-search {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 16px;
 }
 
-.resultado-busca__foto {
+.result-search__foto {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -601,13 +1069,13 @@
   justify-content: center;
 }
 
-.resultado-busca__foto img {
+.result-search__foto img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.resultado-busca__foto-placeholder {
+.result-search__foto-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -617,18 +1085,18 @@
   color: #666;
 }
 
-.resultado-busca__info {
+.result-search__info {
   flex: 1;
 }
 
-.resultado-busca__nome {
+.result-search__nome {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 4px;
   color: #333;
 }
 
-.resultado-busca__detalhes {
+.result-search__detalhes {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -636,78 +1104,16 @@
   color: #666;
 }
 
-.resultado-busca__partido {
+.result-search__partido {
   font-weight: 500;
 }
 
-.resultado-busca__separador {
+.result-search__separador {
   font-size: 10px;
   opacity: 0.5;
 }
 
 /* >>>>>>>>> ExplicacaoLLM.jsx <<<<<<<<<<*/
-.explicacao-llm {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
-.explicacao-llm__cabecalho {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 16px;
-  background-color: #6b3f26;
-  color: white;
-}
-
-.explicacao-llm__titulo {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.explicacao-llm__fechar {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.explicacao-llm__fechar:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.explicacao-llm__conteudo {
-  padding: 16px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #333;
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-.explicacao-llm__carregando {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  text-align: center;
-  color: #666;
-}
-
-.explicacao-llm__carregando .loading-spinner {
-  width: 24px;
-  height: 24px;
-  margin-bottom: 12px;
-}
 
 /*  */
 /*  */
@@ -717,6 +1123,23 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .busca-detalhada-modal {
+    margin: 10px;
+    max-height: 95vh;
+  }
+
+  .busca-detalhada__campos {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-busca__lista-moderna {
+    grid-template-columns: 1fr;
+  }
+
+  .card-deputado-moderno__conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
   .movimentos-recentes {
     padding: 24px 16px;
   }
@@ -724,36 +1147,15 @@
   .movimentos-recentes__grid {
     grid-template-columns: 1fr;
   }
-
-  .item-lei__conteudo {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .item-lei__imagem {
-    width: 100%;
-    height: 120px;
-  }
-
-  .card-deputado__conteudo {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .filtro-botao {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
 }
 
 @media (max-width: 480px) {
-  .movimentos-recentes__filtros {
+  .busca-detalhada__acoes {
     flex-direction: column;
-    align-items: center;
   }
 
-  .item-lei__metadados {
+  .filtros-ativos {
     flex-direction: column;
-    gap: 6px;
+    align-items: flex-start;
   }
 }

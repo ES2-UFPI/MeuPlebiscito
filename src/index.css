@@ -1424,6 +1424,309 @@
   border-bottom: none;
 }
 
+/* >>>>>>>>> LeiDetalhes.jsx <<<<<<<<<<*/
+.lei-detalhes {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.lei-detalhes__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lei-detalhes__cabecalho {
+  padding: 32px;
+  background: linear-gradient(135deg, #6b3f26 0%, #8b5e45 100%);
+  color: white;
+}
+
+.lei-detalhes__numero-status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.lei-detalhes__numero {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.lei-detalhes__status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.lei-detalhes__titulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.lei-detalhes__ementa {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  opacity: 0.9;
+}
+
+.lei-detalhes__metadados {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.metadado-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.secao-titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.lei-detalhes__autor,
+.lei-detalhes__tramitacao,
+.lei-detalhes__votacoes,
+.lei-detalhes__texto {
+  padding: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lei-detalhes__texto {
+  border-bottom: none;
+}
+
+.autor-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.autor-foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.autor-info {
+  flex: 1;
+}
+
+.autor-nome {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.autor-detalhes {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.tramitacao-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.tramitacao-timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e7eb;
+}
+
+.tramitacao-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.tramitacao-item:last-child {
+  margin-bottom: 0;
+}
+
+.tramitacao-item__marcador {
+  position: absolute;
+  left: -28px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: #6b3f26;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.tramitacao-item__conteudo {
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.tramitacao-item__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tramitacao-data {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.tramitacao-orgao {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b3f26;
+}
+
+.tramitacao-acao {
+  margin: 0 0 8px 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.tramitacao-situacao {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.situacao-recebido {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.situacao-em-análise {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.situacao-aprovado {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.votacao-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  margin-bottom: 16px;
+}
+
+.votacao-card:last-child {
+  margin-bottom: 0;
+}
+
+.votacao-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.votacao-orgao {
+  font-weight: 600;
+  color: #6b3f26;
+}
+
+.votacao-data {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.votacao-resultado {
+  margin-bottom: 12px;
+}
+
+.resultado-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.resultado-aprovado {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.votacao-detalhes {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.voto-tipo {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.voto-tipo.favoravel {
+  color: #166534;
+}
+
+.voto-tipo.contrario {
+  color: #dc2626;
+}
+
+.voto-tipo.abstencao {
+  color: #6b7280;
+}
+
+.texto-integral {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.texto-conteudo {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  margin: 0;
+}
+
 /* >>>>>>>>> MeuEstado.jsx <<<<<<<<<<*/
 .meu-estado {
   background-color: #f5f5f5;
@@ -1788,5 +2091,43 @@
   .meu-estado__cabecalho,
   .meu-estado__controles {
     padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    .deputado-detalhes,
+    .lei-detalhes,
+    .meu-estado,
+    .projetos-lei {
+      padding: 16px;
+    }
+
+    .deputado-detalhes__container,
+    .lei-detalhes__container {
+      margin: 0;
+    }
+
+    .deputado-detalhes__cabecalho,
+    .lei-detalhes__cabecalho,
+    .deputado-detalhes__conteudo,
+    .lei-detalhes__autor,
+    .lei-detalhes__tramitacao,
+    .lei-detalhes__votacoes,
+    .lei-detalhes__texto {
+      padding: 20px;
+    }
+
+    .meu-estado__seletor,
+    .projetos-lei__cabecalho,
+    .projetos-lei__filtros,
+    .projetos-lei__lista,
+    .projetos-lei__resumo,
+    .meu-estado__destaques,
+    .meu-estado__representantes {
+      padding: 20px;
+    }
+
+    .estado-seletor__select {
+      min-width: 200px;
+    }
   }
 }

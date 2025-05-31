@@ -3,8 +3,9 @@ import MainNav from "./components/MainNav";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Searched from "./pages/Searched";
-import Deputado from "./pages/Deputado";
+import Deputado from "./pages/Deputados";
 import MeuEstado from "./pages/MeuEstado";
+import Lei from "./pages/Leis";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/buscar" element={<Searched />} />
         <Route path="/deputado/:id" element={<Deputado />} />
         <Route path="/meu-estado" element={<MeuEstado />} />
+        <Route path="/lei/:id" element={<Lei />} />
         {/* <Route path="/projetos" element={<Projetos />} /> */}
         {/* <Route path="/projeto/:id" element={<Projeto />} /> */}
         {/* <Route path="/sobre" element={<Sobre />} /> */}

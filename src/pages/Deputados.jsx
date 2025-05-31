@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Calendar, FileText, Users, Award } from "lucide-react";
 import { deputadoMockData } from "../mocks/DeputadoMock";
 
-const DeputadoPagina = () => {
+const DeputadosPagina = () => {
   const { id } = useParams();
   const [deputado, setDeputado] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -206,4 +206,4 @@ const DeputadoPagina = () => {
   );
 };
 
-export default DeputadoPagina;
+export default DeputadosPagina;

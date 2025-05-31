@@ -360,106 +360,60 @@
 }
 
 /* >>>>>>>>> SearchResultItem.jsx (Novo Visual) <<<<<<<<<<*/
-.card-deputado-moderno {
-  display: block;
-  border-radius: 24px;
-  padding: 20px;
-  text-decoration: none;
-  color: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
-}
 
-.card-deputado-moderno::before {
-  content: "";
-  position: absolute;
+/* >>>>>>>>> BuscaDetalhada.jsx - Wizard <<<<<<<<<<*/
+.busca-detalhada-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  pointer-events: none;
-}
-
-.card-deputado-moderno:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card-deputado-moderno__conteudo {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.card-deputado-moderno__foto {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+  padding: 20px;
 }
 
-.card-deputado-moderno__imagem {
+.busca-detalhada {
+  background-color: white;
+  border-radius: 12px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-.card-deputado-moderno__placeholder {
+.busca-detalhada__header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  color: rgba(255, 255, 255, 0.8);
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.card-deputado-moderno__info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.card-deputado-moderno__nome {
-  font-size: 18px;
-  font-weight: 700;
+.busca-detalhada__titulo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #6b3f26;
   margin: 0;
-  color: white;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.card-deputado-moderno__detalhes {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.busca-detalhada__fechar {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
 }
 
-.card-deputado-moderno__linha {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.separador {
-  opacity: 0.6;
-  font-size: 10px;
+.busca-detalhada__fechar:hover {
+  background-color: #f3f4f6;
+  color: #374151;
 }
 
 /* >>>>>>>>> Searched.jsx <<<<<<<<<<*/
@@ -790,7 +744,7 @@
   font-weight: 500;
 }
 
-/* >>>>>>>>> CardDeputado.jsx <<<<<<<<<<*/
+/* >>>>>>>>> SearchResultItem.jsx <<<<<<<<<<*/
 .result-item {
   display: block;
   background-color: white;
@@ -879,6 +833,171 @@
 .result-item__cargo {
   font-weight: 500;
 }
+.search-result-item-moderno {
+  display: block;
+  border-radius: 24px;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.search-result-item-moderno::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+.search-result-item-moderno:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.search-result-item-moderno__conteudo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.search-result-item-moderno__foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-result-item-moderno__imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-result-item-moderno__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-result-item-moderno__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-result-item-moderno__nome {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item-moderno__detalhes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-result-item-moderno__linha {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.separador {
+  opacity: 0.6;
+  font-size: 10px;
+}
+
+/* >>>>>>>>> SearchResult.jsx <<<<<<<<<<*/
+.result-search {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.result-search__foto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-search__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-search__foto-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  color: #666;
+}
+
+.result-search__info {
+  flex: 1;
+}
+
+.result-search__nome {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.result-search__detalhes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.result-search__partido {
+  font-weight: 500;
+}
+
+.result-search__separador {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
 /* /////////////////////////// PAGES //////////////////////*/
 
 /* >>>>>>>>> Home.jsx <<<<<<<<<<*/
@@ -1050,70 +1169,532 @@
   z-index: 100;
 }
 
-/* >>>>>>>>> SearchResult.jsx <<<<<<<<<<*/
-.result-search {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
+/* >>>>>>>>> DeputadoDetalhes.jsx <<<<<<<<<<*/
+.deputado-detalhes {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
 }
 
-.result-search__foto {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
+.deputado-detalhes__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #f0f0f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.result-search__foto img {
-  width: 100%;
-  height: 100%;
+.deputado-detalhes__cabecalho {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  padding: 32px;
+  background: linear-gradient(135deg, #6b3f26 0%, #8b5e45 100%);
+  color: white;
+}
+
+.deputado-detalhes__foto-container {
+  display: flex;
+  align-items: center;
+}
+
+.deputado-detalhes__foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.3);
 }
 
-.result-search__foto-placeholder {
+.deputado-detalhes__info-principal {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #ddd;
-  color: #666;
 }
 
-.result-search__info {
-  flex: 1;
+.deputado-detalhes__nome {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
 }
 
-.result-search__nome {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #333;
+.deputado-detalhes__cargo {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  opacity: 0.9;
 }
 
-.result-search__detalhes {
+.deputado-detalhes__metadados {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
 }
 
-.result-search__partido {
+.deputado-detalhes__partido {
+  font-weight: 600;
+}
+
+.deputado-detalhes__contato {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.contato-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contato-label {
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.contato-valor {
+  opacity: 0.9;
+}
+
+.deputado-detalhes__navegacao {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.aba-botao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.aba-botao:hover {
+  color: #6b3f26;
+  background-color: rgba(107, 63, 38, 0.05);
+}
+
+.aba-botao.ativo {
+  color: #6b3f26;
+  border-bottom-color: #6b3f26;
+  background-color: rgba(107, 63, 38, 0.1);
+}
+
+.deputado-detalhes__conteudo {
+  padding: 32px;
+}
+
+.aba-conteudo {
+  max-width: 800px;
+}
+
+.aba-titulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.participacoes-lista,
+.projetos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.participacao-item,
+.projeto-item {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.participacao-item__cabecalho,
+.projeto-item__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.participacao-tipo,
+.projeto-numero {
+  font-weight: 600;
+  color: #6b3f26;
+}
+
+.participacao-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
   font-weight: 500;
 }
 
-.result-search__separador {
-  font-size: 10px;
-  opacity: 0.5;
+.participacao-status.presente {
+  background-color: #dcfce7;
+  color: #166534;
 }
 
-/* >>>>>>>>> ExplicacaoLLM.jsx <<<<<<<<<<*/
+.participacao-status.ausente {
+  background-color: #fecaca;
+  color: #dc2626;
+}
+
+.participacao-descricao,
+.projeto-titulo {
+  margin: 0 0 8px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.projeto-titulo {
+  font-weight: 600;
+}
+
+.participacao-data,
+.projeto-data {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.projeto-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-sancionada {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-em-tramitação {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.atividades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.atividade-secao {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.atividade-secao__titulo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 16px;
+}
+
+.atividade-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.atividade-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #333;
+}
+
+.atividade-item:last-child {
+  border-bottom: none;
+}
+
+/* >>>>>>>>> MeuEstado.jsx <<<<<<<<<<*/
+.meu-estado {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.meu-estado__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.meu-estado__seletor {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.meu-estado__titulo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #6b3f26;
+  margin-bottom: 24px;
+}
+
+.estado-seletor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.estado-seletor__label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.estado-seletor__select {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  min-width: 250px;
+}
+
+.estado-seletor__select:focus {
+  outline: none;
+  border-color: #6b3f26;
+  box-shadow: 0 0 0 2px rgba(107, 63, 38, 0.1);
+}
+
+.meu-estado__estatisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.estatistica-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.estatistica-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #6b3f26;
+  border-radius: 12px;
+  color: white;
+}
+
+.estatistica-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.estatistica-numero {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6b3f26;
+}
+
+.estatistica-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.meu-estado__destaques,
+.meu-estado__representantes {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.destaques-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.representantes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.representante-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.2s;
+}
+
+.representante-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #6b3f26;
+}
+
+.representante-foto {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.representante-info {
+  flex: 1;
+}
+
+.representante-nome {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #333;
+}
+
+.representante-partido {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.representante-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-item {
+  font-size: 12px;
+  color: #6b3f26;
+  font-weight: 500;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-ativo {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.meu-estado__cabecalho {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.meu-estado__subtitulo {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 8px 0 0 0;
+}
+
+.meu-estado__controles {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.visualizacao-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background-color: #f3f4f6;
+  padding: 4px;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-btn.ativo {
+  background-color: #6b3f26;
+  color: white;
+}
+
+.mapa-container,
+.lista-container {
+  text-align: center;
+}
+
+.seletor-titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 20px;
+}
+
+.estado-atual {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #6b3f26;
+}
+
+.estado-atual__label {
+  font-weight: 500;
+  color: #6b7280;
+  margin-right: 8px;
+}
+
+.estado-atual__nome {
+  font-weight: 600;
+  color: #6b3f26;
+  font-size: 18px;
+}
 
 /*  */
 /*  */
@@ -1123,39 +1704,89 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .busca-detalhada-modal {
+  .busca-detalhada {
     margin: 10px;
     max-height: 95vh;
   }
 
-  .busca-detalhada__campos {
-    grid-template-columns: 1fr;
-  }
-
-  .pagina-busca__lista-moderna {
-    grid-template-columns: 1fr;
-  }
-
-  .card-deputado-moderno__conteudo {
+  .wizard-steps {
     flex-direction: column;
-    text-align: center;
-  }
-  .movimentos-recentes {
-    padding: 24px 16px;
+    gap: 12px;
   }
 
-  .movimentos-recentes__grid {
+  .wizard-step {
+    justify-content: flex-start;
+  }
+
+  .partidos-grid {
     grid-template-columns: 1fr;
+  }
+
+  .estados-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wizard-navegacao {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wizard-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-bar__form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar__submit,
+  .search-bar__advanced {
+    width: 100%;
+  }
+
+  .visualizacao-toggle {
+    max-width: 100%;
+  }
+
+  .mapa-brasil {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .busca-detalhada__acoes {
+  .wizard-conteudo {
+    padding: 20px;
+  }
+
+  .busca-detalhada__header {
+    padding: 16px;
+  }
+
+  .wizard-progress {
+    padding: 16px;
+  }
+
+  .wizard-navegacao {
+    padding: 16px;
+  }
+
+  .estados-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .genero-opcoes {
     flex-direction: column;
   }
 
-  .filtros-ativos {
+  .idade-range {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .meu-estado__cabecalho,
+  .meu-estado__controles {
+    padding: 20px;
   }
 }

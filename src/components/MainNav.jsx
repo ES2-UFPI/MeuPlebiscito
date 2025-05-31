@@ -5,12 +5,12 @@ const MainNav = () => {
   return (
     <div className="main-nav">
       <NavLink
-        to="/estado"
+        to="/meu-estado"
         className={({ isActive }) =>
           isActive ? "main-nav__link active" : "main-nav__link"
         }
       >
-        Meu Estado
+        Meu Congresso
       </NavLink>
       <NavLink
         to="/congresso"
@@ -18,7 +18,7 @@ const MainNav = () => {
           isActive ? "main-nav__link active" : "main-nav__link"
         }
       >
-        Congresso Nacional
+        Minha História
       </NavLink>
       <NavLink
         to="/projetos"
@@ -26,7 +26,7 @@ const MainNav = () => {
           isActive ? "main-nav__link active" : "main-nav__link"
         }
       >
-        Projetos de Lei
+        Minhas Leis
       </NavLink>
       <NavLink
         to="/tempo-real"

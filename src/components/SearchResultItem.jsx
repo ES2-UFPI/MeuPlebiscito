@@ -1,7 +1,7 @@
 import { User, MapPin, Users, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const CardDeputado = ({ deputado }) => {
+const SearchResultItem = ({ deputado }) => {
   const obterCorPartido = (partido) => {
     // Cores baseadas no espectro político brasileiro
     const coresPartidos = {
@@ -41,40 +41,40 @@ const CardDeputado = ({ deputado }) => {
   return (
     <Link
       to={`/deputado/${deputado.id}`}
-      className="card-deputado-moderno"
+      className="search-result-item-moderno"
       style={{
         background: `linear-gradient(135deg, ${obterCorPartido(
           deputado.siglaPartido
         )}dd, ${obterCorPartido(deputado.siglaPartido)}aa)`,
       }}
     >
-      <div className="card-deputado-moderno__conteudo">
-        <div className="card-deputado-moderno__foto">
+      <div className="search-result-item-moderno__conteudo">
+        <div className="search-result-item-moderno__foto">
           {deputado.urlFoto ? (
             <img
               src={deputado.urlFoto || "/placeholder.svg"}
               alt={`Foto de ${deputado.nome}`}
-              className="card-deputado-moderno__imagem"
+              className="search-result-item-moderno__imagem"
             />
           ) : (
-            <div className="card-deputado-moderno__placeholder">
+            <div className="search-result-item-moderno__placeholder">
               <User size={32} />
             </div>
           )}
         </div>
 
-        <div className="card-deputado-moderno__info">
-          <h3 className="card-deputado-moderno__nome">{deputado.nome}</h3>
+        <div className="search-result-item-moderno__info">
+          <h3 className="search-result-item-moderno__nome">{deputado.nome}</h3>
 
-          <div className="card-deputado-moderno__detalhes">
-            <div className="card-deputado-moderno__linha">
+          <div className="search-result-item-moderno__detalhes">
+            <div className="search-result-item-moderno__linha">
               <Users size={12} />
               <span>{deputado.siglaPartido}</span>
               <span className="separador">•</span>
               <span>{deputado.cargo || "Deputado Federal"}</span>
             </div>
 
-            <div className="card-deputado-moderno__linha">
+            <div className="search-result-item-moderno__linha">
               <MapPin size={12} />
               <span>{deputado.siglaUf}</span>
               {deputado.idade && (
@@ -92,4 +92,4 @@ const CardDeputado = ({ deputado }) => {
   );
 };
 
-export default CardDeputado;
+export default SearchResultItem;

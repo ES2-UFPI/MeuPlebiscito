@@ -9,7 +9,20 @@ import { useNavigate } from "react-router-dom";
 const SearchBar = ({ onOpenDetailedSearch }) => {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
+
+  // Sugestões populares para busca
+  const popularSuggestions = [
+    "Educação",
+    "Saúde",
+    "Meio Ambiente",
+    "Economia",
+    "Direitos Humanos",
+    "Tecnologia",
+    "Agricultura",
+    "Segurança",
+  ];
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -20,12 +33,20 @@ const SearchBar = ({ onOpenDetailedSearch }) => {
   const handleSearch = () => {
     if (query.trim()) {
       navigate(`/buscar?q=${encodeURIComponent(query.trim())}`);
+      setShowSuggestions(false);
     }
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setQuery(suggestion);
+    navigate(`/buscar?q=${encodeURIComponent(suggestion)}`);
+    setShowSuggestions(false);
   };
 
   const handleDetailedSearchClick = () => {
     if (onOpenDetailedSearch) {
       onOpenDetailedSearch();
+      setShowSuggestions(false);
     }
   };
 
@@ -37,7 +58,9 @@ const SearchBar = ({ onOpenDetailedSearch }) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Buscar deputados, projetos de lei..."
+          onFocus={() => setShowSuggestions(true)}
+          onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+          placeholder="Buscar deputados, projetos de lei, temas políticos..."
           className="searchbar-input"
         />
 
@@ -79,6 +102,27 @@ const SearchBar = ({ onOpenDetailedSearch }) => {
           </button>
         </div>
       </div>
+
+      {/* Sugestões de busca */}
+      {showSuggestions && query.length === 0 && (
+        <div className="searchbar-suggestions">
+          <div className="searchbar-suggestions-header">
+            Sugestões populares:
+          </div>
+          <div className="searchbar-suggestions-list">
+            {popularSuggestions.map((suggestion, index) => (
+              <button
+                key={index}
+                className="searchbar-suggestion-item"
+                onClick={() => handleSuggestionClick(suggestion)}
+              >
+                <Search size={14} />
+                <span>{suggestion}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

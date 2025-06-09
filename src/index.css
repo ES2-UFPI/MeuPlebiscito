@@ -103,98 +103,125 @@
 }
 
 /* >>>>>>>>> SearchBar.jsx <<<<<<<<<<*/
+/* SearchBar Styles */
 .searchbar-container {
-  max-width: 600px;
-  margin: 0 auto 24px;
   position: relative;
+  width: 100%;
+  max-width: 600px;
 }
 
 .searchbar-input-wrapper {
-  position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.searchbar-input-wrapper:focus-within {
+  border-color: #6b3f26;
+  box-shadow: 0 0 0 3px rgba(107, 63, 38, 0.1);
 }
 
 .searchbar-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #374151;
   width: 100%;
-  padding: 10px 80px 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 9999px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.2s;
 }
 
 .searchbar-input:focus {
-  border-color: #6b3f26;
-  box-shadow: 0 0 0 2px rgba(107, 63, 38, 0.2);
+  outline: none;
 }
 
-.searchbar-icon-button {
-  position: absolute;
-  top: 68%;
-  right: 8px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #999;
+.searchbar-actions {
+  display: flex;
+  align-items: center;
 }
-.searchbar-filter-button {
+
+.searchbar-filter-button,
+.searchbar-icon-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #f3f4f6;
+  background: none;
   border: none;
-  cursor: pointer;
+  padding: 12px;
   color: #6b3f26;
-  transition: background-color 0.2s;
-}
-
-.searchbar-results {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 100%;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  max-height: 300px;
-  overflow-y: auto;
-  z-index: 10;
-}
-
-.searchbar-icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #6b3f26;
-  border: none;
   cursor: pointer;
-  color: white;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
+.searchbar-filter-button:hover,
 .searchbar-icon-button:hover {
-  background-color: #8b5e45;
+  background-color: rgba(107, 63, 38, 0.1);
 }
 
 .loading-spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid #999;
-  border-top-color: transparent;
+  border: 2px solid rgba(107, 63, 38, 0.3);
+  border-top-color: #6b3f26;
   border-radius: 50%;
-  animation: spin 0.6s linear infinite;
+  animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Suggestions */
+.searchbar-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+.searchbar-suggestions-header {
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.searchbar-suggestions-list {
+  padding: 8px;
+}
+
+.searchbar-suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  color: #374151;
+}
+
+.searchbar-suggestion-item:hover {
+  background-color: #f3f4f6;
 }
 
 /* >>>>>>>>> BuscaDetalhada.jsx <<<<<<<<<<*/
@@ -1167,6 +1194,222 @@
   width: 100%;
   max-width: 400px;
   z-index: 100;
+}
+
+/* >>>>>>>>> ProjetosLei.jsx <<<<<<<<<<*/
+.projetos-lei {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.projetos-lei__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projetos-lei__cabecalho {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.projetos-lei__titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #6b3f26;
+  margin-bottom: 8px;
+}
+
+.projetos-lei__subtitulo {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.projetos-lei__filtros {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.filtros-titulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 24px;
+}
+
+.tematicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.tematica-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.tematica-card:hover {
+  border-color: #6b3f26;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tematica-card.ativo {
+  border-color: #6b3f26;
+  background-color: #6b3f26;
+  color: white;
+}
+
+.tematica-card__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  color: #6b3f26;
+  transition: all 0.2s;
+}
+
+.tematica-card.ativo .tematica-card__icone {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.tematica-card__info {
+  flex: 1;
+}
+
+.tematica-card__nome {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.tematica-card__quantidade {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.projetos-lei__lista {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lista-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.lista-titulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin: 0;
+}
+
+.lista-contador {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.lista-vazia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.lista-vazia svg {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.projetos-lei__resumo {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.resumo-titulo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b3f26;
+  margin-bottom: 24px;
+}
+
+.resumo-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+.stat-card svg {
+  color: #6b3f26;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-numero {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6b3f26;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #6b7280;
 }
 
 /* >>>>>>>>> DeputadoDetalhes.jsx <<<<<<<<<<*/

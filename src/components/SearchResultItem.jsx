@@ -5,24 +5,6 @@ const SearchResultItem = ({ deputado }) => {
   const obterCorPartido = (partido) => {
     // Cores baseadas no espectro político brasileiro
     const coresPartidos = {
-      PT: "#e53e3e", // Vermelho
-      PSDB: "#3182ce", // Azul
-      MDB: "#38a169", // Verde
-      PL: "#d69e2e", // Amarelo/Dourado
-      PSOL: "#e53e3e", // Vermelho
-      PDT: "#e53e3e", // Vermelho
-      PSB: "#e53e3e", // Vermelho
-      REPUBLICANOS: "#3182ce", // Azul
-      PP: "#3182ce", // Azul
-      UNIÃO: "#805ad5", // Roxo
-      PSD: "#38a169", // Verde
-      PODE: "#d69e2e", // Amarelo
-      NOVO: "#e53e3e", // Vermelho
-      CIDADANIA: "#3182ce", // Azul
-      REDE: "#38a169", // Verde
-      PCdoB: "#e53e3e", // Vermelho
-      AVANTE: "#805ad5", // Roxo
-      SOLIDARIEDADE: "#d69e2e", // Amarelo
       default: "#6b3f26", // Cor padrão do tema
     };
 
@@ -43,9 +25,7 @@ const SearchResultItem = ({ deputado }) => {
       to={`/deputado/${deputado.id}`}
       className="search-result-item-moderno"
       style={{
-        background: `linear-gradient(135deg, ${obterCorPartido(
-          deputado.siglaPartido
-        )}dd, ${obterCorPartido(deputado.siglaPartido)}aa)`,
+        background: obterCorPartido(deputado.default),
       }}
     >
       <div className="search-result-item-moderno__conteudo">

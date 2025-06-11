@@ -1,12 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Calendar, FileText, Users, Award } from "lucide-react";
+import { useParams, useNavigate } from "react-router-dom";
+import {
+  Calendar,
+  FileText,
+  Users,
+  Award,
+  DollarSign,
+  ArrowLeft,
+  TrendingUp,
+  PieChart,
+} from "lucide-react";
 import { deputadoMockData } from "../mocks/DeputadoMock";
 
 const DeputadosPagina = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [deputado, setDeputado] = useState(null);
   const [loading, setLoading] = useState(true);
   const [abaSelecionada, setAbaSelecionada] = useState("participacao");
@@ -15,10 +25,38 @@ const DeputadosPagina = () => {
     // Simular carregamento de dados do deputado usando mocks
     setTimeout(() => {
       const deputadoData = deputadoMockData[id] || deputadoMockData[1];
-      setDeputado(deputadoData);
+      const deputadoComOrcamento = {
+        // Valores mockados para orçamento
+        ...deputadoData,
+        orcamento: {
+          totalGasto: 125000.5,
+          categorias: [
+            { nome: "Passagens Aéreas", valor: 45000.0, percentual: 36 },
+            { nome: "Hospedagem", valor: 28000.0, percentual: 22 },
+            { nome: "Alimentação", valor: 18500.0, percentual: 15 },
+            { nome: "Combustível", valor: 15000.0, percentual: 12 },
+            { nome: "Telefonia", valor: 12000.5, percentual: 10 },
+            { nome: "Outros", valor: 6500.0, percentual: 5 },
+          ],
+          historico: [
+            { mes: "Jan/2025", valor: 12500.0 },
+            { mes: "Dez/2024", valor: 11800.0 },
+            { mes: "Nov/2024", valor: 13200.0 },
+            { mes: "Out/2024", valor: 10900.0 },
+            { mes: "Set/2024", valor: 14100.0 },
+            { mes: "Ago/2024", valor: 12300.0 },
+          ],
+        },
+      };
+
+      setDeputado(deputadoComOrcamento);
       setLoading(false);
     }, 1000);
   }, [id]);
+
+  const voltarPaginaAnterior = () => {
+    navigate(-1); // Volta para a página anterior (pode ser Searched.jsx ou Home.jsx)
+  };
 
   if (loading) {
     return (
@@ -36,6 +74,10 @@ const DeputadosPagina = () => {
       <div className="pagina-busca">
         <div className="pagina-busca__sem-resultados">
           <p>Deputado não encontrado</p>
+          <button className="btn-voltar" onClick={voltarPaginaAnterior}>
+            <ArrowLeft size={16} />
+            Voltar
+          </button>
         </div>
       </div>
     );
@@ -44,6 +86,13 @@ const DeputadosPagina = () => {
   return (
     <div className="deputado-detalhes">
       <div className="deputado-detalhes__container">
+        {/* Botão de volta */}
+        <div className="deputado-detalhes__header-actions">
+          <button className="btn-voltar" onClick={voltarPaginaAnterior}>
+            <ArrowLeft size={20} />
+            Voltar
+          </button>
+        </div>
         {/* Cabeçalho com informações básicas */}
         <div className="deputado-detalhes__cabecalho">
           <div className="deputado-detalhes__foto-container">
@@ -110,6 +159,15 @@ const DeputadosPagina = () => {
           >
             <Award size={16} />
             Atividades e Cargos
+          </button>
+          <button
+            className={`aba-botao ${
+              abaSelecionada === "orcamento" ? "ativo" : ""
+            }`}
+            onClick={() => setAbaSelecionada("orcamento")}
+          >
+            <DollarSign size={16} />
+            Orçamento
           </button>
         </div>
 
@@ -196,6 +254,84 @@ const DeputadosPagina = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* aba de Orçamento */}
+          {abaSelecionada === "orcamento" && (
+            <div className="aba-conteudo">
+              <h3 className="aba-titulo">Análise Orçamentária</h3>
+
+              {/* Resumo financeiro */}
+              <div className="orcamento-resumo">
+                <div className="orcamento-card">
+                  <div className="orcamento-card__icone">
+                    <DollarSign size={24} />
+                  </div>
+                  <div className="orcamento-card__info">
+                    <span className="orcamento-valor">
+                      R${" "}
+                      {deputado.orcamento.totalGasto.toLocaleString("pt-BR", {
+                        minimumFractionDigits: 2,
+                      })}
+                    </span>
+                    <span className="orcamento-label">Total Gasto em 2024</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Gráfico de categorias */}
+              <div className="orcamento-secao">
+                <h4 className="orcamento-secao__titulo">
+                  <PieChart size={20} />
+                  Gastos por Categoria
+                </h4>
+                <div className="categorias-lista">
+                  {deputado.orcamento.categorias.map((categoria, index) => (
+                    <div key={index} className="categoria-item">
+                      <div className="categoria-info">
+                        <span className="categoria-nome">{categoria.nome}</span>
+                        <span className="categoria-valor">
+                          R${" "}
+                          {categoria.valor.toLocaleString("pt-BR", {
+                            minimumFractionDigits: 2,
+                          })}
+                        </span>
+                      </div>
+                      <div className="categoria-barra">
+                        <div
+                          className="categoria-progresso"
+                          style={{ width: `${categoria.percentual}%` }}
+                        ></div>
+                      </div>
+                      <span className="categoria-percentual">
+                        {categoria.percentual}%
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Histórico mensal */}
+              <div className="orcamento-secao">
+                <h4 className="orcamento-secao__titulo">
+                  <TrendingUp size={20} />
+                  Histórico Mensal
+                </h4>
+                <div className="historico-lista">
+                  {deputado.orcamento.historico.map((mes, index) => (
+                    <div key={index} className="historico-item">
+                      <span className="historico-mes">{mes.mes}</span>
+                      <span className="historico-valor">
+                        R${" "}
+                        {mes.valor.toLocaleString("pt-BR", {
+                          minimumFractionDigits: 2,
+                        })}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

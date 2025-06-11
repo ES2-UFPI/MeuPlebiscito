@@ -11,8 +11,8 @@ const MainNav = () => {
   const tabRefs = useRef([]);
 
   const navItems = [
-    { path: "/meu-estado", label: "Meu Congresso" },
-    { path: "/congresso", label: "Minha História" },
+    { path: "/congresso", label: "Meu Congresso" },
+    { path: "/historia", label: "Minha História" },
     { path: "/projetos", label: "Minhas Leis" },
     { path: "/tempo-real", label: "Em Tempo Real" },
   ];

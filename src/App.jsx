@@ -6,6 +6,7 @@ import Searched from "./pages/Searched";
 import Deputado from "./pages/Deputados";
 import MeuEstado from "./pages/MeuEstado";
 import Lei from "./pages/Leis";
+import Congresso from "./pages/Congresso";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/deputado/:id" element={<Deputado />} />
         <Route path="/meu-estado" element={<MeuEstado />} />
         <Route path="/lei/:id" element={<Lei />} />
+        <Route path="/congresso" element={<Congresso />} />
         {/* <Route path="/projetos" element={<Projetos />} /> */}
         {/* <Route path="/projeto/:id" element={<Projeto />} /> */}
         {/* <Route path="/sobre" element={<Sobre />} /> */}

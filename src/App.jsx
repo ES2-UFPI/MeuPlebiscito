@@ -4,7 +4,6 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Searched from "./pages/Searched";
 import Deputado from "./pages/Deputados";
-import MeuEstado from "./pages/MeuEstado";
 import Lei from "./pages/Leis";
 import Congresso from "./pages/Congresso";
 
@@ -18,7 +17,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/buscar" element={<Searched />} />
         <Route path="/deputado/:id" element={<Deputado />} />
-        <Route path="/meu-estado" element={<MeuEstado />} />
         <Route path="/lei/:id" element={<Lei />} />
         <Route path="/congresso" element={<Congresso />} />
         {/* <Route path="/projetos" element={<Projetos />} /> */}

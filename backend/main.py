@@ -1,20 +1,22 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.data.routes import router as rota_deputados
+from app.data.routes import router as deputados
 
-app = FastAPI(title="API MeuPlebiscito")
+app = FastAPI(
+    title="API MeuPlebiscito - Deputados",
+    description="Endpoints para listar e detalhar deputados",
+    version="1.0"
+)
 
-# Configuração do CORS para liberar o frontend React
+# CORS para permitir o frontend acessar
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # endereço do frontend React
+    allow_origins=["http://localhost:3000"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.include_router(rota_deputados)
+app.include_router(deputados, prefix="/api", tags=["deputados"])
 
-@app.get("/")
-async def raiz():
-    return {"mensagem": "API do MeuPlebiscito está no ar 🚀"}
+app.add_event_handler("startup", lambda: print("API MeuPlebiscito - Deputados iniciada"))

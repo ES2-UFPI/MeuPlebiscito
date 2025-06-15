@@ -2,6 +2,8 @@
 
 import httpx
 from typing import Dict, Any, Optional
+from collections import defaultdict
+
 
 API_BASE_URL = "https://dadosabertos.camara.leg.br/api/v2"
 
@@ -46,3 +48,72 @@ class ProposicaoService:
         return await self._request_api(f"/proposicoes/{id}/votacoes", params=params)
 
 proposicao_service = ProposicaoService()
+
+
+class EstatisticasProposicoes:
+    def __init__(self,
+                 total_proposicoes: int = 0,
+                 por_tipo: Dict[str, int] = None,
+                 por_ano: Dict[int, int] = None,
+                 por_partido: Dict[str, int] = None,
+                 por_uf: Dict[str, int] = None,
+                 por_tema: Dict[str, int] = None):
+        self.total_proposicoes = total_proposicoes
+        self.por_tipo = por_tipo if por_tipo is not None else {}
+        self.por_ano = por_ano if por_ano is not None else {}
+        self.por_partido = por_partido if por_partido is not None else {}
+        self.por_uf = por_uf if por_uf is not None else {}
+        self.por_tema = por_tema if por_tema is not None else {}
+
+async def estatisticas_proposicoes(
+    ano_inicio: Optional[int] = None,
+    ano_fim: Optional[int] = None,
+    partido: Optional[str] = None,
+    uf: Optional[str] = None,
+    tema: Optional[str] = None
+) -> EstatisticasProposicoes:
+    """Calcula estatísticas de proposições com filtros"""
+    params = {
+        "dataInicio": f"{ano_inicio}-01-01" if ano_inicio else None,
+        "dataFim": f"{ano_fim}-12-31" if ano_fim else None,
+        "siglaPartidoAutor": partido,
+        "siglaUfAutor": uf,
+        "keywords": tema, # Usando keywords para tema, pode ser ajustado
+        "itens": 100 # Buscar mais itens por página para cálculo de estatísticas
+    }
+    
+    service = ProposicaoService()
+    response = await service.get_proposicoes(params={k: v for k, v in params.items() if v is not None})
+    
+    proposicoes = response.get("dados", [])
+    total_proposicoes = len(proposicoes)
+    
+    por_tipo = defaultdict(int)
+    por_ano = defaultdict(int)
+    por_partido = defaultdict(int)
+    por_uf = defaultdict(int)
+    por_tema = defaultdict(int)
+
+    for prop in proposicoes:
+        por_tipo[prop.get("siglaTipo")] += 1
+        por_ano[prop.get("ano")] += 1
+        
+        # Autores e temas precisam de chamadas adicionais ou dados mais ricos na lista inicial
+        # Para simplificar, vamos usar o que está disponível diretamente na lista
+        if prop.get("statusProposicao") and prop["statusProposicao"].get("siglaPartido"): 
+            por_partido[prop["statusProposicao"]["siglaPartido"]] += 1
+        if prop.get("statusProposicao") and prop["statusProposicao"].get("siglaUf"): 
+            por_uf[prop["statusProposicao"]["siglaUf"]] += 1
+        
+        # Temas não estão diretamente na lista, precisaríamos de outra chamada para cada proposição
+        # ou um endpoint de API que agregue por tema. Por enquanto, será vazio.
+
+    return EstatisticasProposicoes(
+        total_proposicoes=total_proposicoes,
+        por_tipo=dict(por_tipo),
+        por_ano=dict(por_ano),
+        por_partido=dict(por_partido),
+        por_uf=dict(por_uf),
+        por_tema=dict(por_tema)
+    )
+

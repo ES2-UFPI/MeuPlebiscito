@@ -304,3 +304,25 @@ async def votacoes_senador(codigo: int, ano: Optional[int] = None) -> List[Dict[
         
         return votacoes
 
+
+
+async def votacoes_deputado(deputado_id: int) -> List[VotacaoDeputado]:
+    """Busca as votações de um deputado"""
+    async with httpx.AsyncClient() as client:
+        resp = await client.get(f"{BASE_URL_CAMARA}/deputados/{deputado_id}/votacoes")
+        resp.raise_for_status()
+        dados = resp.json().get("dados", [])
+        
+        votacoes = []
+        for votacao_data in dados:
+                votacoes.append(VotacaoDeputado(
+                    uri_votacao=votacao_data.get("uriVotacao"),
+                    data_hora_registro=votacao_data.get("dataHoraRegistro"),
+                    voto=votacao_data.get("voto"),
+                    uri_proposicao=votacao_data.get("uriProposicao"),
+                    sigla_tipo=votacao_data.get("siglaTipo"),
+                    numero=votacao_data.get("numero"),
+                    ano=votacao_data.get("ano"),
+                    ementa=votacao_data.get("ementa"),
+                ))
+        return votacoes

@@ -187,3 +187,15 @@ class ResultadoBuscaAvancada(BaseModel):
     total_encontrados: int
     filtros_aplicados: FiltroAvancadoDeputados
     estatisticas_gerais: dict
+
+class VotacaoDeputado(BaseModel):
+    uri_votacao: Optional[str]
+    data_hora_registro: Optional[str]
+    voto: Optional[str]
+    uri_proposicao: Optional[str]
+    sigla_tipo: Optional[str]
+    numero: Optional[int]
+    ano: Optional[int]
+    ementa: Optional[str]
+
+

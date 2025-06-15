@@ -1,0 +1,925 @@
+temas que uma proposição pode apresentar.
+ID: 34, Nome: Administração Pública
+ID: 35, Nome: Arte, Cultura e Religião
+ID: 37, Nome: Comunicações
+ID: 39, Nome: Esporte e Lazer
+ID: 40, Nome: Economia
+ID: 41, Nome: Cidades e Desenvolvimento Urbano
+ID: 42, Nome: Direito Civil e Processual Civil
+ID: 43, Nome: Direito Penal e Processual Penal
+ID: 44, Nome: Direitos Humanos e Minorias
+ID: 46, Nome: Educação
+ID: 48, Nome: Meio Ambiente e Desenvolvimento Sustentável
+ID: 51, Nome: Estrutura Fundiária
+ID: 52, Nome: Previdência e Assistência Social
+ID: 53, Nome: Processo Legislativo e Atuação Parlamentar
+ID: 54, Nome: Energia, Recursos Hídricos e Minerais
+ID: 55, Nome: Relações Internacionais e Comércio Exterior
+ID: 56, Nome: Saúde
+ID: 57, Nome: Defesa e Segurança
+ID: 58, Nome: Trabalho e Emprego
+ID: 60, Nome: Turismo
+ID: 61, Nome: Viação, Transporte e Mobilidade
+ID: 62, Nome: Ciência, Tecnologia e Inovação
+ID: 64, Nome: Agricultura, Pecuária, Pesca e Extrativismo
+ID: 66, Nome: Indústria, Comércio e Serviços
+ID: 67, Nome: Direito e Defesa do Consumidor
+ID: 68, Nome: Direito Constitucional
+ID: 70, Nome: Finanças Públicas e Orçamento
+ID: 72, Nome: Homenagens e Datas Comemorativas
+ID: 74, Nome: Política, Partidos e Eleições
+ID: 76, Nome: Direito e Justiça
+ID: 85, Nome: Ciências Exatas e da Terra
+ID: 86, Nome: Ciências Sociais e Humanas
+
+
+
+
+----------------------------------------------------------------------------------------------
+tipos de proposições que podem ser encontradas no sistema,
+id: 27, SIGLA: OF, NOME: Ofício do Congresso Nacional
+id: 129, SIGLA: CON, NOME: Consulta
+id: 130, SIGLA: EMC, NOME: Emenda na Comissão
+id: 131, SIGLA: EMP, NOME: Emenda de Plenário
+id: 132, SIGLA: EMS, NOME: Emenda/Substitutivo do Senado
+id: 133, SIGLA: INC, NOME: Indicação 
+id: 134, SIGLA: MSC, NOME: Mensagem
+id: 135, SIGLA: PDC, NOME: Projeto de Decreto Legislativo
+id: 136, SIGLA: PEC, NOME: Proposta de Emenda à Constituição
+id: 137, SIGLA: PET, NOME: Petição
+id: 138, SIGLA: PFC, NOME: Proposta de Fiscalização e Controle
+id: 139, SIGLA: PL, NOME: Projeto de Lei
+id: 140, SIGLA: PLP, NOME: Projeto de Lei Complementar
+id: 141, SIGLA: PRC, NOME: Projeto de Resolução
+id: 142, SIGLA: PRN, NOME: Projeto de Resolução do Congresso Nacional
+id: 143, SIGLA: RCP, NOME: Requerimento de Instituição de CPI
+id: 144, SIGLA: REC, NOME: Recurso
+id: 145, SIGLA: REM, NOME: Reclamação
+id: 146, SIGLA: REP, NOME: Representação
+id: 147, SIGLA: REQ, NOME: Requerimento
+id: 148, SIGLA: RIC, NOME: Requerimento de Informação
+id: 150, SIGLA: REQ, NOME: Requerimento de Convocação de Autoridade
+id: 151, SIGLA: SIT, NOME: Solicitação de Informação ao TCU
+id: 153, SIGLA: TVR, NOME: Ato de Concessão e Renovação de Concessão de Emissora de Rádio e Televisão
+id: 154, SIGLA: REC, NOME: Recurso do Congresso Nacional
+id: 171, SIGLA: INA, NOME: Indicação de Autoridade
+id: 181, SIGLA: OF, NOME: Ofício
+id: 185, SIGLA: P.C, NOME: Parecer (CD)
+id: 187, SIGLA: PAR, NOME: Parecer de Comissão
+id: 189, SIGLA: MAN, NOME: Manifestação do Relator
+id: 190, SIGLA: PRL, NOME: Parecer do Relator
+id: 191, SIGLA: PRV, NOME: Parecer Vencedor
+id: 192, SIGLA: PPP, NOME: Parecer Proferido em Plenário
+id: 193, SIGLA: PRR, NOME: Parecer Reformulado
+id: 195, SIGLA: CVO, NOME: Complementação de Voto
+id: 196, SIGLA: PES, NOME: Parecer às Emendas Apresentadas ao Substitutivo do Relator
+id: 197, SIGLA: RDF, NOME: Redação Final
+id: 201, SIGLA: MAN, NOME: Manifestação pela Prejudicialidade da Matéria
+id: 202, SIGLA: MAN, NOME: Manifestação pela Incompetência da Comissão
+id: 211, SIGLA: PRF, NOME: Projeto de Resolução do Senado Federal
+id: 246, SIGLA: CST, NOME: Solicitação de Pronunciamento
+id: 253, SIGLA: SGM, NOME: Ofício da Mesa
+id: 254, SIGLA: DIS, NOME: Discurso
+id: 255, SIGLA: SBT, NOME: Substitutivo
+id: 256, SIGLA: SBE, NOME: Subemenda
+id: 257, SIGLA: EMR, NOME: Emenda de Relator
+id: 258, SIGLA: ESB, NOME: Emenda ao Substitutivo
+id: 260, SIGLA: VTS, NOME: Voto em Separado
+id: 261, SIGLA: DTQ, NOME: Destaque
+id: 262, SIGLA: REL, NOME: Relatório de Subcomissão
+id: 263, SIGLA: DTN, NOME: Destaque (CN)
+id: 270, SIGLA: DVT, NOME: Declaração de Voto
+id: 273, SIGLA: EML, NOME: Emenda à LDO
+id: 276, SIGLA: SDL, NOME: Sugestão de Emenda à LDO - CLP
+id: 285, SIGLA: SUG, NOME: Sugestão
+id: 286, SIGLA: SUM, NOME: Súmula
+id: 287, SIGLA: EMO, NOME: Emenda ao Orçamento
+id: 288, SIGLA: SOA, NOME: Sugestão de Emenda ao Orçamento - CLP
+id: 289, SIGLA: REL, NOME: Relatório de CPI
+id: 290, SIGLA: EMD, NOME: Emenda
+id: 291, SIGLA: MPV, NOME: Medida Provisória
+id: 292, SIGLA: REL, NOME: Relatório
+id: 293, SIGLA: REQ, NOME: Requerimento de Sessão Solene
+id: 294, SIGLA: REQ, NOME: Requerimento de Audiência Pública
+id: 295, SIGLA: DEN, NOME: Denúncia
+id: 296, SIGLA: , NOME: D) PARECERES, MANIFESTAÇÕES E REDAÇÃO FINAL
+id: 297, SIGLA: , NOME: C) EMENDAS (RICD Cap. V)
+id: 298, SIGLA: , NOME: H) OUTRAS PROPOSIÇÕES ACESSÓRIAS
+id: 299, SIGLA: , NOME: E) REQUERIMENTOS (RICD Cap IV)
+id: 301, SIGLA: , NOME: A) PROPOSIÇÕES CF/88 Art. 59
+id: 302, SIGLA: , NOME: B) PROPOSIÇÕES CF/88 Arts 58, 70 e 223, e RICD Art 100.
+id: 303, SIGLA: , NOME: F) SUGESTÕES
+id: 304, SIGLA: REQ, NOME: Requerimento de Apensação
+id: 305, SIGLA: REQ, NOME: Requerimento de Desapensação
+id: 306, SIGLA: REQ, NOME: Requerimento de Audiência solicitada por Deputado
+id: 307, SIGLA: REQ, NOME: Requerimento de Audiência solicitada por Comissão ou Deputado
+id: 308, SIGLA: REQ, NOME: Requerimento de Redistribuição
+id: 310, SIGLA: REQ, NOME: Requerimento de Inclusão ou Retirada de Assinatura em Proposição de Iniciativa Coletiva Obrigatória
+id: 311, SIGLA: REQ, NOME: Requerimento de Retirada de Proposição de Iniciativa Individual
+id: 312, SIGLA: REQ, NOME: Requerimento de Retirada de Proposição de Iniciativa Coletiva
+id: 313, SIGLA: REQ, NOME: Requerimento de Inclusão ou Retirada de Assinatura em Proposição de Iniciativa Individual
+id: 314, SIGLA: REQ, NOME: Requerimento de Envio de proposições pendentes de parecer à Comissão seguinte ou ao Plenário
+id: 315, SIGLA: REQ, NOME: Requerimento de Retirada do requerimento de urgência (matéria com requerimento apresentado e não votado)
+id: 316, SIGLA: REQ, NOME: Requerimento de Retirada do requerimento de informação
+id: 317, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Parlamentar de Inquerito (CPI)
+id: 318, SIGLA: REQ, NOME: Requerimento de Inclusão de Matéria na Ordem do Dia
+id: 319, SIGLA: REQ, NOME: Requerimento de Retirada de Proposição
+id: 321, SIGLA: REQ, NOME: Requerimento de Extinção do regime de urgência (matéria com urgência votada)
+id: 322, SIGLA: REQ, NOME: Requerimento de Tramitação de proposição em regime de prioridade
+id: 323, SIGLA: REQ, NOME: Requerimento de Quebra de Interstício para Inclusão de Matéria na Ordem do Dia
+id: 324, SIGLA: REQ, NOME: Requerimento de Destaque para votação em separado de parte de proposição (DVS)
+id: 327, SIGLA: RPD, NOME: Requerimento de Retirada da OD de proposições com pareceres favoraveis
+id: 328, SIGLA: RPD, NOME: Requerimento de Retirada de Pauta
+id: 329, SIGLA: RPD, NOME: Requerimento de Adiamento da Discussão
+id: 330, SIGLA: RPD, NOME: Requerimento de Dispensa da Discussão
+id: 331, SIGLA: RPD, NOME: Requerimento de Encerramento da Discussão
+id: 332, SIGLA: RPD, NOME: Requerimento de Votação pelo Processo Nominal
+id: 333, SIGLA: RPD, NOME: Requerimento de Votação parcelada da proposição
+id: 334, SIGLA: RPD, NOME: Requerimento de Verificação de Votação
+id: 335, SIGLA: RPD, NOME: Requerimento de Votação por escrutínio secreto
+id: 336, SIGLA: RPD, NOME: Requerimento de Adiamento da Votação
+id: 337, SIGLA: RPD, NOME: Requerimento de Preferência
+id: 338, SIGLA: RPD, NOME: Requerimento de Dispensa do Avulso da Redação Final
+id: 339, SIGLA: REQ, NOME: Requerimento de Reconstituição de proposição
+id: 340, SIGLA: REQ, NOME: Requerimento de Inclusão na Ordem do Dia de proposição (Durante o período ordinário)
+id: 341, SIGLA: REQ, NOME: Requerimento de Publicação de Parecer de Comissão aprovado
+id: 342, SIGLA: REQ, NOME: Requerimento de Reabertura de discussão de projeto de Sessão Legislativa anterior
+id: 343, SIGLA: REQ, NOME: Requerimento de Transformação de Sessão Plenária em Comissão Geral
+id: 344, SIGLA: REQ, NOME: Requerimento de Retificação de Ata
+id: 345, SIGLA: RPD, NOME: Requerimento de Prorrogação de sessão
+id: 346, SIGLA: RPD, NOME: Requerimento de Prorrogação da Ordem do Dia
+id: 347, SIGLA: REQ, NOME: Requerimento de Convocação de Sessões Extraordinarias para matérias constantes do ato de convocação
+id: 348, SIGLA: REQ, NOME: Requerimento de Prorrogação de prazo de Comissão Temporária
+id: 349, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Externa
+id: 350, SIGLA: REQ, NOME: Requerimento de Realização de Sessão Extraordinária
+id: 351, SIGLA: REQ, NOME: Requerimento de Realização de Sessão secreta
+id: 353, SIGLA: REQ, NOME: Requerimento de Não realização de sessão solene em determinado dia
+id: 354, SIGLA: REQ, NOME: Requerimento de Voto de regozijo ou louvor
+id: 355, SIGLA: REQ, NOME: Requerimento de Voto de pesar
+id: 356, SIGLA: REQ, NOME: Requerimento de Convocação de Ministro de Estado no Plenário (art. 50, CF)
+id: 357, SIGLA: REQ, NOME: Requerimento de Quebra de sigilo (Requerimentos não especificados no RICD)
+id: 358, SIGLA: REQ, NOME: Requerimento de Encaminha copia de Relatorio Final de C. Temporaria 
+id: 359, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Especial de PEC
+id: 360, SIGLA: REQ, NOME: Requerimento de Inserção nos Anais
+id: 361, SIGLA: REQ, NOME: Requerimento de Publicação de documentos discursos de outro poder nao lidos na integra por deputado
+id: 362, SIGLA: REQ, NOME: Requerimento de Adocão de providências em face da ausência de resposta no prazo constitucional a RIC
+id: 363, SIGLA: REQ, NOME: Requerimento de Desarquivamento de Proposições
+id: 364, SIGLA: REQ, NOME: Requerimento de Afastamento para tratamento de saude superior a 120 dias.
+id: 365, SIGLA: REQ, NOME: Requerimento de Afastamento para tratamento de saúde inferior a 120 dias.
+id: 366, SIGLA: REQ, NOME: Requerimento de Afastamento por licença de saude e consecutivamente afastamento para tratar de assunto particular superior a 120 dias.
+id: 368, SIGLA: REQ, NOME: Requerimento de Afastamento para investidura em cargo publico
+id: 369, SIGLA: REQ, NOME: Requerimento de Prorrogação de licença para tratamento de saúde (licença superior a 120 dias)
+id: 370, SIGLA: REQ, NOME: Requerimento de Interrupção da licença superior a 120 dias
+id: 371, SIGLA: REQ, NOME: Requerimento de Justificativa de falta
+id: 372, SIGLA: REC, NOME: Recurso contra devolução de requerimento de CPI (Art. 35, § 2º, RICD)
+id: 373, SIGLA: REC, NOME: Recurso contra apreciação conclusiva de comissão (Art. 58, § 1º c/c art. 132, § 2º, RICD)
+id: 374, SIGLA: REC, NOME: Recurso contra apreciação conclusiva com pareceres contrarios (Art. 133, RICD)
+id: 375, SIGLA: REC, NOME: Recurso contra parecer terminativo de comissão (Art. 132, § 2º c/c art. 144, caput, RICD)
+id: 376, SIGLA: REC, NOME: Recurso contra devolução de proposição (Art. 137, § 2º, RICD)
+id: 377, SIGLA: REC, NOME: Recurso contra deferimento/indeferimento de audiencia (Art. 140, I, RICD)
+id: 378, SIGLA: REC, NOME: Recurso contra redistribuição de proposição (Art. 141, RICD)
+id: 379, SIGLA: REC, NOME: Recurso contra apensação/desapensação de proposição (Art. 142, I, RICD)
+id: 380, SIGLA: REC, NOME: Recurso contra deferimento/indeferimento retirada proposição (Art. 104, caput, RICD)
+id: 381, SIGLA: REC, NOME: Recurso contra declaração de prejudicialidade. (Art. 164, § 2º, RICD)
+id: 382, SIGLA: REC, NOME: Recurso contra decisão do Presidente da CD em Questao de Ordem (Art. 95, § 8º, RICD)
+id: 383, SIGLA: REC, NOME: Recurso contra decisão de Presidente de Comissão em Questão de Ordem (Art. 57, XXI c/c art. 17, III, f, RICD)
+id: 384, SIGLA: REC, NOME: Recurso contra indeferimento de Requerimento de Infomação (Art. 115, parágrafo único, RICD)
+id: 385, SIGLA: REC, NOME: Recurso contra nao recebimento de emenda (Art. 125, caput, RICD)
+id: 386, SIGLA: REC, NOME: Recurso contra improcedencia de retificação de ata (Art. 80, § 1º, RICD)
+id: 387, SIGLA: REC, NOME: Recurso contra indeferimento de requerimento para publicação em ata (Art. 98, § 3º, RICD)
+id: 388, SIGLA: REC, NOME: Recurso contra a não publicação de pronunciamento ou expressão (Art. 98, 6º, RICD)
+id: 389, SIGLA: REC, NOME: Recurso contra nao recebimento de denuncia crime responsabilidade (Art. 218, § 3º, RICD)
+id: 390, SIGLA: PLV, NOME: Projeto de Lei de Conversão
+id: 391, SIGLA: REQ, NOME: Requerimento de Urgência (Art. 154, II, do RICD)
+id: 392, SIGLA: REQ, NOME: Requerimento de Urgência (Art. 155 do RICD)
+id: 393, SIGLA: REQ, NOME: Requerimento de Adiamento de discussão em regime de urgência
+id: 394, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Medida Provisória
+id: 395, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Referendo ou Plebiscito
+id: 396, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Concessão, Renovação e Permissão de Radio/TV
+id: 397, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Acordos, tratados ou atos internacionais
+id: 398, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Indicação de Autoridade ao TCU
+id: 400, SIGLA: PRC, NOME: Projeto de Resolução de Criação de CPI
+id: 401, SIGLA: MSC, NOME: Mensagem de Concessão ou Renovação de Rádio e TV 
+id: 402, SIGLA: REC, NOME: Recurso contra aplicação de censura verbal (Art. 11, Parágrafo único do CEDP)
+id: 403, SIGLA: MSC, NOME: Mensagem de Comunica ausência do país
+id: 404, SIGLA: MSC, NOME: Mensagem de Cancelamento de Urgência
+id: 405, SIGLA: MSC, NOME: Mensagem de Retirada de proposição
+id: 406, SIGLA: MSC, NOME: Mensagem de Solicitação de urgência 
+id: 407, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Programação Monetária
+id: 408, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Sustação de Atos Normativos do Poder Executivo
+id: 409, SIGLA: AV, NOME: Demonstrativo de emissão do real
+id: 410, SIGLA: MSC, NOME: Mensagem de Indicação de Líder
+id: 411, SIGLA: MSC, NOME: Mensagem de Acordos, convênios, tratados e atos internacionais
+id: 412, SIGLA: MSC, NOME: Mensagem de Restituição de Autógrafos
+id: 413, SIGLA: REQ, NOME: Requerimento de Retirada de proposição sem parecer
+id: 414, SIGLA: MSC, NOME: Mensagem de ausência do país por mais de 15 dias 
+id: 415, SIGLA: MSC, NOME: Mensagem de ausência do país por menos de 15 dias  
+id: 417, SIGLA: TVR, NOME: Autorização - Rádio Comunitária
+id: 418, SIGLA: TVR, NOME: Concessão - Rádio Ondas Curtas
+id: 419, SIGLA: TVR, NOME: Concessão - Rádio Ondas Médias
+id: 420, SIGLA: TVR, NOME: Concessão Rádio Ondas Médias Educativa
+id: 421, SIGLA: TVR, NOME: Concessão Rádio Ondas Tropicais
+id: 422, SIGLA: TVR, NOME: Concessão Radiodifusão Sons e Imagens
+id: 423, SIGLA: TVR, NOME: Concessão TV Educativa
+id: 424, SIGLA: TVR, NOME: Permissão Frequência Modulada Educativa
+id: 425, SIGLA: TVR, NOME: Permissão Rádio Frequência Modulada
+id: 426, SIGLA: TVR, NOME: Permissão Rádio Ondas Médias Local
+id: 427, SIGLA: TVR, NOME: Renovação Rádio Comunitária
+id: 428, SIGLA: TVR, NOME: Renovação Rádio Frequência Modulada
+id: 429, SIGLA: TVR, NOME: Renovação Rádio Frequência Modulada Educativa
+id: 430, SIGLA: TVR, NOME: Renovação Rádio Ondas Curtas
+id: 431, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias
+id: 432, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias Local
+id: 433, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias Educativa
+id: 434, SIGLA: TVR, NOME: Renovação Rádio Ondas Tropicais
+id: 435, SIGLA: TVR, NOME: Renovação TV Sons e Imagens
+id: 436, SIGLA: TVR, NOME: Renovação TV Educativa
+id: 437, SIGLA: MSC, NOME: Mensagem de Cumprimento de meta
+id: 439, SIGLA: DCR, NOME: Denúncia por Crime de Responsabilidade
+id: 440, SIGLA: , NOME: J) NÃO PROPOSIÇÃO
+id: 441, SIGLA: REQ, NOME: Requerimento de Moção
+id: 442, SIGLA: PEP, NOME: Parecer às Emendas de Plenário
+id: 443, SIGLA: PSS, NOME: Parecer às Emendas ou ao Substitutivo do Senado
+id: 444, SIGLA: PRC, NOME: Projeto de Resolução de Alteração do Regimento e outros
+id: 445, SIGLA: NIC, NOME: Norma Interna
+id: 448, SIGLA: REQ, NOME: Requerimento (Outros)
+id: 449, SIGLA: MSC, NOME: Mensagem de Implementação da Lei 10.147/00
+id: 450, SIGLA: ERD, NOME: Emenda de Redação
+id: 451, SIGLA: PPR, NOME: Parecer Reformulado de Plenário
+id: 452, SIGLA: TER, NOME: Termo de Implementação
+id: 453, SIGLA: RLP, NOME: Relatório Prévio
+id: 454, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Perempção da Concessão
+id: 455, SIGLA: RLF, NOME: Relatório Final
+id: 456, SIGLA: PRT, NOME: Parecer Técnico
+id: 457, SIGLA: PRO, NOME: Proposta
+id: 459, SIGLA: REC, NOME: Recurso contra decisão de presidente de Comissão em Reclamação (Art. 96, § 2º, RICD)
+id: 460, SIGLA: OBJ, NOME: Objeto de Deliberação
+id: 461, SIGLA: MSC, NOME: Mensagem de Missão de Paz (Art. 15 da LC 97/99)
+id: 462, SIGLA: , NOME: I) OUTROS ITENS SUJEITOS À DELIBERAÇÃO
+id: 463, SIGLA: , NOME: G) PROPOSIÇÔES CN E SF TRAMITANDO NA CÂMARA (CMO E MERCOSUL)
+id: 464, SIGLA: PLS, NOME: Projeto de Lei do Senado Federal
+id: 465, SIGLA: PLC, NOME: Projeto de Lei da Câmara dos Deputados (SF)
+id: 466, SIGLA: PDS, NOME: Projeto de Decreto Legislativo (SF)
+id: 467, SIGLA: RPD, NOME: Requerimento de Adiamento de Votação de Matéria Urgente
+id: 468, SIGLA: RPD, NOME: Requerimento de Encerramento de Discussão em Comissão
+id: 482, SIGLA: RDV, NOME: Redação do Vencido
+id: 483, SIGLA: RST, NOME: Redação para o segundo turno
+id: 484, SIGLA: RLP(R), NOME: Relatório Prévio Reformulado
+id: 485, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Aprovação de Contas dos Presidentes
+id: 486, SIGLA: RPD, NOME: Requerimento Procedimental de Sessão/Reunião
+id: 487, SIGLA: EPP, NOME: Emenda ao Plano Plurianual
+id: 488, SIGLA: EAG, NOME: Emenda Substitutiva Aglutinativa Global
+id: 489, SIGLA: MSC, NOME: Mensagem que Propõe alteração a Projeto
+id: 490, SIGLA: PEA, NOME: Parecer à Emenda Aglutinativa
+id: 491, SIGLA: SPA, NOME: Sugestão de Emenda ao PPA - CLP
+id: 492, SIGLA: TVR, NOME: Autorização - Rádio Comunitária - Dez anos
+id: 493, SIGLA: MSC, NOME: Mensagem de Perempção de Rádio/TV
+id: 494, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Alteração de Decreto Legislativo
+id: 495, SIGLA: AV, NOME: Aviso
+id: 496, SIGLA: IAN, NOME: Indicação da ANC (1987-88)
+id: 497, SIGLA: OF, NOME: Ofício Externo
+id: 498, SIGLA: PCA, NOME: Parecer da ANC (1987-88)
+id: 499, SIGLA: PDA, NOME: Projeto de Decisão da ANC (1987-88)
+id: 500, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Autorização do Congresso Nacional
+id: 501, SIGLA: PRA, NOME: Projeto de Resolução da ANC (1987-88)
+id: 503, SIGLA: RCM, NOME: Requerimento de Comissão Mista
+id: 504, SIGLA: RQA, NOME: Requerimento de Informações da ANC (1987-88)
+id: 505, SIGLA: RQC, NOME: Requerimento de Convocação
+id: 506, SIGLA: AA, NOME: Autógrafo
+id: 507, SIGLA: REC, NOME: Recurso contra Inadmissibilidade de PEC (Art. 202, § 1º do RICD)
+id: 508, SIGLA: ESP, NOME: Emenda Substitutiva de Plenário
+id: 509, SIGLA: SSP, NOME: Subemenda Substitutiva de Plenário
+id: 513, SIGLA: MSC, NOME: Mensagem de Implementação da Lei 10.707/03
+id: 514, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Ministro do TCU
+id: 515, SIGLA: , NOME: K) PROPOSIÇÕES INATIVAS IMPORTADAS SINOPSE
+id: 516, SIGLA: REQ, NOME: Requerimento de Inclusão na Ordem do Dia de proposição (com previsão ou durante o período de Convocação Extraordinário)
+id: 517, SIGLA: REQ, NOME: Requerimento de Interrupção da licença inferior a 120 dias
+id: 518, SIGLA: RPD, NOME: Requerimento de Votação em globo dos destaques simples
+id: 519, SIGLA: REQ, NOME: Requerimento de Afastamento para missão temporária de caráter diplomático ou cultural
+id: 520, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Especial de Projeto de Código
+id: 521, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Especial de Projeto
+id: 522, SIGLA: REQ, NOME: Requerimento de Constituição de Comissão Especial de Estudo
+id: 523, SIGLA: REQ, NOME: Requerimento de Convocação de Ministro de Estado na Comissão (art. 50, CF)
+id: 524, SIGLA: REQ, NOME: Requerimento de Convocação de Sessão Extraordinária do CN
+id: 525, SIGLA: REQ, NOME: Requerimento de Convocação de reunião extraordinária de comissão
+id: 526, SIGLA: REQ, NOME: Requerimento de Destaque votação de emenda ou parte
+id: 527, SIGLA: REQ, NOME: Requerimento de Destaque para votação de subemenda ou parte
+id: 528, SIGLA: REQ, NOME: Requerimento de Destaque para tornar parte de emenda ou proposição projeto autonomo
+id: 529, SIGLA: REQ, NOME: Requerimento de Destaque para votação de projeto ou substitutivo ou parte deles quando a preferencia cair sobre outro ou sobre proposições apensadas
+id: 530, SIGLA: REQ, NOME: Requerimento de Destaque para votação de parte da proposição
+id: 531, SIGLA: RPD, NOME: Requerimento de Prorrogação da sessão para discussão e votação da matéria da Ordem do Dia
+id: 532, SIGLA: RPD, NOME: Requerimento de Prorrogação da sessão para audiência de Ministro de Estado
+id: 533, SIGLA: RPD, NOME: Requerimento de Prorrogação da sessão para realização de homenagens
+id: 534, SIGLA: REQ, NOME: Requerimento de Prorrogação de licença para tratamento de saúde (Licença inferior a 120 dias)
+id: 535, SIGLA: MMP, NOME: Mensagem (MPU)
+id: 536, SIGLA: RIN, NOME: Requerimento de Resolução Interna
+id: 537, SIGLA: MST, NOME: Mensagem (STF)
+id: 538, SIGLA: APJ, NOME: Anteprojeto
+id: 539, SIGLA: RQN, NOME: Requerimento do Congresso Nacional
+id: 540, SIGLA: R.C, NOME: Recurso do Congresso Nacional
+id: 541, SIGLA: MSC, NOME: Mensagem de Tranferência de Controle Societário
+id: 550, SIGLA: PDL, NOME: Projeto de Decreto Legislativo
+id: 551, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Medida Provisória
+id: 552, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Referendo ou Plebiscito
+id: 553, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Concessão, Renovação e Permissão de Radio/TV
+id: 554, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Acordos, tratados ou atos internacionais
+id: 555, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Indicação de Autoridade ao TCU
+id: 556, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Programação Monetária
+id: 557, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Sustação de Atos Normativos do Poder Executivo
+id: 558, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Perempção da Concessão
+id: 559, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Aprovação de Contas dos Presidentes
+id: 560, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Alteração de Decreto Legislativo
+id: 561, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Autorização do Congresso Nacional
+id: 562, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Ministro do TCU
+id: 563, SIGLA: PDL, NOME: Projeto de Decreto Legislativo de Perempção
+id: 600, SIGLA: CCN, NOME: Consulta do Congresso Nacional
+id: 601, SIGLA: PDC, NOME: Projeto de Decreto Legislativo de Perempção
+id: 602, SIGLA: MSC, NOME: Mensagem Revogação ou Anulação de Portaria
+id: 603, SIGLA: ADD, NOME: Adendo
+id: 604, SIGLA: DEC, NOME: Decisão
+id: 605, SIGLA: ATC, NOME: Ato Convocatório
+id: 606, SIGLA: PRST, NOME: Parecer à Redação para o Segundo Turno
+id: 607, SIGLA: RLP(V), NOME: Relatório Prévio Vencedor
+id: 608, SIGLA: EMA, NOME: Emenda Aglutinativa de Plenário
+id: 609, SIGLA: REQ, NOME: Requerimento de Criação de Frente Parlamentar
+id: 610, SIGLA: DOC, NOME: Documento
+id: 611, SIGLA: SOR, NOME: Sugestão de Emenda ao Orçamento - Comissões
+id: 612, SIGLA: SLD, NOME: Sugestão de Emenda à LDO - Comissões
+id: 613, SIGLA: SPP, NOME: Sugestão de Emenda ao PPA - Comissões
+id: 614, SIGLA: RPA, NOME: Relatório Parcial
+id: 615, SIGLA: MTC, NOME: Mensagem (TCU)
+id: 616, SIGLA: SPP-R, NOME: Sugestão de Emenda ao PPA - revisão (Comissões)
+id: 617, SIGLA: SPA-R, NOME: Sugestão de Emenda ao PPA - revisão (CLP)
+id: 618, SIGLA: REC, NOME: Recurso do Conselho de Ética que contraria norma constitucional ou regimental (Art. 13 ou 14, CEDP)
+id: 619, SIGLA: RFP, NOME: Refomulação de Parecer - art. 130, parágrafo único do RICD.
+id: 620, SIGLA: PPP, NOME: Parecer Proferido em Plenário - Notas Taquigráficas
+id: 621, SIGLA: PSS, NOME: Parecer às Emendas ou ao Substitutivo do Senado - Notas Taquigráficas
+id: 622, SIGLA: PRVP, NOME: Proposta de Redação do Vencido em Primeiro Turno
+id: 623, SIGLA: MSC, NOME: Mensagem de Afastamento/Interrupção de tratamento de saúde
+id: 624, SIGLA: SUC, NOME: Sugestão a Projeto de Consolidação de Leis
+id: 625, SIGLA: REQ, NOME: Requerimento de Prejudicialidade
+id: 626, SIGLA: MSC, NOME: Mensagem de Cessão de Imóvel
+id: 627, SIGLA: TVR, NOME: Perempção de Rádio/TV
+id: 628, SIGLA: TVR, NOME: Revogação ou Anulação de Portaria de Rádio/TV
+id: 629, SIGLA: TVR, NOME: Transferência de Controle Societário
+id: 630, SIGLA: REC, NOME: Recurso contra indeferimento liminar de emenda à Medida Provisória (Art. 125, caput, RICD)
+id: 631, SIGLA: REL, NOME: Relatório de Comissão Externa
+id: 632, SIGLA: PLN, NOME: Projeto de Lei (CN)
+id: 633, SIGLA: PLN, NOME: Projeto de Lei (CN) de Alteração do PPA e LDO
+id: 634, SIGLA: PDN, NOME: Projeto de Decreto Legislativo (CN)
+id: 635, SIGLA: AVN, NOME: Aviso (CN)
+id: 636, SIGLA: AVN, NOME: Aviso (CN) de Relatório de Atividades do TCU
+id: 637, SIGLA: AVN, NOME: Aviso (CN) de Relatório de Gestão Fiscal
+id: 638, SIGLA: AVN, NOME: Aviso (CN) de Demonstrações Financeiras do Banco Central do Brasil
+id: 639, SIGLA: AVN, NOME: Aviso (CN) de Contas do Governo da República
+id: 640, SIGLA: AVN, NOME: Aviso (CN) de Relatório de Desempenho do Fundo Soberano do Brasil
+id: 641, SIGLA: AVN, NOME: Aviso (CN) de Subtítulos com Indícios de Irregularidades Graves Apontadas pelo TCU
+id: 642, SIGLA: AVN, NOME: Aviso (CN) de Operações de Redesconto e Empréstimo realizadas pelo Banco Central
+id: 643, SIGLA: MCN, NOME: Mensagem (CN)
+id: 644, SIGLA: OFN, NOME: Ofício (CN)
+id: 645, SIGLA: MCN, NOME: Mensagem (CN) de Relatório de Avaliação do Cumprimento das Metas Fiscais/Superávit Primário, MCN
+id: 646, SIGLA: MCN, NOME: Mensagem (CN) de Relatório de Gestão Fiscal, MCN
+id: 647, SIGLA: MCN, NOME: Mensagem (CN) de Operações de Crédito Incluídas na LOA Pedentes de Contratação, MCN
+id: 648, SIGLA: MCN, NOME: Mensagem (CN) de Relatório de Avaliação do PPA, MCN
+id: 649, SIGLA: MCN, NOME: Mensagem (CN) de Contas do Governo da República, MCN
+id: 650, SIGLA: MCN, NOME: Mensagem (CN) de Relatório de Avaliação de Receitas e Despesas, MCN
+id: 651, SIGLA: OFN, NOME: Ofício (CN) de Relatório de Gestão Fiscal
+id: 652, SIGLA: OFN, NOME: Ofício (CN) de Relatório Trimestral Gerencial do BNDES
+id: 653, SIGLA: OFN, NOME: Ofício (CN) de Operações de Empréstimo de Capital de Giro Contratadas pela Caixa Econômica Federal
+id: 654, SIGLA: OFN, NOME: Ofício (CN) de Demonstrações Contábeis de Fundo Constitucional de Financiamento
+id: 655, SIGLA: OFN, NOME: Ofício (CN) de Contas do Governo da República
+id: 656, SIGLA: OFN, NOME: Ofício (CN) de Subtítulos com Indícios de Irregularidades Graves apontadas pelo TCU
+id: 657, SIGLA: PLN, NOME: Projeto de Lei (CN) de Crédito Especial
+id: 658, SIGLA: PLN, NOME: Projeto de Lei (CN) de Crédito Suplementar
+id: 659, SIGLA: PLN, NOME: Projeto de Lei (CN) de Lei Orçamentária Anual (LOA)
+id: 660, SIGLA: PLN, NOME: Projeto de Lei (CN) de Lei de Diretrizes Orçamentárias (LDO)
+id: 661, SIGLA: PLN, NOME: Projeto de Lei (CN) de Plano Plurianual
+id: 662, SIGLA: MSF, NOME: Mensagem (SF)
+id: 663, SIGLA: PRP, NOME: Parecer do Relator Parcial
+id: 664, SIGLA: REQ, NOME: Requerimento de Retirada de Emenda a Medida Provisória
+id: 665, SIGLA: EMRP, NOME: Emenda de Relator Parcial
+id: 666, SIGLA: CAC, NOME: Comunicado de Alteração do Controle Societário
+id: 667, SIGLA: RRL, NOME: Relatório do Relator (CMO)
+id: 668, SIGLA: CVR, NOME: Contestação ao Voto do Relator
+id: 669, SIGLA: PARF, NOME: Parecer de Comissão para Redação Final
+id: 670, SIGLA: MPV, NOME: Medida Provisória de Crédito Extraordinário
+id: 671, SIGLA: OFN, NOME: Ofício (CN) de Relatório de Atividades da Autoridade Pública Olímpica - APO
+id: 672, SIGLA: AVN, NOME: Aviso (CN) de Relatório de Gestão Fiscal do Tribunal de Contas da União
+id: 673, SIGLA: OFN, NOME: Ofício (CN) de Lei de Incentivo ao Esporte
+id: 674, SIGLA: SRL, NOME: Sugestão de Emenda a Relatório
+id: 675, SIGLA: RPL, NOME: Relatório Preliminar
+id: 676, SIGLA: RRC, NOME: Relatório de Receita
+id: 679, SIGLA: RPLE, NOME: Relatório Preliminar Apresentado com Emendas
+id: 680, SIGLA: ERR, NOME: Errata
+id: 681, SIGLA: CAE, NOME: Relatório de Atividades do Comitê de Admissibilidade de Emendas (CAE)
+id: 682, SIGLA: COI, NOME: Relatório do COI
+id: 683, SIGLA: RAT, NOME: Relatório Setorial
+id: 685, SIGLA: CAE, NOME: Relatório do CAE
+id: 686, SIGLA: REQ, NOME: Requerimento para realização ou participação em Seminário, Visita Técnica ou outro Evento
+id: 687, SIGLA: REQ, NOME: Requerimento de Reapresentação de Projeto de Lei Rejeitado na mesma Sessão Legislativa
+id: 688, SIGLA: RPD, NOME: Requerimento de Inclusão de Matéria na Ordem do Dia para Apreciação Imediata na Comissão
+id: 689, SIGLA: OFN, NOME: Ofício (CN) de Informações de Execução das Obras do PAC
+id: 690, SIGLA: OFS, NOME: Ofício do Senado Federal
+id: 691, SIGLA: OFS, NOME: Ofício do Senado Federal de Fundo Constitucional de Financiamento 
+id: 692, SIGLA: PLN, NOME: Projeto de Lei (CN) de Alteração da LDO
+id: 693, SIGLA: PLN, NOME: Projeto de Lei (CN) de Alteração da LOA
+id: 694, SIGLA: MSG, NOME: Mensagem (SF)
+id: 695, SIGLA: MSG, NOME: Mensagem (SF) de Contas do Governo da República
+id: 696, SIGLA: OFN, NOME: Ofício (CN) de Demonstrações Contábeis do Fundo Constitucional de Financiamento do Norte (FNO)
+id: 697, SIGLA: OFN, NOME: Ofício (CN) de Demonstrações Contábeis do Fundo Constitucional de Financiamento do Centro-Oeste (FCO)
+id: 698, SIGLA: OFN, NOME: Ofício (CN) de Demonstrações Contábeis do Fundo Constitucional de Financiamento do Nordeste (FNE).
+id: 699, SIGLA: PLN, NOME: Projeto de Lei (CN) de Alteração do PPA
+id: 700, SIGLA: , NOME: Outras Proposições - Comissão Mista
+id: 701, SIGLA: SBT-A, NOME: Substitutivo adotado pela Comissão
+id: 702, SIGLA: EMC-A, NOME: Emenda Adotada pela Comissão
+id: 703, SIGLA: SBE-A, NOME: Subemenda Adotada pela Comissão
+id: 704, SIGLA: RPLOA, NOME: Relatório Preliminar
+id: 705, SIGLA: ANEXO, NOME: Anexo
+id: 706, SIGLA: EMPV, NOME: Emenda à Medida Provisória (CN)
+id: 707, SIGLA: REL, NOME: Relatório do Congresso Nacional
+id: 709, SIGLA: SBR, NOME: Subemenda de Relator
+id: 710, SIGLA: AVN, NOME: Aviso (CN) de Contas do Gestor Federal do SUS
+id: 711, SIGLA: OFN, NOME: Ofício (CN) de Demonstrações Financeiras do Banco Central do Brasil
+id: 712, SIGLA: AVN, NOME: Aviso (CN) de Contas do TCU
+id: 713, SIGLA: ERD-A, NOME: Emenda de Redação Adotada
+id: 714, SIGLA: PIN, NOME: Proposta de Instrução Normativa
+id: 715, SIGLA: OFN, NOME: Ofício (CN) de Contas do TCU
+id: 720, SIGLA: PROC, NOME: Processo Interno
+id: 810, SIGLA: ATA, NOME: Ata
+id: 814, SIGLA: CRVITAEDOC, NOME: Curriculum Vitae/Outro Documento
+id: 822, SIGLA: OF, NOME: Ofício do Congresso Nacional
+id: 823, SIGLA: OF, NOME: Ofício do Senado Federal
+id: 830, SIGLA: PR/CNMP, NOME: Parecer do Conselho Nacional do Ministério Público
+id: 831, SIGLA: PR/CNJ, NOME: Parecer do Conselho Nacional de Justiça
+id: 832, SIGLA: OFN, NOME: Ofício (CN) de Relatório Anual da Agência Nacional de Transportes Aquaviários - Antaq
+id: 833, SIGLA: , NOME: L) DOCUMENTOS DE CPI
+id: 834, SIGLA: DOCCPI, NOME: Documento de CPI
+id: 835, SIGLA: DOCCPI, NOME: Documento de CPI sigiloso
+id: 836, SIGLA: OFJ, NOME: Ofício de Órgão do Poder Judiciário
+id: 837, SIGLA: OFE, NOME: Ofício de Órgão do Poder Executivo
+id: 838, SIGLA: MAD, NOME: Manifestação do(a) Denunciado(a)
+id: 839, SIGLA: PDC, NOME: Projeto de Decreto Legislativo sobre Declaração de Guerra e correlatos
+id: 840, SIGLA: PDC, NOME: Projeto de Decreto Legislativo sobre Estado de Defesa, Estado de Sítio e Intervenção Federal nos Estados
+id: 841, SIGLA: PDC, NOME: Projeto de Decreto Legislativo sobre transferência temporária da sede do Governo Federal
+id: 842, SIGLA: PDC, NOME: Projeto de Decreto Legislativo para autorizar o Presidente ou o Vice-Presidente da República a se ausentarem do paíse, por mais de 15 dias (art. 49, II, CF)
+id: 843, SIGLA: SIP, NOME: Solicitação para instauração de processo
+id: 844, SIGLA: REC, NOME: Recurso contra aplicação de censura escrita (Art. 12, § 2º do CEDP)
+id: 845, SIGLA: OF, NOME: Demonstrativo de emissão do real
+id: 846, SIGLA: DTQ, NOME: Destaque para Votação em Separado
+id: 847, SIGLA: DTQ, NOME: Destaque de Bancada
+id: 848, SIGLA: RCEX, NOME: Relatório de Comissão Externa
+id: 849, SIGLA: RCEL, NOME: Relatório de Comissão de Estudo Legislativo
+id: 850, SIGLA: DEF, NOME: Defesa Escrita
+id: 851, SIGLA: DEF, NOME: Defesa Prévia
+id: 852, SIGLA: PRLP, NOME: Parecer Preliminar
+id: 853, SIGLA: PRLP(V), NOME: Parecer Preliminar Vencedor
+id: 854, SIGLA: RGT, NOME: Relatório de Grupo de Trabalho
+id: 855, SIGLA: REL-A, NOME: Relatório Adotado pela Comissão
+id: 856, SIGLA: RRR, NOME: Relatório Reformulado
+id: 857, SIGLA: RVC, NOME: Relatório Vencedor
+id: 858, SIGLA: CMC, NOME: Comunicação de Medida Cautelar
+id: 859, SIGLA: DOC, NOME: Indicação de Líder de Partido ou Bloco Parlamentar
+id: 860, SIGLA: DOC, NOME: Indicação de Vice-Líder de Partido ou Bloco Parlamentar
+id: 861, SIGLA: DOC, NOME: Adesão a Grupo Parlamentar Registrado
+id: 862, SIGLA: DOC, NOME: Desligamento de Grupo Parlamentar Registrado
+id: 863, SIGLA: DOC, NOME: Constituição de Bloco Parlamentar
+id: 864, SIGLA: DOC, NOME: Adesão a Bloco Parlamentar
+id: 865, SIGLA: DOC, NOME: Desligamento de Bloco Parlamentar
+id: 866, SIGLA: DOC, NOME: Indicação de Coordenador de Bancada Estadual
+id: 867, SIGLA: REQ, NOME: Requerimento de Inclusão na Ordem do Dia (Res 14/20, art. 4º, §3º)
+id: 868, SIGLA: MIP, NOME: Minuta de Proposição Legislativa
+id: 869, SIGLA: EMC, NOME: Emenda à PEC
+id: 870, SIGLA: EMP, NOME: Emenda de Plenário a Projeto com Urgência 
+id: 871, SIGLA: EMP, NOME: Emenda de Plenário a Projeto em Fase de Discussão do 2º Turno 
+id: 872, SIGLA: ERD, NOME: Emenda de Redação em Plenário
+id: 873, SIGLA: EMP, NOME: Emenda de Plenário à MPV (Ato Conjunto 1/20)
+id: 874, SIGLA: RPD, NOME: Requerimento de Discussão por Partes
+id: 875, SIGLA: RPD, NOME: Requerimento de quebra de insterstício para verificação de votação
+id: 876, SIGLA: RPD, NOME: Requerimento de Inversão de Pauta
+id: 877, SIGLA: RPD, NOME: Requerimento de Encerramento da Discussão de Projeto de Código
+id: 878, SIGLA: REQ, NOME: Requerimento de Urgência (art. 154, I ou III, do RICD)
+id: 887, SIGLA: ECN, NOME: Emenda (CN)
+id: 888, SIGLA: DTS, NOME: Destaque Simples
+id: 889, SIGLA: RPDR, NOME: Requerimento Procedimental Genérico de Sessão/Reunião
+id: 890, SIGLA: RPD, NOME: Requerimento para Retirada de Tramitação de RPD e DTQs
+id: 891, SIGLA: PRLP, NOME: Parecer Preliminar de Plenário
+id: 892, SIGLA: RPD, NOME: Requerimento de Adiamento da Discussão de Matéria Urgente
+id: 895, SIGLA: AJECN, NOME: Ajuste de Emenda Orçamentária (CN)
+id: 896, SIGLA: SRL, NOME: Sugestão a Relatório (CN)
+id: 897, SIGLA: ATACN, NOME: Ata (CN)
+id: 898, SIGLA: REQ, NOME: Requerimento de Tramitação de Tratado Internacional nos Termos do art. 5º, § 3º, da CF
+id: 899, SIGLA: RPD, NOME: Requerimento de Retirada de Assinatura de RPDs e DTQs
+id: 1000, SIGLA: RPD, NOME: Requerimento de Encerramento da Discussão e do Encaminhamento de Matéria Urgente
+id: 1001, SIGLA: PRLE, NOME: Parecer Preliminar às Emendas de Plenário
+id: 1002, SIGLA: DOC, NOME: Denominação de Bloco Parlamentar
+id: 1003, SIGLA: DOC, NOME: Ofício da Primeira-Secretaria
+id: 1004, SIGLA: PRO, NOME: Proposta de Plano para Comissão
+id: 1005, SIGLA: PRO, NOME: Proposta de Regulamento
+id: 1006, SIGLA: RLG, NOME: Relatório Geral
+id: 1007, SIGLA: QO, NOME: Questão de Ordem
+id: 1008, SIGLA: APM, NOME: Complemento de Apoiamento
+id: 1009, SIGLA: CFIS, NOME: Relatório de Atividades do Comitê de Avaliação, Fiscalização e Controle de Execução Orçamentária
+id: 1010, SIGLA: RPDR, NOME: Requerimento de Alteração da Ordem dos Trabalhos
+id: 1011, SIGLA: DTQ, NOME: Destaque de Emenda
+id: 1012, SIGLA: DTQ, NOME: Destaque de Preferência
+id: 1013, SIGLA: DTQ, NOME: Destaque para Proposição Autônoma
+id: 1015, SIGLA: REQ, NOME: Requerimento para envio de Solicitação de Informação ao TCU pela Comissão
+id: 1016, SIGLA: REQ, NOME: Requerimento para envio de Indicação pela Comissão
+id: 1017, SIGLA: REQ, NOME: Requerimento para envio de Requerimento de Informação pela Comissão
+id: 1018, SIGLA: REQ, NOME: Requerimento de Convocação em CPI (art. 58, §3º, CF)
+id: 1019, SIGLA: RPD, NOME: Requerimento de Inclusão de Matéria na Ordem do Dia para Apreciação Imediata
+id: 1020, SIGLA: DEF, NOME: Defesa
+id: 1021, SIGLA: DEF, NOME: Complementação de Defesa
+id: 1022, SIGLA: DEF, NOME: Alegações Finais
+id: 1023, SIGLA: DEF, NOME: Memoriais
+id: 1024, SIGLA: DOC, NOME: Indicação ou Desligamento de Membros de Comissão
+id: 1025, SIGLA: INC, NOME: Indicação à Mesa
+id: 1026, SIGLA: DOC, NOME: Instalação de Grupo Parlamentar
+id: 1027, SIGLA: DOC, NOME: Ato da Presidência da Comissão
+id: 1028, SIGLA: DOC, NOME: Ofício do Senado Federal
+id: 1029, SIGLA: REQ, NOME: Requerimento de Requisição de Informação e Documentação em CPI (art. 58, §3º, CF)
+id: 1030, SIGLA: REQ, NOME: Requerimento de Quebra de Sigilo em CPI (art. 58, §3º, CF)
+id: 1031, SIGLA: REQ, NOME: Requerimento de Busca e Apreensão em CPI (art. 58, §3º, CF)
+id: 1032, SIGLA: REQ, NOME: Requerimento de Realização de Diligências em CPI (art. 58, §3º, CF)
+id: 1033, SIGLA: DOC, NOME: Ofício do Congresso Nacional
+id: 1034, SIGLA: PPR, NOME: Parecer Reformulado de Plenário às Emendas de Plenário
+id: 1035, SIGLA: DOC, NOME: Adesão a Frente Parlamentar Registrada
+id: 1036, SIGLA: DOC, NOME: Desligamento de Frente Parlamentar Registrada
+id: 1037, SIGLA: REQ, NOME: Requerimento para envio de ofício solicitando informações
+id: 1040, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Adiamento da Discussão
+id: 1041, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Adiamento da Discussão (matéria urgente)
+id: 1042, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Adiamento da Votação
+id: 1043, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Adiamento da Votação (matéria urgente)
+id: 1044, SIGLA: RPDR, NOME: Votação Nominal do Requerimento de Alteração da Ordem dos Trabalhos
+id: 1045, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Encerramento da Discussão (Comissões)
+id: 1046, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Encerramento da Discussão (Plenário)
+id: 1047, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Encerramento da Discussão e do Encaminhamento da Votação
+id: 1048, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Inclusão de Matéria para Apreciação Imediata
+id: 1049, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Inversão da Pauta
+id: 1050, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Preferência
+id: 1051, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Retirada de Matéria da Ordem do Dia
+id: 1052, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Retirada de Tramitação de RPD e DTQ
+id: 1053, SIGLA: RPD, NOME: Votação Nominal do Destaque para Votação em Separado
+id: 1054, SIGLA: RPD, NOME: Votação Nominal do Destaque de Emenda
+id: 1055, SIGLA: RPD, NOME: Votação Nominal do Destaque para Proposição Autônoma
+id: 1056, SIGLA: RPD, NOME: Votação Nominal do Destaque de Preferência
+id: 1057, SIGLA: RPDR, NOME: Votação Nominal do Requerimento Procedimental Genérico
+id: 1058, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias adaptada para Frequência Modulada
+id: 1059, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias Educativa adaptada para Frequência Modulada Educativa
+id: 1060, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Retirada de Assinatura de RPD e DTQ
+id: 1061, SIGLA: RPD, NOME: Votação Nominal do Requerimento de Emenda
+id: 1062, SIGLA: DOC, NOME: Indicação de Coordenador de Frente Parlamentar Registrada
+id: 1063, SIGLA: DOC, NOME: Adesão a Frente Parlamentar do Senado Federal
+id: 1093, SIGLA: DOC, NOME: Indicação ou Retirada de Indicação de Candidatura Oficial para Mesa de Comissões Permanentes
+id: 1094, SIGLA: DOC, NOME: Desligamento de Frente Parlamentar do Senado Federal
+id: 1095, SIGLA: DOC, NOME: Adesão a Frente Parlamentar Mista do Senado Federal
+id: 1096, SIGLA: DOC, NOME: Desligamento de Frente Parlamentar Mista do Senado Federal
+id: 1097, SIGLA: TVR, NOME: Renovação Rádio Ondas Médias Local adaptada para Frequência Modulada
+id: 1098, SIGLA: DOC, NOME: Ofício de Órgão da Câmara dos Deputados
+id: 1099, SIGLA: ATA_PRE, NOME: Ata Preparatória 
+id: 1100, SIGLA: SAP, NOME: Sustação de Andamento de Ação Penal
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------
+situações de tramitação em que uma proposição pode se encontrar,
+ como Encaminhada à Publicação, Aguardando Análise, Devolvida ao Autor, etc.
+ID: 900, Nome: Aguardando Autógrafos na Mesa
+ID: 901, Nome: Aguardando Constituição de Comissão Temporária
+ID: 902, Nome: Aguardando Criação de Comissão Temporária
+ID: 903, Nome: Aguardando Deliberação
+ID: 904, Nome: Aguardando Deliberação de Recurso
+ID: 905, Nome: Aguardando Despacho do Presidente da Câmara dos Deputados
+ID: 906, Nome: Aguardando Distribuição
+ID: 907, Nome: Aguardando Designação de Relator(a)
+ID: 910, Nome: Aguardando Encaminhamento
+ID: 911, Nome: Aguardando Instalação de Comissão Temporária
+ID: 912, Nome: Aguardando Leitura e Publicação
+ID: 914, Nome: Aguardando Originais para Envio ao Arquivo
+ID: 915, Nome: Aguardando Parecer
+ID: 917, Nome: Aguardando Recebimento
+ID: 918, Nome: Aguardando Recurso
+ID: 920, Nome: Aguardando Deliberação sobre Prejudicialidade
+ID: 921, Nome: Aguardando Resposta
+ID: 922, Nome: Aguardando Vistas
+ID: 923, Nome: Arquivada
+ID: 924, Nome: Pronta para Pauta
+ID: 925, Nome: Tramitando em Conjunto
+ID: 926, Nome: Aguardando Apreciação pelo Senado Federal
+ID: 927, Nome: Aguardando Apensação
+ID: 928, Nome: Aguardando Análise de Parecer
+ID: 929, Nome: Aguardando Redação Final
+ID: 930, Nome: Enviada ao Arquivo
+ID: 931, Nome: Aguardando Remessa ao Arquivo
+ID: 932, Nome: Aguardando Definição Encaminhamento
+ID: 933, Nome: Aguardando Conhecimento
+ID: 934, Nome: Aguardando despacho de Emenda
+ID: 935, Nome: Aguardando despacho de Substitutivo
+ID: 936, Nome: Aguardando Providências Internas
+ID: 937, Nome: Vetado totalmente
+ID: 939, Nome: Aguardando Apreciação do Veto
+ID: 940, Nome: Aguardando Despacho de Arquivamento
+ID: 941, Nome: Recusado
+ID: 950, Nome: Retirado pelo(a) Autor(a)
+ID: 1000, Nome: Aguardando Recebimento para Publicação - Relatadas
+ID: 1010, Nome: Aguardando Informações do DCD - Novas
+ID: 1020, Nome: Aguardando Encaminhamento à Publicação
+ID: 1030, Nome: Aguardando Informações do DCD - Relatadas
+ID: 1040, Nome: Aguardando Encaminhamento à CCP para Publicação
+ID: 1050, Nome: Aguardando análise de prazo recursal
+ID: 1052, Nome: Aguardando Abertura de Prazo para Recurso
+ID: 1060, Nome: Encaminhada à Publicação
+ID: 1070, Nome: Aguardando Envio ao Executivo
+ID: 1080, Nome: Aguardando Recebimento para Publicação - Novas
+ID: 1090, Nome: Aguardando Análise
+ID: 1110, Nome: Aguardando Despacho do Presidente
+ID: 1120, Nome: Devolvida ao(à) Autor(a)
+ID: 1140, Nome: Transformado em Norma Jurídica
+ID: 1150, Nome: Aguardando Sanção
+ID: 1160, Nome: Aguardando Remessa à Sanção
+ID: 1161, Nome: Outros
+ID: 1170, Nome: Aguardando Designação - Aguardando Devolução de Relator(a) que deixou de ser Membro
+ID: 1180, Nome: Aguardando Apoiamento - Conferência de Assinaturas
+ID: 1185, Nome: Aguardando Apoiamento - Coleta de Assinaturas
+ID: 1200, Nome: Aguardando Autorização do Despacho
+ID: 1201, Nome: Aguardando Despacho do Presidente da Câmara dos Deputados (Chancela)
+ID: 1210, Nome: Aguardando Chancela e Publicação do Despacho
+ID: 1220, Nome: Aguardando Despacho do Presidente da Câmara dos Deputados (Análise)
+ID: 1221, Nome: Aguardando Despacho do Presidente da Câmara dos Deputados (Autorização)
+ID: 1222, Nome: Prejudicialidade
+ID: 1223, Nome: Aguardando Despacho - Requerimentos
+ID: 1230, Nome: Transformado em nova proposição
+ID: 1250, Nome: Inativa Sinopse (Carga Jan/2001)
+ID: 1260, Nome: Desmembrada
+ID: 1270, Nome: Aguardando Envio à Redação Final
+ID: 1280, Nome: Comissão em funcionamento
+ID: 1285, Nome: Tramitação Finalizada
+ID: 1290, Nome: Aguardando Indexação
+ID: 1291, Nome: Aguardando Indexação (Substituição de Versão)
+ID: 1292, Nome: Perdeu a Eficácia
+ID: 1293, Nome: Aguardando Envio ao Senado Federal
+ID: 1294, Nome: Aguardando Promulgação
+ID: 1295, Nome: Aguardando Reformulação de Parecer
+ID: 1296, Nome: Aguardando Eleição do(a) Presidente da Comissão Especial e do(a) Relator(a)
+ID: 1297, Nome: Aguardando Parecer da Comissão Especial
+ID: 1298, Nome: Aguardando Manifestação do(a)(s) Acusado(a)(s)
+ID: 1299, Nome: Enviada ao Congresso Nacional
+ID: 1300, Nome: Aguardando Leitura do Parecer da Comissão Especial
+ID: 1301, Nome: Aguardando Interstício Regimental
+ID: 1302, Nome: Aguardando Publicação
+ID: 1303, Nome: Enviada ao Senado Federal
+ID: 1304, Nome: Aguardando Solicitação de Relatoria na CMO
+ID: 1305, Nome: Enviada ao TCU
+ID: 1310, Nome: Em tramitação no Conselho de Ética
+ID: 1311, Nome: <Não Definido>
+ID: 1312, Nome: Aguardando Instauração do Processo
+ID: 1313, Nome: Aguardando Parecer Preliminar no Conselho de Ética
+ID: 1314, Nome: Aguardando Defesa Escrita no Conselho de Ética
+ID: 1350, Nome: Aguardando Notificação do(a) Representado(a)
+ID: 1355, Nome: Em Instrução Probatória
+ID: 1360, Nome: Tramitação Suspensa
+ID: 1380, Nome: Aguardando Elaboração do Parecer pelo(a) Relator(a)
+
+
+
+----------------------------------------------------------------------------------------------
+tipos de tramitações em que uma proposição pode se encontrar, 
+como Apensação, Despacho, Devolução ao autor, etc.
+
+ID: 5, Nome: Não Informado
+ID: 100, Nome: Apresentação de Proposição
+ID: 104, Nome: Desapensação
+ID: 105, Nome: Leitura e publicação
+ID: 106, Nome: Apensação
+ID: 107, Nome: Não Apensação
+ID: 110, Nome: Distribuição
+ID: 112, Nome: Redistribuição
+ID: 113, Nome: Envio para a redação Final
+ID: 115, Nome: Declarada insubsistência
+ID: 120, Nome: Criação de Comissão Temporária
+ID: 121, Nome: Constituição de Comissão Temporária
+ID: 122, Nome: Instalação de Comissão
+ID: 125, Nome: Despacho à CCJR - Redação Final
+ID: 126, Nome: Despacho à Promulgação
+ID: 127, Nome: Despacho à Sanção
+ID: 128, Nome: Remessa ao Senado Federal
+ID: 129, Nome: Despacho de Apensação
+ID: 130, Nome: Despacho de Desapensação
+ID: 131, Nome: Despacho de sujeita a Arquivamento
+ID: 132, Nome: Despacho de sujeita a Devolução
+ID: 133, Nome: Devolução ao(à) autor(a)
+ID: 134, Nome: Despacho de Arquivamento
+ID: 135, Nome: Despacho de Desarquivamento
+ID: 137, Nome: Remessa à Presidência da República
+ID: 138, Nome: Remessa a Ministério
+ID: 139, Nome: Despacho de Não Acolhimento
+ID: 140, Nome: Desarquivamento - Errata
+ID: 150, Nome: Inclusão em Pauta
+ID: 151, Nome: Inclusão de Urgência em Pauta
+ID: 161, Nome: Recebimento na Mesa solicitando resposta
+ID: 162, Nome: Recebimento de Resposta
+ID: 170, Nome: Devolução ao(à) Relator(a)
+ID: 171, Nome: Devolução à Mesa para Novo Despacho
+ID: 180, Nome: Encaminhamento
+ID: 181, Nome: Encaminhamento - art. 52, § 6º do RICD
+ID: 190, Nome: Expedição de Documento
+ID: 191, Nome: Aprovação de Recurso
+ID: 192, Nome: Apresentação de Recurso
+ID: 193, Nome: Rejeição de Recurso
+ID: 194, Nome: Apresentação de Requerimento
+ID: 195, Nome: Aprovação de Requerimento
+ID: 196, Nome: Aprovação de Urgência (154, 155 ou 64 CF)
+ID: 197, Nome: Rejeição de Proposicao
+ID: 198, Nome: Prejudicado
+ID: 199, Nome: Providência Interna
+ID: 200, Nome: Retirada pelo(a) Autor(a)
+ID: 201, Nome: Proposição Devolvida ao(à) Autor(a)
+ID: 203, Nome: Notificação de Despacho
+ID: 210, Nome: Leitura de Parecer em substituição à Comissão
+ID: 211, Nome: Leitura e publicação da Redação Final
+ID: 214, Nome: Leitura e publicação de Parecer favorável de admissibilidade de PEC
+ID: 215, Nome: Leitura e publicação do Parecer - Urgência (154,155 ou 64 CF)
+ID: 216, Nome: Discussão
+ID: 219, Nome: Encaminhamento da Votação
+ID: 220, Nome: Discussão (Inicio e Continuacao)
+ID: 221, Nome: Adiamento de Discussão
+ID: 222, Nome: Discussão (Plenário)
+ID: 223, Nome: Obstrução Discussão (Plenário)
+ID: 226, Nome: Recebimento de Emenda de Plenário
+ID: 227, Nome: Encerramento de Discussão
+ID: 231, Nome: Votação
+ID: 232, Nome: Votação em 1º Turno
+ID: 233, Nome: Votação em 2º Turno
+ID: 234, Nome: Adiamento de Votação
+ID: 237, Nome: Aprovação em 1º turno
+ID: 238, Nome: Aprovação em 1º turno - com redação
+ID: 239, Nome: Aprovação da Redação Final
+ID: 240, Nome: Aprovação
+ID: 241, Nome: Aprovação de Proposição Interna
+ID: 242, Nome: Discussão da Materia pelos(as) Deputados(as)
+ID: 244, Nome: Aprovação de Proposição em Plenário
+ID: 245, Nome: Verificação de Votação
+ID: 250, Nome: Retirada de Pauta
+ID: 251, Nome: Transformação em Norma Jurídica
+ID: 260, Nome: Rejeição de Requerimento
+ID: 263, Nome: Retirada de Requerimento
+ID: 300, Nome: Apresentação de Proposição interna - Comissão
+ID: 319, Nome: Análise Parecer
+ID: 320, Nome: Designação de Relator(a)
+ID: 321, Nome: Redistribuição a Relator(a)
+ID: 322, Nome: Parecer do(a) Relator(a)
+ID: 323, Nome: Parecer do(a) Relator(a) - Emendas
+ID: 324, Nome: Parecer do(a) Relator(a) - Manifestação
+ID: 325, Nome: Parecer do(a) Relator(a) - Parcial
+ID: 326, Nome: Parecer do(a) Relator(a) - Revisão
+ID: 327, Nome: Designação de Relator(a) do Vencedor
+ID: 328, Nome: Designação de Relator(a) Parcial
+ID: 329, Nome: Designação de Relator(a) Revisor(a)
+ID: 330, Nome: Leitura e publicação do Parecer
+ID: 331, Nome: Cancelamento de Parecer
+ID: 335, Nome: Rejeição do Parecer do(a) Relator(a)
+ID: 336, Nome: Aprovação do Parecer
+ID: 337, Nome: Apresentação do Relatório Prévio
+ID: 338, Nome: Aprovação do Relatório Prévio ou Parcial
+ID: 339, Nome: Rejeição do Relatório Prévio
+ID: 340, Nome: Apresentação do Relatório Final
+ID: 350, Nome: Abertura de Prazo
+ID: 352, Nome: Prorrogação de Prazo
+ID: 353, Nome: Reabertura de Prazo
+ID: 362, Nome: Prejudicado Requerimento
+ID: 400, Nome: Recebimento de Emenda
+ID: 401, Nome: Recebimento de Emenda a Substitutivo
+ID: 420, Nome: Pedido de Vista
+ID: 430, Nome: Manifestação de Voto
+ID: 431, Nome: Declaração de Voto em Separado
+ID: 435, Nome: Declaração de Prejudicialidade
+ID: 440, Nome: Prorrogação de prazo para conclusão de CPI
+ID: 441, Nome: Conclusão de CPI
+ID: 451, Nome: Manifestação pela Prejudicialidade
+ID: 452, Nome: Manifestação pela Incompetência
+ID: 469, Nome: Transformada em Nova Proposição
+ID: 500, Nome: Recebimento
+ID: 501, Nome: Recebimento - Relator(a)
+ID: 502, Nome: Arquivamento
+ID: 503, Nome: Desarquivamento
+ID: 504, Nome: Notificação de Apensação
+ID: 505, Nome: Notificação de Desapensação
+ID: 506, Nome: Recebimento - Redação Final
+ID: 507, Nome: Recebimento - Relator(a) (Sem Manifestação)
+ID: 508, Nome: Recebimento - Parecer Preliminar
+ID: 510, Nome: Dispensada a Redação Final
+ID: 600, Nome: Encerramento de Prazo
+ID: 601, Nome: Saída de membro da comissão
+ID: 602, Nome: Devolução de Vista
+ID: 603, Nome: Novo despacho
+ID: 604, Nome: Publicação de Proposição
+ID: 605, Nome: Publicação de Despacho
+ID: 606, Nome: Publicação de Parecer
+ID: 607, Nome: Recebimento de autógrafos
+ID: 608, Nome: Remessa à Promulgação
+ID: 609, Nome: Remessa à Sanção
+ID: 610, Nome: Submeta-se a Plenário
+ID: 611, Nome: Publicação de Documento
+ID: 620, Nome: Perda de eficácia
+ID: 630, Nome: Reentrada na comissão por arquivamento
+ID: 640, Nome: Desarquivamento a Pedido
+ID: 650, Nome: Desarquivamento de Ofício
+ID: 700, Nome: Conferência Sinopse 2001
+ID: 710, Nome: Revisão de despacho
+ID: 720, Nome: Adoção de Proposição pela Comissão
+ID: 910, Nome: Notificação de Encaminhamento Fora de Fluxo
+ID: 997, Nome: Deliberação* (inativa)
+ID: 998, Nome: Pronta para ordem do dia* (inativa)
+ID: 999, Nome: Despacho* (inativa)
+ID: 1000, Nome: Notificação de Apoiamento
+ID: 1001, Nome: Decisão da Presidência
+ID: 1002, Nome: Notificação - Pasta genérica
+ID: 1003, Nome: Notificação (Sinopse) - Revisão da Ementa / Indexação
+ID: 1004, Nome: Notificação (CeDi) - Legislação Citada
+ID: 1005, Nome: Notificações
+ID: 1006, Nome: Pela Recusa
+ID: 1007, Nome: Recebimento de Retorno
+ID: 1008, Nome: Não Deliberado
+ID: 1009, Nome: Tramitação de Proposição Acessória
+ID: 1010, Nome: Devolução à CCP
+ID: 1011, Nome: Criação de TVRs
+ID: 1012, Nome: Transformado em Norma Jurídica com Veto Parcial
+ID: 1013, Nome: Vetado Totalmente
+ID: 1020, Nome: Ofício de Devolução ao(à) Autor(a)
+ID: 1021, Nome: Questão de Ordem
+ID: 1022, Nome: Oficio Conferência Apoiamento
+ID: 1023, Nome: Despacho
+ID: 1024, Nome: Arquivamento - Art.133 do RI
+ID: 1025, Nome: Deferido o requerimento de retirada pelo(a) autor(a)
+ID: 1026, Nome: Autorização de abertura de prazo recursal
+ID: 1027, Nome: Pareceres Favoráveis nas Comissões
+ID: 1028, Nome: Pareceres Contrários quanto ao Mérito
+ID: 1029, Nome: Parecer pela Inadequação Financeira e/ou Orçamentária
+ID: 1030, Nome: Parecer pela Inconstitucionalidade ou Injuridicidade
+ID: 1031, Nome: Contra Declaração de Prejudicialidade
+ID: 1032, Nome: Contra Despacho de Devolução ao(à) Autor(a)
+ID: 1033, Nome: Contra Despacho pelo Indeferimento
+ID: 1034, Nome: Arquivamento da representação, por inépcia/ausência de justa causa.
+ID: 1035, Nome: Arquivamento da representação, por improcedência.
+ID: 1036, Nome: Despacho Revisto
+ID: 1037, Nome: Pela perda do mandato de deputado(a) federal.
+ID: 1038, Nome: Volta a aguardar criação de nova Comissão Especial.
+ID: 1040, Nome: Ratificação de Parecer
+ID: 1041, Nome: Remessa ao Congresso Nacional
+ID: 1042, Nome: Relatório de Conferência de Assinaturas
+ID: 1043, Nome: Ação de Relatoria
+ID: 1050, Nome: Notificacao para Publicação Intermediária
+ID: 1051, Nome: Encerramento de Comissão Temporária
+ID: 1052, Nome: Substituição de Versão
+ID: 1053, Nome: Apresentação de Quadro Analítico
+ID: 1054, Nome: Não Acolhimento
+ID: 1055, Nome: Providência Interna - Comunicação de Dilatação de Prazo
+ID: 1056, Nome: Providência Interna - Comunicação de resposta ostensiva
+ID: 1057, Nome: Providência Interna - Comunicação de resposta reservada
+ID: 1058, Nome: Leitura de proposição em Plenário
+ID: 1059, Nome: Instauração de Processo - COÉTICA
+ID: 1060, Nome: Sorteio para Escolha do(a) Relator(a)
+ID: 1061, Nome: Início da Instrução Probatória
+ID: 1062, Nome: Encerramento da Instrução Probatória
+ID: 1070, Nome: Sessão Solene
+ID: 1071, Nome: Comissão Geral
+ID: 1231, Nome: Votação (Plenário)
+ID: 1232, Nome: Obstruçao Votação (Plenário)
+ID: 1233, Nome: Destaques (Plenário)
+ID: 1234, Nome: Votação (Outros Requerimentos)
+ID: 1235, Nome: Aprovação de Proposição (Plenário)
+ID: 1236, Nome: Rejeição de Proposição (Plenário)
+ID: 1237, Nome: Manutenção do texto (Plenário)
+ID: 1238, Nome: Supressão do texto (Plenário)
+ID: 1239, Nome: Verificação de Votação (Plenário)
+ID: 1240, Nome: Prejudicialidade (Plenário)
+ID: 1241, Nome: Retirada pelo Autor(a) (Plenário)
+ID: 1242, Nome: Não Acolhimento (Plenário)
+ID: 1243, Nome: Encaminhamento (Plenário)
+ID: 1244, Nome: Encerramentos
+ID: 1245, Nome: Acessórios
+ID: 1250, Nome: Saída de Relator(a) da Comissão - Sem Parecer Apresentado
+ID: 1255, Nome: Saída de Relator(a) da Comissão - Com Parecer Apresentado
+ID: 1260, Nome: Retorno de Relator(a) à Comissão
+ID: 1261, Nome: Aprovação de Requerimento Procedimental
+ID: 1262, Nome: Rejeição de Requerimento Procedimental
+ID: 1263, Nome: Prejudicado Requerimento Procedimental
+ID: 1264, Nome: Retirada de Requerimento Procedimental
+ID: 1265, Nome: Inadmissibilidade de Requerimento Procedimental
+ID: 1500, Nome: Matéria apreciada em Plenário
+ID: 1501, Nome: Notificação do Representado
+ID: 1502, Nome: Abertura de Prazo para Defesa Escrita
+ID: 1504, Nome: Encerramento de Prazo Para Apresentação da Defesa Escrita
+ID: 1505, Nome: Apresentação do Plano de Trabalho
+ID: 1510, Nome: Ofício do Senado Federal
+ID: 1515, Nome: Ofício do Congresso Nacional
+ID: 1516, Nome: Leitura do Oficio CN de encaminhamento de MPV
+ID: 1517, Nome: Suspensão de Tramitação
+ID: 1518, Nome: Aprovação no Senado Federal
+ID: 1519, Nome: Aprovação no Senado Federal - Com Emendas
+ID: 1520, Nome: Publicação de TVR
+
+
+

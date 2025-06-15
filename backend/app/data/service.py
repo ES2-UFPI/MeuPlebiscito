@@ -26,7 +26,7 @@ async def listar_deputados(
     if sexo:
         params["siglaSexo"] = sexo.upper()
 
-    async with httpx.AsyncClient() as client:
+    async with httpx.AsyncClient(verify=False) as client:
         resp = await client.get(f"{BASE_URL_CAMARA}/deputados", params=params)
         resp.raise_for_status()
         dados = resp.json().get("dados", [])

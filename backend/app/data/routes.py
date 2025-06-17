@@ -1,13 +1,20 @@
 """
 Rotas da API REST para consulta de deputados
-Integrado com a estrutura existente do projeto
+Corrigido para importações e compatibilidade
 """
 from fastapi import APIRouter, Query, HTTPException, Depends
 from typing import List, Optional
 from datetime import datetime
-from ..models.deputado import DeputadoResumo, DeputadoCompleto
-from ..services.deputados import DeputadosService
 import logging
+
+# Importações corrigidas - usando importação absoluta para evitar problemas
+try:
+    from app.models.deputado import DeputadoResumo, DeputadoCompleto
+    from app.services.deputados import DeputadosService
+except ImportError:
+    # Fallback para importação relativa
+    from ..models.deputado import DeputadoResumo, DeputadoCompleto
+    from ..services.deputados import DeputadosService
 
 # Configuração do logger
 logger = logging.getLogger(__name__)

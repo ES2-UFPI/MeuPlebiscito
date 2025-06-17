@@ -2,7 +2,7 @@
 
 /**
  * Hook personalizado para gerenciar dados de deputado
- * Integrado com a estrutura existente do projeto
+ * CORRIGIDO: Usa apenas endpoint principal que existe no backend
  */
 
 import { useState, useEffect, useCallback } from "react";
@@ -14,7 +14,7 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
 
 /**
  * Hook principal para gerenciar dados de deputado
- * Compatível com Deputados.jsx existente
+ * CORRIGIDO: Não faz mais chamadas para endpoints inexistentes
  */
 export const useDeputadoData = (id) => {
   const [dados, setDados] = useState(null);
@@ -99,7 +99,8 @@ export const useDeputadoData = (id) => {
   );
 
   /**
-   * Carrega todos os dados do deputado
+   * CORRIGIDO: Carrega todos os dados do deputado de uma só vez
+   * Usa apenas o endpoint principal que existe no backend
    */
   const carregarDados = useCallback(async () => {
     if (!id) {
@@ -139,7 +140,7 @@ export const useDeputadoData = (id) => {
         return;
       }
 
-      // Carrega dados completos com retry
+      // CORRIGIDO: Carrega dados completos com retry usando apenas endpoint principal
       const dadosCompletos = await carregarDadosComRetry(
         () => deputadosService.buscarDetalhesDeputado(deputadoId),
         "DadosCompletos"
@@ -191,82 +192,30 @@ export const useDeputadoData = (id) => {
   }, [id, verificarCache, salvarCache, carregarDadosComRetry]);
 
   /**
-   * Função para atualizar dados específicos
-   * Mantida para compatibilidade com código existente
+   * CORRIGIDO: Função para atualizar dados específicos
+   * Agora recarrega tudo pois os dados vêm de um endpoint só
    */
   const atualizarDados = useCallback(
     async (tipo) => {
-      if (!id || !dados) {
+      if (!id) {
         console.warn(
-          `⚠️ [atualizarDados] ID ou dados não disponíveis para atualizar ${tipo}`
+          `⚠️ [atualizarDados] ID não disponível para atualizar ${tipo}`
         );
         return;
       }
 
+      console.log(
+        `🔄 [atualizarDados] Recarregando todos os dados para atualizar ${tipo}`
+      );
+
+      // Limpa cache e recarrega tudo
       const deputadoId = Number.parseInt(id);
+      const chaveCache = `deputado_${deputadoId}`;
+      cache.delete(chaveCache);
 
-      try {
-        console.log(
-          `🔄 [atualizarDados] Atualizando ${tipo} do deputado ${deputadoId}`
-        );
-
-        let novosDados;
-        const tipoNormalizado =
-          tipo === "participacao" ? "participacoes" : tipo;
-
-        switch (tipoNormalizado) {
-          case "participacoes":
-            novosDados = await deputadosService.buscarParticipacoes(deputadoId);
-            setDados((prev) => ({ ...prev, participacoes: novosDados }));
-            break;
-          case "projetos":
-            novosDados = await deputadosService.buscarProjetos(deputadoId);
-            setDados((prev) => ({ ...prev, projetos: novosDados }));
-            break;
-          case "atividades":
-            novosDados = await deputadosService.buscarAtividades(deputadoId);
-            setDados((prev) => ({ ...prev, atividades: novosDados }));
-            break;
-          case "orcamento":
-            novosDados = await deputadosService.buscarOrcamento(
-              deputadoId,
-              new Date().getFullYear()
-            );
-            setDados((prev) => ({ ...prev, orcamento: novosDados }));
-            break;
-          default:
-            console.warn(
-              `⚠️ [atualizarDados] Tipo de atualização desconhecido: ${tipo}`
-            );
-            return;
-        }
-
-        // Atualiza cache
-        const chaveCache = `deputado_${deputadoId}`;
-        const dadosAtualizados = { ...dados, [tipoNormalizado]: novosDados };
-        salvarCache(chaveCache, dadosAtualizados);
-
-        // Marca seção como carregada
-        const chaveStatus = tipo === "participacao" ? "participacao" : tipo;
-        setStatusCarregamento((prev) => ({
-          ...prev,
-          [chaveStatus]: true,
-        }));
-
-        console.log(
-          `✅ [atualizarDados] ${tipo} atualizado para deputado ${deputadoId}`
-        );
-      } catch (error) {
-        console.error(`❌ [atualizarDados] Erro ao atualizar ${tipo}:`, error);
-
-        const chaveStatus = tipo === "participacao" ? "participacao" : tipo;
-        setStatusCarregamento((prev) => ({
-          ...prev,
-          [chaveStatus]: false,
-        }));
-      }
+      await carregarDados();
     },
-    [id, dados, salvarCache]
+    [id, carregarDados]
   );
 
   /**

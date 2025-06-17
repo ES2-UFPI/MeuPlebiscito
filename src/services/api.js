@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /**
- * Serviço de API corrigido para integração com backend
- * CORREÇÃO: URLs agora incluem o prefixo /api
+ * Serviço de API CORRIGIDO para integração com backend
+ * PROBLEMA RESOLVIDO: Removidas chamadas para endpoints inexistentes
  */
 
 // Configuração da URL base da API
@@ -35,7 +35,7 @@ class ApiService {
     };
 
     try {
-      console.log(`🔄 [API] Fazendo requisição para: ${url}`);
+      console.log(`🚀 [API] Fazendo requisição para: ${url}`);
       console.log(`📋 [API] Parâmetros:`, config);
 
       const response = await fetch(url, config);
@@ -75,7 +75,7 @@ class ApiService {
 
 /**
  * Serviço específico para operações com deputados
- * CORREÇÃO: Todas as URLs agora incluem /api
+ * CORRIGIDO: Usa apenas endpoints que existem no backend
  */
 class DeputadosService extends ApiService {
   /**
@@ -99,7 +99,6 @@ class DeputadosService extends ApiService {
     }
 
     const queryString = params.toString();
-    // CORREÇÃO: Adicionado prefixo /api
     const endpoint = `/api/deputados/${queryString ? `?${queryString}` : ""}`;
 
     return this.request(endpoint);
@@ -107,7 +106,7 @@ class DeputadosService extends ApiService {
 
   /**
    * Busca deputado completo por ID
-   * Compatível com Deputados.jsx existente
+   * CORRIGIDO: Usa apenas o endpoint principal que retorna todos os dados
    */
   async buscarDetalhesDeputado(id) {
     if (!id || id <= 0) {
@@ -116,29 +115,36 @@ class DeputadosService extends ApiService {
       );
     }
 
-    // CORREÇÃO: Adicionado prefixo /api
+    console.log(`🔍 [API] Buscando deputado completo: ${id}`);
     return this.request(`/api/deputados/${id}`);
   }
 
   /**
-   * Métodos de compatibilidade com hooks existentes
+   * MÉTODOS CORRIGIDOS: Agora extraem dados do endpoint principal
+   * Mantidos para compatibilidade com hooks existentes
    */
   async buscarParticipacoes(id) {
+    console.log(`📅 [API] Extraindo participações do deputado: ${id}`);
     const deputado = await this.buscarDetalhesDeputado(id);
     return deputado.participacoes || [];
   }
 
   async buscarProjetos(id) {
+    console.log(`📜 [API] Extraindo projetos do deputado: ${id}`);
     const deputado = await this.buscarDetalhesDeputado(id);
     return deputado.projetos || [];
   }
 
   async buscarAtividades(id) {
+    console.log(`👥 [API] Extraindo atividades do deputado: ${id}`);
     const deputado = await this.buscarDetalhesDeputado(id);
     return deputado.atividades || { mandatos: [], comissoes: [] };
   }
 
   async buscarOrcamento(id, ano = null) {
+    console.log(
+      `💰 [API] Extraindo orçamento do deputado: ${id} (ano: ${ano})`
+    );
     const deputado = await this.buscarDetalhesDeputado(id);
     return (
       deputado.orcamento || {
@@ -153,7 +159,6 @@ class DeputadosService extends ApiService {
    * Verifica se a API está funcionando
    */
   async verificarSaude() {
-    // CORREÇÃO: Adicionado prefixo /api
     return this.request("/api/deputados/health/check");
   }
 }
@@ -163,7 +168,6 @@ class DeputadosService extends ApiService {
  * Mantido para não quebrar código existente
  */
 class SenadoresService extends ApiService {
-  // eslint-disable-next-line no-unused-vars
   async listarSenadores(filtros = {}) {
     console.warn("⚠️ [API] Serviço de senadores ainda não implementado");
     return [];

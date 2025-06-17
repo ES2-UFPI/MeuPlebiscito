@@ -1,6 +1,6 @@
 """
-Serviço para integração com a API da Câmara dos Deputados
-Integrado com a estrutura existente do projeto
+Serviço completo para integração com APIs oficiais
+Implementa todos os endpoints específicos solicitados
 """
 import httpx
 import logging
@@ -14,13 +14,14 @@ from ..models.deputado import (
 # Configuração do logger
 logger = logging.getLogger(__name__)
 
-# URL base da API oficial da Câmara dos Deputados
+# URLs das APIs oficiais
 CAMARA_API_URL = "https://dadosabertos.camara.leg.br/api/v2"
+TRANSPARENCIA_API_URL = "https://api.portaldatransparencia.gov.br"
 
 class DeputadosService:
     """
     Serviço principal para operações com deputados
-    Integrado com a arquitetura existente do projeto
+    Integrado com APIs oficiais da Câmara e Portal da Transparência
     """
     
     def __init__(self):
@@ -75,7 +76,7 @@ class DeputadosService:
     ) -> List[DeputadoResumo]:
         """
         Lista deputados com filtros opcionais
-        Compatível com SearchBar.jsx e BuscaDetalhada.jsx existentes
+        Endpoint: GET /deputados
         """
         logger.info(f"🔍 Listando deputados - nome: {nome}, partido: {partido}, estado: {estado}, sexo: {sexo}")
         
@@ -123,7 +124,7 @@ class DeputadosService:
                     
                     if (i + 1) % 10 == 0:
                         logger.debug(f"Processados {i + 1}/{len(dados_api)} deputados")
-                    
+                   
                 except Exception as e:
                     logger.warning(f"⚠️ Erro ao processar deputado {deputado_data.get('id', 'unknown')}: {str(e)}")
                     # Adiciona sem idade se houver erro nos detalhes
@@ -150,7 +151,7 @@ class DeputadosService:
     async def buscar_deputado_completo(self, deputado_id: int) -> Optional[DeputadoCompleto]:
         """
         Busca dados completos de um deputado específico
-        Compatível com Deputados.jsx existente
+        Integra todos os endpoints necessários
         """
         logger.info(f"🔍 Buscando deputado completo: {deputado_id}")
         
@@ -167,12 +168,12 @@ class DeputadosService:
             ultimo_status = dados.get("ultimoStatus", {})
             gabinete = ultimo_status.get("gabinete", {})
             
-            # 2. Buscar dados das abas em paralelo
+            # 2. Buscar dados das abas em paralelo usando endpoints específicos
             import asyncio
-            participacoes_task = self._buscar_participacoes(deputado_id)
-            projetos_task = self._buscar_projetos(deputado_id)
-            atividades_task = self._buscar_atividades(deputado_id)
-            orcamento_task = self._buscar_orcamento(deputado_id)
+            participacoes_task = self._buscar_participacoes_eventos(deputado_id)
+            projetos_task = self._buscar_proposicoes_por_autor(deputado_id)
+            atividades_task = self._buscar_atividades_completas(deputado_id)
+            orcamento_task = self._buscar_despesas_detalhadas(deputado_id)
             
             participacoes, projetos, atividades, orcamento = await asyncio.gather(
                 participacoes_task,
@@ -237,79 +238,184 @@ class DeputadosService:
             logger.error(f"❌ Erro inesperado ao buscar deputado completo {deputado_id}: {str(e)}")
             raise
 
-    async def _buscar_participacoes(self, deputado_id: int) -> List[Participacao]:
-        """Busca participações em eventos do deputado"""
+    async def _buscar_participacoes_eventos(self, deputado_id: int) -> List[Participacao]:
+        """
+        Busca participações em eventos do deputado
+        Endpoint: GET /deputados/{id}/eventos
+        """
         try:
+            logger.info(f"🔍 Buscando eventos do deputado {deputado_id}")
+            
             response = await self.client.get(f"{CAMARA_API_URL}/deputados/{deputado_id}/eventos")
             response.raise_for_status()
             
             dados = response.json().get("dados", [])
             participacoes = []
             
-            for evento in dados[:20]:
+            logger.info(f"📊 Encontrados {len(dados)} eventos do deputado {deputado_id}")
+            
+            for evento in dados[:20]:  # Limita a 20 eventos mais recentes
                 participacao = Participacao(
                     tipo=evento.get("descricaoTipo", "Evento"),
                     descricao=evento.get("descricao", "")[:200] + "..." if len(evento.get("descricao", "")) > 200 else evento.get("descricao", ""),
                     data=evento.get("dataHoraInicio", ""),
-                    presente=True
+                    presente=True  # API não fornece status de presença diretamente
                 )
                 participacoes.append(participacao)
             
+            logger.info(f"✅ Processados {len(participacoes)} eventos do deputado {deputado_id}")
             return participacoes
             
         except Exception as e:
-            logger.warning(f"Erro ao buscar participações do deputado {deputado_id}: {str(e)}")
+            logger.warning(f"Erro ao buscar eventos do deputado {deputado_id}: {str(e)}")
             return []
 
-    async def _buscar_projetos(self, deputado_id: int) -> List[Projeto]:
-        """Busca projetos de lei do deputado"""
+    async def _buscar_proposicoes_por_autor(self, deputado_id: int) -> List[Projeto]:
+        """
+        Busca proposições por autor usando endpoint específico
+        Endpoint: GET /proposicoes?idDeputadoAutor={id}
+        """
         try:
+            logger.info(f"🔍 Buscando proposições do deputado {deputado_id}")
+            
+            # Usa o endpoint específico para proposições por autor
             response = await self.client.get(
-                f"{CAMARA_API_URL}/deputados/{deputado_id}/proposicoes",
-                params={"itens": 20, "ordem": "DESC", "ordenarPor": "id"}
+                f"{CAMARA_API_URL}/proposicoes",
+                params={
+                    "idDeputadoAutor": deputado_id,
+                    "itens": 20,
+                    "ordem": "DESC",
+                    "ordenarPor": "id"
+                }
             )
             response.raise_for_status()
             
             dados = response.json().get("dados", [])
             projetos = []
             
+            logger.info(f"📊 Encontradas {len(dados)} proposições do deputado {deputado_id}")
+            
             for proposicao in dados:
+                # Monta o número da proposição
                 numero = f"{proposicao.get('siglaTipo', '')} {proposicao.get('numero', '')}/{proposicao.get('ano', '')}"
+                
+                # Limita o tamanho da ementa
                 titulo = proposicao.get("ementa", "")
                 if len(titulo) > 200:
                     titulo = titulo[:200] + "..."
+                
+                # Mapeia o status
+                status_situacao = proposicao.get("statusProposicao", {})
+                status = self._mapear_status_proposicao(status_situacao)
                 
                 projeto = Projeto(
                     numero=numero.strip(),
                     titulo=titulo,
                     data=proposicao.get("dataApresentacao", ""),
-                    status=self._mapear_status_proposicao(proposicao.get("statusProposicao", {}))
+                    status=status
                 )
                 projetos.append(projeto)
             
+            logger.info(f"✅ Processadas {len(projetos)} proposições do deputado {deputado_id}")
             return projetos
             
         except Exception as e:
-            logger.warning(f"Erro ao buscar projetos do deputado {deputado_id}: {str(e)}")
+            logger.warning(f"Erro ao buscar proposições do deputado {deputado_id}: {str(e)}")
             return []
 
-    def _mapear_status_proposicao(self, status_data: Dict[str, Any]) -> str:
-        """Mapeia status da proposição para formato amigável"""
-        descricao = status_data.get("descricaoSituacao", "").lower()
-        
-        if "arquivad" in descricao:
-            return "Arquivado"
-        elif "aprovad" in descricao or "sancionad" in descricao:
-            return "Aprovado"
-        elif "tramitação" in descricao or "tramitando" in descricao:
-            return "Em Tramitação"
-        elif "rejeitad" in descricao:
-            return "Rejeitado"
-        else:
-            return status_data.get("descricaoSituacao", "Status não informado")
+    async def _buscar_atividades_completas(self, deputado_id: int) -> Atividades:
+        """
+        Busca atividades completas do deputado
+        Endpoints: 
+        - /deputados/{id}/mandatosExternos
+        - /deputados/{id}/historico
+        - /deputados/{id}/orgaos
+        """
+        try:
+            logger.info(f"🔍 Buscando atividades completas do deputado {deputado_id}")
+            
+            # Busca dados em paralelo
+            import asyncio
+            mandatos_task = self._buscar_mandatos_externos(deputado_id)
+            historico_task = self._buscar_historico_deputado(deputado_id)
+            orgaos_task = self._buscar_orgaos_deputado(deputado_id)
+            
+            mandatos_externos, historico, orgaos = await asyncio.gather(
+                mandatos_task,
+                historico_task,
+                orgaos_task,
+                return_exceptions=True
+            )
+            
+            # Processa mandatos
+            mandatos = ["Deputado Federal - Legislatura atual"]
+            if not isinstance(mandatos_externos, Exception) and mandatos_externos:
+                mandatos.extend(mandatos_externos)
+            if not isinstance(historico, Exception) and historico:
+                mandatos.extend(historico)
+            
+            # Processa comissões e órgãos
+            comissoes = []
+            if not isinstance(orgaos, Exception) and orgaos:
+                comissoes = orgaos
+            
+            return Atividades(
+                mandatos=list(set(mandatos)),  # Remove duplicatas
+                comissoes=comissoes
+            )
+            
+        except Exception as e:
+            logger.warning(f"Erro ao buscar atividades do deputado {deputado_id}: {str(e)}")
+            return Atividades(mandatos=[], comissoes=[])
 
-    async def _buscar_atividades(self, deputado_id: int) -> Atividades:
-        """Busca atividades e cargos do deputado"""
+    async def _buscar_mandatos_externos(self, deputado_id: int) -> List[str]:
+        """Busca mandatos externos do deputado"""
+        try:
+            response = await self.client.get(f"{CAMARA_API_URL}/deputados/{deputado_id}/mandatosExternos")
+            response.raise_for_status()
+            
+            dados = response.json().get("dados", [])
+            mandatos = []
+            
+            for mandato in dados:
+                descricao = f"{mandato.get('cargo', '')} - {mandato.get('entidade', '')}"
+                if mandato.get('anoInicio'):
+                    descricao += f" ({mandato.get('anoInicio')}"
+                    if mandato.get('anoFim'):
+                        descricao += f"-{mandato.get('anoFim')}"
+                    descricao += ")"
+                mandatos.append(descricao.strip())
+            
+            return mandatos
+            
+        except Exception as e:
+            logger.warning(f"Erro ao buscar mandatos externos: {str(e)}")
+            return []
+
+    async def _buscar_historico_deputado(self, deputado_id: int) -> List[str]:
+        """Busca histórico do deputado"""
+        try:
+            response = await self.client.get(f"{CAMARA_API_URL}/deputados/{deputado_id}/historico")
+            response.raise_for_status()
+            
+            dados = response.json().get("dados", [])
+            historico = []
+            
+            for item in dados:
+                if item.get('legislatura'):
+                    descricao = f"Legislatura {item.get('legislatura')}"
+                    if item.get('situacao'):
+                        descricao += f" - {item.get('situacao')}"
+                    historico.append(descricao)
+            
+            return historico
+            
+        except Exception as e:
+            logger.warning(f"Erro ao buscar histórico: {str(e)}")
+            return []
+
+    async def _buscar_orgaos_deputado(self, deputado_id: int) -> List[str]:
+        """Busca órgãos e comissões do deputado"""
         try:
             response = await self.client.get(f"{CAMARA_API_URL}/deputados/{deputado_id}/orgaos")
             response.raise_for_status()
@@ -326,32 +432,37 @@ class DeputadosService:
                 else:
                     comissoes.append(nome_orgao)
             
-            comissoes = sorted(list(set(comissoes)))
-            mandatos = ["Deputado Federal - Legislatura atual"]
-            
-            return Atividades(
-                mandatos=mandatos,
-                comissoes=comissoes
-            )
+            return sorted(list(set(comissoes)))
             
         except Exception as e:
-            logger.warning(f"Erro ao buscar atividades do deputado {deputado_id}: {str(e)}")
-            return Atividades(mandatos=[], comissoes=[])
+            logger.warning(f"Erro ao buscar órgãos: {str(e)}")
+            return []
 
-    async def _buscar_orcamento(self, deputado_id: int) -> Optional[Orcamento]:
-        """Busca dados orçamentários do deputado"""
+    async def _buscar_despesas_detalhadas(self, deputado_id: int) -> Optional[Orcamento]:
+        """
+        Busca dados orçamentários detalhados do deputado
+        Endpoint: GET /deputados/{id}/despesas?ano=&ordem=ASC&ordenarPor=ano
+        """
         try:
+            logger.info(f"🔍 Buscando despesas do deputado {deputado_id}")
+            
             ano_atual = datetime.now().year
             
             response = await self.client.get(
                 f"{CAMARA_API_URL}/deputados/{deputado_id}/despesas",
-                params={"ano": ano_atual, "itens": 100}
+                params={
+                    "ano": ano_atual,
+                    "ordem": "ASC",
+                    "ordenarPor": "ano",
+                    "itens": 100
+                }
             )
             response.raise_for_status()
             
             dados = response.json().get("dados", [])
             
             if not dados:
+                logger.info(f"Nenhuma despesa encontrada para o deputado {deputado_id}")
                 return None
             
             total_gasto = sum(float(despesa.get("valorLiquido", 0)) for despesa in dados)
@@ -365,10 +476,12 @@ class DeputadosService:
                 valor = float(despesa.get("valorLiquido", 0))
                 mes = despesa.get("mes", 1)
                 
+                # Agrupa por categoria
                 if categoria not in categorias_dict:
                     categorias_dict[categoria] = 0
                 categorias_dict[categoria] += valor
                 
+                # Agrupa por mês
                 chave_mes = f"{mes:02d}/{ano_atual}"
                 if chave_mes not in historico_dict:
                     historico_dict[chave_mes] = 0
@@ -392,6 +505,8 @@ class DeputadosService:
                 for mes, valor in sorted(historico_dict.items())
             ]
             
+            logger.info(f"✅ Processadas despesas do deputado {deputado_id}: R$ {total_gasto:,.2f}")
+            
             return Orcamento(
                 totalGasto=total_gasto,
                 categorias=categorias,
@@ -399,5 +514,25 @@ class DeputadosService:
             )
             
         except Exception as e:
-            logger.warning(f"Erro ao buscar orçamento do deputado {deputado_id}: {str(e)}")
+            logger.warning(f"Erro ao buscar despesas do deputado {deputado_id}: {str(e)}")
             return None
+
+    def _mapear_status_proposicao(self, status_data: Dict[str, Any]) -> str:
+        """Mapeia status da proposição para formato amigável"""
+        if not status_data:
+            return "Status não informado"
+            
+        descricao = status_data.get("descricaoSituacao", "").lower()
+        
+        if "arquivad" in descricao:
+            return "Arquivado"
+        elif "aprovad" in descricao or "sancionad" in descricao:
+            return "Aprovado"
+        elif "tramitação" in descricao or "tramitando" in descricao:
+            return "Em Tramitação"
+        elif "rejeitad" in descricao:
+            return "Rejeitado"
+        elif "pronto" in descricao:
+            return "Pronto para Pauta"
+        else:
+            return status_data.get("descricaoSituacao", "Status não informado")

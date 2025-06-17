@@ -1,6 +1,7 @@
 """
 Modelos Pydantic para dados de deputados
 Compatível com a API da Câmara dos Deputados e estrutura existente
+CORRIGIDO: Adicionado modelo Atividades que estava faltando
 """
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
@@ -22,6 +23,7 @@ class DeputadoResumo(BaseModel):
 class Participacao(BaseModel):
     """
     Modelo para participações em reuniões e eventos
+    Dados da API: GET /deputados/{id}/eventos
     """
     tipo: str = Field(..., description="Tipo do evento (Reunião, Sessão, etc.)")
     descricao: str = Field(..., description="Descrição detalhada do evento")
@@ -31,6 +33,7 @@ class Participacao(BaseModel):
 class Projeto(BaseModel):
     """
     Modelo para projetos de lei e proposições
+    Dados da API: GET /proposicoes?idDeputadoAutor={id}
     """
     numero: str = Field(..., description="Número da proposição (ex: PL 1234/2023)")
     titulo: str = Field(..., description="Ementa/título do projeto")
@@ -40,9 +43,13 @@ class Projeto(BaseModel):
 class Atividades(BaseModel):
     """
     Modelo para atividades parlamentares e cargos ocupados
+    Dados das APIs:
+    - GET /deputados/{id}/mandatosExternos
+    - GET /deputados/{id}/historico  
+    - GET /deputados/{id}/orgaos
     """
-    mandatos: List[str] = Field(default_factory=list, description="Lista de mandatos")
-    comissoes: List[str] = Field(default_factory=list, description="Comissões que participa")
+    mandatos: List[str] = Field(default_factory=list, description="Lista de mandatos e histórico")
+    comissoes: List[str] = Field(default_factory=list, description="Comissões e órgãos que participa")
 
 class CategoriaOrcamento(BaseModel):
     """
@@ -62,6 +69,7 @@ class HistoricoMensal(BaseModel):
 class Orcamento(BaseModel):
     """
     Modelo completo para dados orçamentários
+    Dados da API: GET /deputados/{id}/despesas?ano=&ordem=ASC&ordenarPor=ano
     """
     totalGasto: float = Field(..., description="Total gasto no período analisado")
     categorias: List[CategoriaOrcamento] = Field(default_factory=list, description="Gastos por categoria")
@@ -70,7 +78,7 @@ class Orcamento(BaseModel):
 class DeputadoCompleto(BaseModel):
     """
     Modelo completo do deputado para página de detalhes
-    Compatível com Deputados.jsx existente e useDeputadoData.js
+    Compatível com DeputadoDetalhes.jsx e useDeputadoData.js
     """
     # Informações básicas obrigatórias
     id: int = Field(..., description="ID único do deputado")

@@ -1,29 +1,25 @@
 annotated-types==0.7.0
 anyio>=3.7.1,<4.0.0
-certifi==2025.4.26
+certifi==2024.2.2
 click==8.1.8
 dnspython==2.7.0
 email_validator==2.2.0
-# Framework web assíncrono
 fastapi==0.104.1
 fastapi-cli==0.0.7
 h11==0.16.0
 httpcore==1.0.9
 httptools==0.6.4
-# Cliente HTTP assíncrono para APIs externas
-httpx==0.27.0
+httpx==0.25.1
 idna==3.10
 Jinja2==3.1.6
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
-# Validação de dados e serialização
-pydantic==2.5.0
-pydantic_core==2.14.1
+pydantic==2.4.2
+pydantic_core==2.10.1
 Pygments==2.19.1
-python-dotenv==1.0.0 # Para variáveis de ambiente
-# Suporte para formulários multipart
-python-multipart==0.0.6
+python-dotenv==1.0.0
+python-multipart==0.0.20
 PyYAML==6.0.2
 rich==14.0.0
 rich-toolkit==0.14.6
@@ -33,13 +29,8 @@ starlette==0.27.0
 typer==0.15.4
 typing-inspection==0.4.1
 typing_extensions==4.13.2
-# Servidor ASGI para produção
 uvicorn==0.24.0
 watchfiles==1.0.5
 websockets==15.0.1
-
-
-# Logging estruturado (opcional)
+pydantic-settings==2.0.3
 structlog==23.2.0
-aiofiles==23.2.1      # Para operações de arquivo assíncronas
-

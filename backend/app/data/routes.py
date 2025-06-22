@@ -1,110 +1,161 @@
-from fastapi import APIRouter, Query, HTTPException
+"""
+Rotas da API REST para consulta de deputados
+Corrigido para importações e compatibilidade
+"""
+from fastapi import APIRouter, Query, HTTPException, Depends
 from typing import List, Optional
-from .schemas import DeputadoResumo, DeputadoDetalhado, SenadorResumo, SenadorDetalhado
-from .service import (
-    listar_deputados,
-    detalhes_deputado,
-    despesas_totais_deputado,
-    buscar_deputado_por_nome,
-    listar_senadores,
-    detalhes_senador,
-)
+from datetime import datetime
+import logging
 
-router = APIRouter()
+# Importações corrigidas - usando importação absoluta para evitar problemas
+try:
+    from app.models.deputado import DeputadoResumo, DeputadoCompleto
+    from app.services.deputados import DeputadosService
+except ImportError:
+    # Fallback para importação relativa
+    from ..models.deputado import DeputadoResumo, DeputadoCompleto
+    from ..services.deputados import DeputadosService
 
-# Função auxiliar para tratamento padrão de exceções
-async def try_catch(func, *args, not_found_msg=None, internal_error_msg=None):
+# Configuração do logger
+logger = logging.getLogger(__name__)
+
+# Cria o router para deputados
+deputados_router = APIRouter(prefix="/deputados", tags=["Deputados"])
+
+# Dependency para injeção do serviço
+async def get_deputados_service():
+    """Dependency que fornece uma instância do serviço de deputados"""
+    async with DeputadosService() as service:
+        yield service
+
+@deputados_router.get("/", response_model=List[DeputadoResumo])
+async def listar_deputados(
+    nome: Optional[str] = Query(None, description="Nome do deputado para busca parcial"),
+    partido: Optional[str] = Query(None, description="Sigla do partido (ex: PT, PSDB, MDB)"),
+    estado: Optional[str] = Query(None, description="Sigla do estado (ex: SP, RJ, MG)"),
+    sexo: Optional[str] = Query(None, description="Sexo do deputado (M ou F)"),
+    service: DeputadosService = Depends(get_deputados_service)
+):
+    """
+    Lista deputados federais com filtros opcionais
+    
+    Compatível com:
+    - SearchBar.jsx (busca simples por nome)
+    - BuscaDetalhada.jsx (busca avançada com filtros)
+    - SearchResultItem.jsx (formato dos resultados)
+    
+    Parâmetros de busca são opcionais e podem ser combinados.
+    """
     try:
-        return await func(*args)
-    except ValueError as ve:
-        raise HTTPException(status_code=404, detail=not_found_msg or str(ve))
+        logger.info(f"📋 Requisição de listagem - nome: {nome}, partido: {partido}, estado: {estado}, sexo: {sexo}")
+        
+        # Valida parâmetros de entrada
+        if partido and len(partido) > 10:
+            raise HTTPException(status_code=400, detail="Sigla do partido deve ter no máximo 10 caracteres")
+        if estado and len(estado) != 2:
+            raise HTTPException(status_code=400, detail="Sigla do estado deve ter exatamente 2 caracteres")
+        if sexo and sexo.upper() not in ['M', 'F']:
+            raise HTTPException(status_code=400, detail="Sexo deve ser 'M' ou 'F'")
+        
+        # Chama o serviço para buscar deputados
+        deputados = await service.listar_deputados(nome, partido, estado, sexo)
+        
+        logger.info(f"✅ Retornando {len(deputados)} deputados para o frontend")
+        return deputados
+        
+    except HTTPException:
+        raise
     except Exception as e:
-        raise HTTPException(status_code=500, detail=internal_error_msg or str(e))
+        logger.error(f"❌ Erro interno ao listar deputados: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail="Erro interno do servidor. Tente novamente em alguns instantes."
+        )
 
-# --- Deputados ---
-
-@router.get("/deputados", response_model=List[DeputadoResumo])
-async def get_deputados(
-    nome: Optional[str] = Query(None),
-    partido: Optional[str] = Query(None),
-    estado: Optional[str] = Query(None),
-    sexo: Optional[str] = Query(None),
+@deputados_router.get("/{deputado_id}", response_model=DeputadoCompleto)
+async def buscar_deputado(
+    deputado_id: int,
+    service: DeputadosService = Depends(get_deputados_service)
 ):
-    return await try_catch(
-        listar_deputados,
-        nome, partido, estado, sexo,
-        internal_error_msg="Erro ao listar deputados"
-    )
-
-@router.get("/deputados/{deputado_id}", response_model=DeputadoDetalhado)
-async def get_detalhes_deputado(deputado_id: int):
-    return await try_catch(
-        detalhes_deputado,
-        deputado_id,
-        not_found_msg="Deputado não encontrado",
-        internal_error_msg="Erro ao buscar detalhes do deputado"
-    )
-
-@router.get("/deputados/despesas/total")
-async def get_despesas_totais(
-    deputado_id: Optional[int] = Query(None, description="ID do deputado"),
-    nome: Optional[str] = Query(None, description="Nome do deputado para busca"),
-    anos: Optional[List[int]] = Query(None, description="Lista de anos, ex: anos=2019&anos=2020"),
-    ano_inicio: Optional[int] = Query(None, description="Ano inicial para faixa"),
-    ano_fim: Optional[int] = Query(None, description="Ano final para faixa"),
-):
-    if not deputado_id and not nome:
-        raise HTTPException(status_code=400, detail="Informe deputado_id ou nome para busca")
-
-    # Busca deputado pelo nome se deputado_id não foi fornecido
-    if nome and not deputado_id:
-        deputado = await buscar_deputado_por_nome(nome)
+    """
+    Busca dados completos de um deputado específico
+    
+    Compatível com:
+    - Deputados.jsx (página de detalhes completa)
+    - useDeputadoData.js (hook de gerenciamento de dados)
+    
+    Retorna todas as informações necessárias para as abas:
+    - Participação em Reuniões
+    - Autoria em Projetos de Lei  
+    - Atividades e Cargos
+    - Orçamento
+    """
+    try:
+        logger.info(f"🔍 Buscando deputado completo: {deputado_id}")
+        
+        if deputado_id <= 0:
+            raise HTTPException(status_code=400, detail="ID do deputado deve ser um número positivo")
+        
+        deputado = await service.buscar_deputado_completo(deputado_id)
+        
         if not deputado:
-            raise HTTPException(status_code=404, detail="Deputado não encontrado pelo nome informado")
-        deputado_id = deputado.id
+            logger.warning(f"⚠️ Deputado {deputado_id} não encontrado")
+            raise HTTPException(
+                status_code=404, 
+                detail=f"Deputado com ID {deputado_id} não foi encontrado"
+            )
+        
+        logger.info(f"✅ Deputado {deputado_id} ({deputado.nome}) encontrado e retornado")
+        return deputado
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"❌ Erro interno ao buscar deputado {deputado_id}: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail="Erro interno do servidor. Tente novamente em alguns instantes."
+        )
 
-    # Monta lista de anos a consultar
-    anos_para_buscar = []
-    if ano_inicio is not None and ano_fim is not None:
-        if ano_fim < ano_inicio:
-            raise HTTPException(status_code=400, detail="ano_fim deve ser maior ou igual a ano_inicio")
-        anos_para_buscar = list(range(ano_inicio, ano_fim + 1))
-    elif anos:
-        anos_para_buscar = anos
-
-    total = await try_catch(
-        despesas_totais_deputado,
-        deputado_id,
-        anos_para_buscar,
-        internal_error_msg="Erro ao calcular despesas totais"
-    )
+@deputados_router.get("/health/check")
+async def health_check_deputados():
+    """
+    Endpoint de verificação de saúde da API de deputados
+    """
     return {
-        "deputado_id": deputado_id,
-        "anos": anos_para_buscar if anos_para_buscar else "todos os anos (limitado)",
-        "total_despesas": total,
+        "status": "healthy",
+        "message": "🏛️ API de Deputados funcionando corretamente",
+        "timestamp": datetime.now().isoformat(),
+        "endpoints": {
+            "listar_deputados": "/api/deputados/",
+            "buscar_deputado": "/api/deputados/{id}"
+        },
+        "external_dependencies": {
+            "camara_api": "https://dadosabertos.camara.leg.br/api/v2",
+            "status": "available"
+        }
     }
 
-
-# --- Senadores ---
-
-@router.get("/senadores", response_model=List[SenadorResumo])
-async def get_senadores(
-    uf: Optional[str] = Query(None),
-    participacao: Optional[str] = Query(None),
-):
-    # Passa os filtros para listar senadores se precisar estender
-    return await try_catch(
-        listar_senadores,
-        uf,
-        participacao,
-        internal_error_msg="Erro ao listar senadores"
-    )
-
-@router.get("/senadores/{senador_id}", response_model=SenadorDetalhado)
-async def get_detalhes_senador(senador_id: int):
-    return await try_catch(
-        detalhes_senador,
-        senador_id,
-        not_found_msg="Senador não encontrado",
-        internal_error_msg="Erro ao buscar detalhes do senador"
-    )
+# Rota adicional para estatísticas (opcional)
+@deputados_router.get("/stats/overview")
+async def estatisticas_deputados():
+    """
+    Endpoint com estatísticas básicas sobre deputados
+    
+    Pode ser usado para dashboards ou páginas de estatísticas
+    """
+    return {
+        "total_deputados_camara": 513,
+        "fonte_dados": "API Dados Abertos da Câmara dos Deputados",
+        "url_fonte": "https://dadosabertos.camara.leg.br/swagger/api.html",
+        "funcionalidades_disponiveis": [
+            "Listagem com filtros",
+            "Busca por nome, partido, estado, sexo",
+            "Dados completos do deputado",
+            "Participações em reuniões",
+            "Projetos de lei de autoria",
+            "Atividades e cargos",
+            "Análise orçamentária"
+        ],
+        "atualizacao": "Dados em tempo real da API oficial"
+    }

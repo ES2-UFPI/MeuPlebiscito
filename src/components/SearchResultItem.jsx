@@ -23,38 +23,38 @@ const SearchResultItem = ({ deputado }) => {
   return (
     <Link
       to={`/deputado/${deputado.id}`}
-      className="search-result-item-moderno"
+      className="result-item"
       style={{
         background: obterCorPartido(deputado.default),
       }}
     >
-      <div className="search-result-item-moderno__conteudo">
-        <div className="search-result-item-moderno__foto">
+      <div className="result-item__conteudo">
+        <div className="result-item__foto">
           {deputado.urlFoto ? (
             <img
               src={deputado.urlFoto || "/placeholder.svg"}
               alt={`Foto de ${deputado.nome}`}
-              className="search-result-item-moderno__imagem"
+              className="result-item__imagem"
             />
           ) : (
-            <div className="search-result-item-moderno__placeholder">
+            <div className="result-item__placeholder">
               <User size={32} />
             </div>
           )}
         </div>
 
-        <div className="search-result-item-moderno__info">
-          <h3 className="search-result-item-moderno__nome">{deputado.nome}</h3>
+        <div className="result-item__info">
+          <h3 className="result-item__nome">{deputado.nome}</h3>
 
-          <div className="search-result-item-moderno__detalhes">
-            <div className="search-result-item-moderno__linha">
+          <div className="result-item__detalhes">
+            <div className="result-item__linha">
               <Users size={12} />
               <span>{deputado.siglaPartido}</span>
               <span className="separador">•</span>
               <span>{deputado.cargo || "Deputado Federal"}</span>
             </div>
 
-            <div className="search-result-item-moderno__linha">
+            <div className="result-item__linha">
               <MapPin size={12} />
               <span>{deputado.siglaUf}</span>
               {deputado.idade && (

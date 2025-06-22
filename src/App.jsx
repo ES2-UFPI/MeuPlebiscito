@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Searched from "./pages/Searched";
 import Deputado from "./pages/Deputados";
+
 import Lei from "./pages/Leis";
 import Congresso from "./pages/Congresso";
 

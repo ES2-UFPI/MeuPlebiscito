@@ -31,7 +31,7 @@ except ImportError as e:
 app = FastAPI(
     title="Meu Plebiscito API",
     description="API para consulta de dados políticos brasileiros - Deputados Federais",
-    version="1.0.0",
+    version="1.3.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )

@@ -6,7 +6,7 @@ import { ArrowLeft, Filter, Search, X } from "lucide-react";
 import SearchBar from "../components/SearchBar";
 import SearchResultItem from "../components/SearchResultItem";
 import BuscaDetalhada from "../components/BuscaDetalhada";
-import { buscarDeputados } from "../services/Buscador";
+import { deputadosService } from "../services/api";
 
 const Searched = () => {
   const location = useLocation();
@@ -17,36 +17,50 @@ const Searched = () => {
   const [filtrosAtivos, setFiltrosAtivos] = useState({});
   const [erro, setErro] = useState(null);
 
+  // Obtém o termo de busca da URL
   const query = new URLSearchParams(location.search).get("q");
 
+  // Efeito para realizar a busca quando o termo de busca mudar
   useEffect(() => {
-    if (!query) return;
+    const realizarBusca = async () => {
+      if (!query) return;
 
-    setCarregando(true);
-    fetch(`http://localhost:8000/deputados?nome=${encodeURIComponent(query)}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && data.dados) {
-          setResultados(data.dados);
-        } else {
-          setResultados([]);
-        }
-      })
-      .catch((error) => {
+      // setCarregando(true);
+      // fetch(`http://localhost:8000/deputados?nome=${encodeURIComponent(query)}`)
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     if (data && data.dados) {
+      //       setResultados(data.dados);
+      //     } else {
+      //       setResultados([]);
+      //     }
+      //   })
+      //   .catch((error) => {
+      setCarregando(true);
+      try {
+        const data = await deputadosService.listarDeputados({ nome: query });
+        setResultados(data);
+        setErro(null);
+      } catch (error) {
         console.error("Erro ao buscar:", error);
         setErro("Ocorreu um erro ao realizar a busca. Tente novamente.");
         setResultados([]);
-      })
-      .finally(() => setCarregando(false));
-  }, [query]);
+      } finally {
+        setCarregando(false);
+      }
+    };
 
+    realizarBusca();
+  }, [query]); // Dependência apenas no query
+
+  // Função para realizar busca detalhada
   const handleBuscaDetalhada = async (filtros) => {
     setCarregando(true);
     setFiltrosAtivos(filtros);
     setErro(null);
 
     try {
-      const dados = await buscarDeputados(filtros);
+      const dados = await deputadosService.listarDeputados(filtros);
       setResultados(dados);
     } catch (error) {
       console.error("Erro ao buscar:", error);
@@ -57,20 +71,21 @@ const Searched = () => {
     }
   };
 
-  const limparFiltros = () => {
+  // Função para limpar filtros e voltar à busca original
+  const limparFiltros = async () => {
     setFiltrosAtivos({});
     if (query) {
-      // Refazer busca simples
       setCarregando(true);
-      fetch(`http://localhost:8000/deputados?nome=${encodeURIComponent(query)}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data && data.dados) {
-            setResultados(data.dados);
-          }
-        })
-        .catch(() => setResultados([]))
-        .finally(() => setCarregando(false));
+      try {
+        const data = await deputadosService.listarDeputados({ nome: query });
+        setResultados(data);
+      } catch (error) {
+        console.error("Erro ao buscar:", error);
+        setErro("Ocorreu um erro ao realizar a busca. Tente novamente.");
+        setResultados([]);
+      } finally {
+        setCarregando(false);
+      }
     }
   };
 

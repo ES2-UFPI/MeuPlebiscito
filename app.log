@@ -1,0 +1,6 @@
+2025-06-26 01:22:08,614 - __main__ - ERROR - Erro ao importar rotas: No module named 'httpx'
+2025-06-26 01:22:17,124 - __main__ - ERROR - Erro ao importar rotas: No module named 'httpx'
+2025-06-26 01:24:47,866 - __main__ - ERROR - Erro ao importar rotas: No module named 'httpx'
+2025-06-26 01:24:57,620 - __main__ - ERROR - Erro ao importar rotas: No module named 'httpx'
+2025-06-26 01:25:22,830 - __main__ - ERROR - Erro ao importar rotas: No module named 'httpx'
+2025-06-26 02:19:58,562 - __main__ - ERROR - Erro ao importar rotas: cannot import name 'router' from 'app.ia.routes' (c:\Users\hever\OneDrive\Desktop\MeuPlebiscito\backend\app\ia\routes.py)

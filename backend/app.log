@@ -1213,6 +1213,7 @@
 2025-06-25 23:42:38,803 - uvicorn.error - INFO - Application shutdown complete.
 2025-06-25 23:42:38,804 - uvicorn.error - INFO - Finished server process [40084]
 2025-06-25 23:42:38,875 - uvicorn.error - INFO - Stopping reloader process [73376]
+<<<<<<< Updated upstream
 2025-06-26 00:55:52,784 - uvicorn.error - INFO - Will watch for changes in these directories: ['C:\\Users\\KM\\Documents\\Meu Plebiscito KM\\MeuPlebiscito\\backend']
 2025-06-26 00:55:52,785 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 2025-06-26 00:55:52,785 - uvicorn.error - INFO - Started reloader process [72672] using WatchFiles
@@ -1906,3 +1907,129 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2025-06-26 01:23:18,779 - watchfiles.main - INFO - 1 change detected
 2025-06-26 01:23:20,856 - watchfiles.main - INFO - 1 change detected
 2025-06-26 01:23:21,214 - watchfiles.main - INFO - 1 change detected
+=======
+2025-06-26 01:42:16,449 - __main__ - INFO - Iniciando Meu Plebiscito API...
+2025-06-26 01:42:17,951 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-26 01:42:17,952 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-26 01:42:17,952 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-26 01:42:17,953 - main - INFO - Rotas registradas:
+2025-06-26 01:42:17,953 - main - INFO -    GET / - Health check principal
+2025-06-26 01:42:17,954 - main - INFO -    GET /health - Health check detalhado
+2025-06-26 01:42:17,954 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-26 01:42:17,955 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-26 01:42:17,955 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-26 01:42:17,956 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-26 01:42:17,992 - watchfiles.main - INFO - 5 changes detected
+2025-06-26 01:44:28,038 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:44:28,040 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:44:31,535 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 01:44:31,601 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 01:44:31,675 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 01:44:31,771 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 01:44:31,973 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 01:44:32,232 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 01:44:32,337 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 01:44:32,597 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 01:44:32,678 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 01:44:32,874 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,081 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,161 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,371 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,556 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,632 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 01:44:33,933 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,063 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,184 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,340 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,443 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,523 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 01:44:34,625 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,037 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,114 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,198 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,316 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,395 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,522 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,599 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,798 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,876 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 01:44:35,998 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,077 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,151 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,443 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,552 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,628 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,755 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,831 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 01:44:36,956 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,060 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,263 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,341 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,438 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,540 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,747 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 01:44:37,820 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 01:44:39,268 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:44:39,269 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:44:39,275 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 01:44:39,401 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 01:44:39,479 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 01:44:39,885 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 01:44:40,130 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 01:44:40,135 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 01:44:40,137 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-26 01:44:41,318 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 01:44:41,341 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 01:44:41,422 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 01:44:41,522 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 01:44:41,700 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 01:44:41,780 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 01:44:41,899 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,178 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,265 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,345 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,485 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,568 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 01:44:42,793 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,100 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,181 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,261 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,340 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,419 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,611 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,689 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,768 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 01:44:43,970 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,225 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,378 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,635 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,713 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,792 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 01:44:44,996 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,250 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,393 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,491 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,686 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,766 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 01:44:45,966 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,045 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,142 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,321 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,583 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,677 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 01:44:46,901 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,078 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,298 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,502 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,578 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,680 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,779 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,877 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 01:44:47,978 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 01:44:48,058 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 01:44:48,143 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 01:44:48,219 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 01:44:48,299 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 01:44:48,304 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 01:44:48,306 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+>>>>>>> Stashed changes

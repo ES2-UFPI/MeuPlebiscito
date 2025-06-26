@@ -27,6 +27,12 @@ except ImportError as e:
     logger.error(f"Erro ao importar rotas: {str(e)}")
     raise
 
+try:
+   from app.proposicoes.routes import router as proposicoes_router
+except ImportError as e:
+    logger.error(f"Erro ao importar rotas: {str(e)}")
+    raise
+
 # Cria a aplicação FastAPI
 app = FastAPI(
     title="Meu Plebiscito API",
@@ -53,6 +59,7 @@ app.add_middleware(
 
 # Inclui as rotas
 app.include_router(deputados_router, prefix="/api", tags=["Deputados"])
+app.include_router(proposicoes_router, prefix="/api", tags=["Proposições"])
 
 # Tratamento global de erros
 @app.exception_handler(Exception)

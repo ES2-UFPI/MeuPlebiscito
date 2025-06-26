@@ -1,0 +1,1908 @@
+2025-06-25 22:55:03,757 - uvicorn.error - INFO - Will watch for changes in these directories: ['C:\\Users\\KM\\Documents\\Meu Plebiscito KM\\MeuPlebiscito\\backend']
+2025-06-25 22:55:03,758 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-25 22:55:03,759 - uvicorn.error - INFO - Started reloader process [73376] using WatchFiles
+2025-06-25 22:55:04,245 - uvicorn.error - INFO - Started server process [65708]
+2025-06-25 22:55:04,246 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 22:55:04,247 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 22:55:04,247 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 22:55:04,247 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 22:55:04,248 - main - INFO - Rotas registradas:
+2025-06-25 22:55:04,248 - main - INFO -    GET / - Health check principal
+2025-06-25 22:55:04,248 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 22:55:04,248 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 22:55:04,248 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 22:55:04,248 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 22:55:04,248 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 22:55:04,248 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 22:56:00,325 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Fufuca, partido: None, estado: None, sexo: None
+2025-06-25 22:56:00,326 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Fufuca, partido: None, estado: None, sexo: None
+2025-06-25 22:56:02,519 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Fufuca "HTTP/1.1 200 OK"
+2025-06-25 22:56:02,520 - app.services.deputados - INFO - 📊 API retornou 0 deputados
+2025-06-25 22:56:02,521 - app.services.deputados - INFO - ✅ Retornando 0 deputados processados
+2025-06-25 22:56:02,521 - app.data.routes - INFO - ✅ Retornando 0 deputados para o frontend
+2025-06-25 22:56:16,780 - app.data.routes - INFO - 📋 Requisição de listagem - nome: André, partido: None, estado: None, sexo: None
+2025-06-25 22:56:16,780 - app.services.deputados - INFO - 🔍 Listando deputados - nome: André, partido: None, estado: None, sexo: None
+2025-06-25 22:56:18,887 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Andr%C3%A9 "HTTP/1.1 200 OK"
+2025-06-25 22:56:18,887 - app.services.deputados - INFO - 📊 API retornou 8 deputados
+2025-06-25 22:56:19,016 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-25 22:56:19,131 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-25 22:56:19,241 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-25 22:56:19,459 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-25 22:56:19,885 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-25 22:56:20,066 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-25 22:56:20,281 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-25 22:56:20,382 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220650 "HTTP/1.1 200 OK"
+2025-06-25 22:56:20,383 - app.services.deputados - INFO - ✅ Retornando 8 deputados processados
+2025-06-25 22:56:20,384 - app.data.routes - INFO - ✅ Retornando 8 deputados para o frontend
+2025-06-25 22:56:56,292 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Andre, partido: None, estado: None, sexo: None
+2025-06-25 22:56:56,292 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Andre, partido: None, estado: None, sexo: None
+2025-06-25 22:56:58,742 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Andre "HTTP/1.1 200 OK"
+2025-06-25 22:56:58,744 - app.services.deputados - INFO - 📊 API retornou 8 deputados
+2025-06-25 22:56:58,887 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-25 22:56:58,999 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,089 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,289 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,374 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,576 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,683 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,785 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220650 "HTTP/1.1 200 OK"
+2025-06-25 22:56:59,787 - app.services.deputados - INFO - ✅ Retornando 8 deputados processados
+2025-06-25 22:56:59,788 - app.data.routes - INFO - ✅ Retornando 8 deputados para o frontend
+2025-06-25 22:57:26,850 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 22:57:26,850 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 22:57:29,319 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 22:57:29,320 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 22:57:29,426 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 22:57:29,428 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 22:57:29,428 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 22:57:44,339 - app.data.routes - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 22:57:44,340 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 22:57:44,681 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 22:57:44,682 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 220689
+2025-06-25 22:57:44,683 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 220689
+2025-06-25 22:57:44,684 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 220689
+2025-06-25 22:57:44,685 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 220689
+2025-06-25 22:57:45,020 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/historico "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,028 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=220689&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,029 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 220689
+2025-06-25 22:57:45,030 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 220689
+2025-06-25 22:57:45,032 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/orgaos "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,193 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,197 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,199 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 220689: R$ 216,301.70
+2025-06-25 22:57:45,231 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/eventos "HTTP/1.1 200 OK"
+2025-06-25 22:57:45,232 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 220689
+2025-06-25 22:57:45,233 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 220689
+2025-06-25 22:57:45,233 - app.services.deputados - INFO - ✅ Deputado completo 220689 carregado com sucesso
+2025-06-25 22:57:45,233 - app.data.routes - INFO - ✅ Deputado 220689 (Detinha) encontrado e retornado
+2025-06-25 22:57:53,056 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha (PL): 161.206, partido: None, estado: None, sexo: None
+2025-06-25 22:57:53,056 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha (PL): 161.206, partido: None, estado: None, sexo: None
+2025-06-25 22:57:56,428 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha+%28PL%29%3A+161.206 "HTTP/1.1 200 OK"
+2025-06-25 22:57:56,429 - app.services.deputados - INFO - 📊 API retornou 0 deputados
+2025-06-25 22:57:56,430 - app.services.deputados - INFO - ✅ Retornando 0 deputados processados
+2025-06-25 22:57:56,431 - app.data.routes - INFO - ✅ Retornando 0 deputados para o frontend
+2025-06-25 22:58:04,237 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 22:58:04,237 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 22:58:04,576 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 22:58:04,577 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 22:58:04,699 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 22:58:04,702 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 22:58:04,702 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 22:59:18,570 - watchfiles.main - INFO - 1 change detected
+2025-06-25 22:59:19,683 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:03:42,133 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:04:06,395 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:04:07,664 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:04:41,004 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:04:42,325 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:06:39,315 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:06:39,670 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:07:09,538 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:07:10,756 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:07:23,582 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:07:24,748 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:08:17,679 - app.data.routes - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:08:17,679 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:08:18,235 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:08:18,237 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 220689
+2025-06-25 23:08:18,238 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 220689
+2025-06-25 23:08:18,239 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 220689
+2025-06-25 23:08:18,239 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 220689
+2025-06-25 23:08:18,437 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:08:18,439 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 220689
+2025-06-25 23:08:18,440 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 220689
+2025-06-25 23:08:18,532 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:08:18,636 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/historico "HTTP/1.1 200 OK"
+2025-06-25 23:08:18,799 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=220689&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:08:18,801 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 220689
+2025-06-25 23:08:18,802 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 220689
+2025-06-25 23:08:18,928 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:08:19,126 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:08:19,128 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 220689: R$ 216,301.70
+2025-06-25 23:08:19,129 - app.services.deputados - INFO - ✅ Deputado completo 220689 carregado com sucesso
+2025-06-25 23:08:19,129 - app.data.routes - INFO - ✅ Deputado 220689 (Detinha) encontrado e retornado
+2025-06-25 23:08:20,883 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:08:20,883 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:08:21,177 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 23:08:21,178 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:08:21,278 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:08:21,279 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:08:21,279 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:08:33,821 - app.data.routes - INFO - 📋 Requisição de listagem - nome: sergio, partido: None, estado: None, sexo: None
+2025-06-25 23:08:33,821 - app.services.deputados - INFO - 🔍 Listando deputados - nome: sergio, partido: None, estado: None, sexo: None
+2025-06-25 23:08:36,084 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=sergio "HTTP/1.1 200 OK"
+2025-06-25 23:08:36,086 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:08:36,189 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178933 "HTTP/1.1 200 OK"
+2025-06-25 23:08:36,191 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:08:36,191 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:10:50,373 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:10:50,373 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:10:52,589 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-25 23:10:52,590 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:10:52,691 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:10:52,693 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:10:52,694 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:10:58,957 - app.data.routes - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-25 23:10:58,958 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-25 23:10:59,250 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:10:59,251 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 178927
+2025-06-25 23:10:59,251 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 178927
+2025-06-25 23:10:59,252 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 178927
+2025-06-25 23:10:59,252 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 178927
+2025-06-25 23:10:59,556 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:10:59,851 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:10:59,946 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:10:59,947 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 178927
+2025-06-25 23:10:59,947 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 178927
+2025-06-25 23:11:00,070 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=178927&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:11:00,071 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 178927
+2025-06-25 23:11:00,071 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 178927
+2025-06-25 23:11:00,181 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:11:00,184 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 178927: R$ 50,291.38
+2025-06-25 23:11:00,536 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/historico "HTTP/1.1 200 OK"
+2025-06-25 23:11:00,538 - app.services.deputados - INFO - ✅ Deputado completo 178927 carregado com sucesso
+2025-06-25 23:11:00,538 - app.data.routes - INFO - ✅ Deputado 178927 (Aliel Machado) encontrado e retornado
+2025-06-25 23:13:50,149 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:13:50,151 - uvicorn.error - WARNING - WatchFiles detected changes in 'app\dependencies.py'. Reloading...
+2025-06-25 23:13:50,187 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:13:50,295 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:13:50,297 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:13:50,299 - uvicorn.error - INFO - Finished server process [65708]
+2025-06-25 23:13:50,788 - watchfiles.main - INFO - 2 changes detected
+2025-06-25 23:13:51,039 - uvicorn.error - INFO - Started server process [40204]
+2025-06-25 23:13:51,040 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 23:13:51,041 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 23:13:51,041 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 23:13:51,041 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 23:13:51,041 - main - INFO - Rotas registradas:
+2025-06-25 23:13:51,041 - main - INFO -    GET / - Health check principal
+2025-06-25 23:13:51,041 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 23:13:51,041 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 23:13:51,041 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 23:13:51,041 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 23:13:51,042 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 23:13:51,042 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 23:13:51,150 - watchfiles.main - INFO - 7 changes detected
+2025-06-25 23:13:57,103 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:13:57,104 - uvicorn.error - WARNING - WatchFiles detected changes in 'app\startup_events.py'. Reloading...
+2025-06-25 23:13:57,215 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:13:57,322 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:13:57,325 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:13:57,327 - uvicorn.error - INFO - Finished server process [40204]
+2025-06-25 23:13:57,812 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:13:58,017 - uvicorn.error - INFO - Started server process [31560]
+2025-06-25 23:13:58,018 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 23:13:58,019 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 23:13:58,019 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 23:13:58,019 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 23:13:58,019 - main - INFO - Rotas registradas:
+2025-06-25 23:13:58,019 - main - INFO -    GET / - Health check principal
+2025-06-25 23:13:58,019 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 23:13:58,020 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 23:13:58,020 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 23:13:58,020 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 23:13:58,020 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 23:13:58,020 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 23:13:58,171 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:50,892 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:51,257 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:51,618 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:51,974 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:52,336 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:52,694 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:53,055 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:53,412 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:53,819 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:54,226 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:54,631 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:55,084 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:55,447 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:55,856 - watchfiles.main - INFO - 2 changes detected
+2025-06-25 23:14:56,264 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:56,672 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:57,079 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:57,484 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:57,890 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:58,307 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:58,714 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:59,118 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:59,523 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:14:59,928 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:00,332 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:00,738 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:01,145 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:01,548 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:01,954 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:02,360 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:02,776 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:03,133 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:03,541 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:03,945 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:04,349 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:04,754 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:05,162 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:05,517 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:05,927 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:06,331 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:06,736 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:07,141 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:07,545 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:07,948 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:08,353 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:08,757 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:09,163 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:09,568 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:09,972 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:10,389 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:10,796 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:11,202 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:11,604 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:12,007 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:12,414 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:12,819 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:13,226 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:13,630 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:14,036 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:14,442 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:14,847 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:15,253 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:15,619 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:16,028 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:16,432 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:16,837 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:17,243 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:17,647 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:18,053 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:18,456 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:18,861 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:19,271 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:19,688 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:20,093 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:20,500 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:20,907 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:21,264 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:21,674 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:22,082 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:22,489 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:22,895 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:23,299 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:23,704 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:24,110 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:24,666 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:25,023 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:25,434 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:25,843 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:26,249 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:26,654 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:27,060 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:27,463 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:27,870 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:28,275 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:28,680 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:29,090 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:29,446 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:29,855 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:30,260 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:30,664 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:31,067 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:31,474 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:31,890 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:32,294 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:32,699 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:33,102 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:33,508 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:33,915 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:34,324 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:34,680 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:35,089 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:35,492 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:35,902 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:36,306 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:36,620 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:15:36,620 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:15:36,712 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:37,082 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-25 23:15:37,083 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:15:37,115 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:37,180 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:15:37,184 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:15:37,184 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:15:37,521 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:37,929 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:38,285 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:38,692 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:39,096 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:39,500 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:39,902 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:40,307 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:40,713 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:41,118 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:41,523 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:41,929 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:42,346 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:42,754 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:43,157 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:43,562 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:43,966 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:44,370 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:44,777 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:45,185 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:45,589 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:45,994 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:46,055 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:15:46,055 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:15:46,348 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:46,355 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 23:15:46,356 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:15:46,461 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:15:46,462 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:15:46,463 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:15:46,758 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:47,163 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:47,567 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:47,602 - app.data.routes - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:15:47,602 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:15:47,900 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:15:47,901 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 220689
+2025-06-25 23:15:47,902 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 220689
+2025-06-25 23:15:47,902 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 220689
+2025-06-25 23:15:47,902 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 220689
+2025-06-25 23:15:47,973 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:48,210 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,389 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:48,413 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,415 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 220689: R$ 216,301.70
+2025-06-25 23:15:48,445 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=220689&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,446 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 220689
+2025-06-25 23:15:48,446 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 220689
+2025-06-25 23:15:48,451 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/historico "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,493 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,571 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:15:48,573 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 220689
+2025-06-25 23:15:48,573 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 220689
+2025-06-25 23:15:48,574 - app.services.deputados - INFO - ✅ Deputado completo 220689 carregado com sucesso
+2025-06-25 23:15:48,574 - app.data.routes - INFO - ✅ Deputado 220689 (Detinha) encontrado e retornado
+2025-06-25 23:15:48,791 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:49,196 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:49,599 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:50,002 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:50,406 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:50,812 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:51,216 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:51,574 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:51,982 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:52,385 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:52,789 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:53,192 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:53,595 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:54,002 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:54,405 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:54,808 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:55,224 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:55,633 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:56,036 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:56,443 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:56,848 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:57,204 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:57,612 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:58,015 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:58,148 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:15:58,148 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:15:58,422 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:58,607 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 23:15:58,609 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:15:58,717 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:15:58,718 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:15:58,718 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:15:58,839 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:59,247 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:15:59,650 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:00,053 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:00,470 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:00,872 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:01,238 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:01,649 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:02,052 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:02,458 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:02,864 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:03,319 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:03,670 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:04,082 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:04,489 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:04,896 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:05,303 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:05,711 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:06,114 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:06,519 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:06,925 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:07,333 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:07,491 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:16:07,492 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:16:07,736 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:08,144 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:08,550 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:08,956 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:09,363 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:09,767 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:10,171 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:10,569 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-25 23:16:10,580 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:10,657 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-25 23:16:10,753 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-25 23:16:10,886 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-25 23:16:10,986 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:11,060 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,264 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,353 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:11,365 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,472 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,672 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,758 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:11,874 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-25 23:16:11,997 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,100 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,166 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:12,203 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,309 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,430 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,558 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,574 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:12,659 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,764 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-25 23:16:12,977 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:12,981 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,084 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,187 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,382 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:13,387 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,501 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,603 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,787 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:13,808 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-25 23:16:13,902 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:16:14,104 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-25 23:16:14,191 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:14,207 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-25 23:16:14,317 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-25 23:16:14,546 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:14,822 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-25 23:16:14,953 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:14,957 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,056 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,162 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,273 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,361 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:15,413 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,573 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,766 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:15,775 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-25 23:16:15,884 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,082 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,172 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:16,284 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,385 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,512 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,578 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:16,690 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,805 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,911 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-25 23:16:16,983 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:17,008 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,113 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,313 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,385 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:17,415 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,543 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,652 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,765 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-25 23:16:17,766 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-25 23:16:17,766 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-25 23:16:17,790 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:18,196 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:18,601 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:18,968 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:19,376 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:19,781 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:20,194 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:20,599 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:21,002 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:21,407 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:21,811 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:22,220 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:22,626 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:23,034 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:23,436 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:23,842 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:23,882 - app.data.routes - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:16:23,883 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 220689
+2025-06-25 23:16:24,203 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,204 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 220689
+2025-06-25 23:16:24,205 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 220689
+2025-06-25 23:16:24,206 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 220689
+2025-06-25 23:16:24,206 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 220689
+2025-06-25 23:16:24,248 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:24,337 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,338 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 220689
+2025-06-25 23:16:24,339 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 220689
+2025-06-25 23:16:24,508 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/historico "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,509 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=220689&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,510 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 220689
+2025-06-25 23:16:24,511 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 220689
+2025-06-25 23:16:24,652 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:24,710 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,786 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,788 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 220689: R$ 216,301.70
+2025-06-25 23:16:24,961 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:16:24,963 - app.services.deputados - INFO - ✅ Deputado completo 220689 carregado com sucesso
+2025-06-25 23:16:24,963 - app.data.routes - INFO - ✅ Deputado 220689 (Detinha) encontrado e retornado
+2025-06-25 23:16:25,057 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:25,461 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:25,865 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:26,270 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:26,675 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:27,082 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:27,488 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:27,856 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:28,265 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:28,638 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:16:28,639 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Detinha, partido: None, estado: None, sexo: None
+2025-06-25 23:16:28,669 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:29,074 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:29,491 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:29,896 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:30,301 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:30,706 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:30,979 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Detinha "HTTP/1.1 200 OK"
+2025-06-25 23:16:30,980 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:16:31,089 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220689 "HTTP/1.1 200 OK"
+2025-06-25 23:16:31,090 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:16:31,090 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:16:31,109 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:31,462 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:31,872 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:32,275 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:32,677 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:33,082 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:33,537 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:33,940 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:34,355 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:34,759 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:35,163 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:35,566 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:35,970 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:36,376 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:36,782 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:37,188 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:37,591 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:37,998 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:38,402 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:38,811 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:39,214 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:39,619 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:40,023 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:40,428 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:40,833 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:41,241 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:41,593 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:42,000 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:42,402 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:42,806 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:43,209 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:43,613 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:44,017 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:44,427 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:44,832 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:45,249 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:45,655 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:46,062 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:46,467 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:46,873 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:47,230 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:47,638 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:48,043 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:48,449 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:48,854 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:49,262 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:49,666 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:50,072 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:50,478 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:50,880 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:51,285 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:51,687 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:52,093 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:52,499 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:52,903 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:53,309 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:53,713 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:54,115 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:54,522 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:54,927 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:55,332 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:55,739 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:56,143 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:56,548 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:56,954 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:57,359 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:57,760 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:58,165 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:58,571 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:58,978 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:59,332 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:16:59,741 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:00,145 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:00,500 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:00,860 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:01,217 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:01,577 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:01,935 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:02,292 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:02,652 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:03,060 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:03,467 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:03,870 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:04,276 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:04,678 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:05,081 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:05,489 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:05,894 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:06,297 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:06,703 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:07,071 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:07,480 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:07,898 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:08,304 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:08,708 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:09,111 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:09,527 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:09,932 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:10,337 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:10,743 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:11,148 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:11,554 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:11,956 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:12,361 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:12,766 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:13,168 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:13,574 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:13,978 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:14,334 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:14,742 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:15,146 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:15,548 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:15,954 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:16,357 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:16,760 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:17,165 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:17,572 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:17,978 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:18,381 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:18,799 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:19,205 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:19,613 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:19,968 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:20,379 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:20,784 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:21,188 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:21,594 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:21,999 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:22,401 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:22,809 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:23,212 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:23,618 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:24,023 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:24,426 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:24,830 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:25,235 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:25,639 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:26,047 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:26,452 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:26,855 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:27,262 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:27,668 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:28,072 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:28,477 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:28,932 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:29,298 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:29,708 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:30,164 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:30,566 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:30,969 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:31,374 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:31,779 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:32,182 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:32,587 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:32,991 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:33,398 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:33,800 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:34,203 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:34,607 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:35,014 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:35,416 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:35,822 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:36,225 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:36,580 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:36,988 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:37,395 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:37,798 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:38,203 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:38,558 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:38,968 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:39,373 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:39,779 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:40,184 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:40,589 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:40,994 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:41,398 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:41,803 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:42,210 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:42,616 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:43,023 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:43,427 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:43,832 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:44,236 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:44,639 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:45,042 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:45,448 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:45,853 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:46,259 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:46,665 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:47,069 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:47,476 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:47,884 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:48,250 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:48,658 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:49,065 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:49,469 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:49,873 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:50,277 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:50,682 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:51,085 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:51,491 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:51,895 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:52,302 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:52,706 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:53,113 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:53,518 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:53,923 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:54,340 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:54,746 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:55,150 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:55,556 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:55,962 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:56,367 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:56,770 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:57,177 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:57,583 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:57,991 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:58,393 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:58,798 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:59,201 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:17:59,606 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:00,010 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:00,415 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:00,819 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:01,225 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:01,633 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:02,039 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:02,445 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:02,852 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:03,256 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:03,612 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:04,017 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:04,421 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:04,827 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:05,234 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:05,639 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:06,043 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:06,461 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:06,817 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:07,226 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:07,633 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:08,037 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:08,454 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:08,858 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:09,261 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:09,668 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:10,076 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:10,494 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:10,901 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:11,305 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:11,710 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:12,118 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:12,524 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:12,931 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:13,333 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:13,735 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:14,142 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:14,546 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:14,952 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:15,357 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:15,762 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:16,168 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:16,573 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:16,977 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:17,333 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:17,742 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:18,150 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:18,558 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:18,964 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:19,373 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:19,731 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:20,140 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:20,545 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:20,950 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:21,355 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:21,761 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:22,167 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:22,526 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:22,933 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:23,337 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:23,745 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:24,152 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:24,554 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:24,962 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:25,372 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:25,778 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:26,182 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:26,589 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:26,995 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:27,402 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:27,808 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:28,212 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:28,619 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:28,971 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:29,379 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:29,784 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:30,189 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:30,592 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:30,996 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:31,400 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:31,806 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:32,209 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:32,615 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:33,032 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:33,388 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:33,798 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:34,204 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:34,610 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:35,016 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:35,422 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:35,827 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:36,233 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:36,638 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:37,047 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:37,452 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:37,856 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:38,262 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:38,668 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:39,035 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:39,444 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:39,902 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:40,268 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:40,676 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:41,078 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:41,479 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:41,886 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:42,291 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:42,646 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:43,056 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:43,512 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:43,928 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:44,334 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:44,736 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:45,139 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:45,548 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:45,954 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:46,359 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:46,764 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:47,166 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:47,574 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:47,978 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:48,334 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:48,742 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:49,157 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:49,560 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:49,965 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:50,371 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:50,775 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:51,179 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:51,582 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:51,986 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:52,390 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:52,794 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:53,199 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:53,601 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:54,005 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:54,412 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:54,815 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:55,223 - watchfiles.main - INFO - 2 changes detected
+2025-06-25 23:18:55,224 - uvicorn.error - WARNING - WatchFiles detected changes in 'tests\test_auth.py'. Reloading...
+2025-06-25 23:18:55,276 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:18:55,384 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:18:55,385 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:18:55,386 - uvicorn.error - INFO - Finished server process [31560]
+2025-06-25 23:18:55,812 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:18:55,989 - uvicorn.error - INFO - Started server process [69920]
+2025-06-25 23:18:55,990 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 23:18:55,991 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 23:18:55,991 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 23:18:55,991 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 23:18:55,992 - main - INFO - Rotas registradas:
+2025-06-25 23:18:55,992 - main - INFO -    GET / - Health check principal
+2025-06-25 23:18:55,992 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 23:18:55,992 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 23:18:55,992 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 23:18:55,992 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 23:18:55,992 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 23:18:55,992 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 23:18:56,723 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:19:35,690 - watchfiles.main - INFO - 3 changes detected
+2025-06-25 23:19:35,691 - uvicorn.error - WARNING - WatchFiles detected changes in 'tests\test_api.py', 'test_api.py'. Reloading...
+2025-06-25 23:19:35,701 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:19:35,808 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:19:35,809 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:19:35,810 - uvicorn.error - INFO - Finished server process [69920]
+2025-06-25 23:19:36,252 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:19:36,442 - uvicorn.error - INFO - Started server process [29068]
+2025-06-25 23:19:36,443 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 23:19:36,444 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 23:19:36,444 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 23:19:36,444 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 23:19:36,444 - main - INFO - Rotas registradas:
+2025-06-25 23:19:36,444 - main - INFO -    GET / - Health check principal
+2025-06-25 23:19:36,444 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 23:19:36,444 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 23:19:36,445 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 23:19:36,445 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 23:19:36,445 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 23:19:36,445 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 23:20:25,278 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:20:25,278 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:20:25,590 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-25 23:20:25,675 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-25 23:20:25,793 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-25 23:20:25,988 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,088 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,187 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,307 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,485 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,581 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,684 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,884 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-25 23:20:26,991 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,186 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,284 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,491 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,685 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,886 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-25 23:20:27,982 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,075 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,181 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,279 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,380 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,581 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,688 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,794 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-25 23:20:28,899 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,001 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,094 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,200 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,305 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,406 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,515 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,612 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,708 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,813 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-25 23:20:29,912 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,055 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,166 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,369 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,463 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,664 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,765 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-25 23:20:30,965 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,062 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,170 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,280 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,385 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,506 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,690 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,792 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-25 23:20:31,888 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-25 23:20:32,095 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-25 23:20:32,097 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-25 23:20:32,097 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-25 23:20:32,315 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:20:32,315 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-25 23:20:32,628 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-25 23:20:32,719 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-25 23:20:32,821 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,016 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,113 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,316 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,514 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,716 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,821 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-25 23:20:33,928 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,027 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,123 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,212 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,411 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,612 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,812 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-25 23:20:34,905 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,020 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,141 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,324 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,428 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,522 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,629 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,731 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-25 23:20:35,986 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,128 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,332 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,527 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,621 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,729 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,824 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-25 23:20:36,927 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,127 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,231 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,325 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,525 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,726 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,828 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-25 23:20:37,935 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,036 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,141 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,256 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,436 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,679 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,771 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-25 23:20:38,871 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,072 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,272 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,377 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,480 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,585 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,687 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-25 23:20:39,687 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-25 23:20:39,687 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-25 23:20:39,913 - app.data.routes - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-25 23:20:39,913 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-25 23:20:40,376 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,377 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 204379
+2025-06-25 23:20:40,378 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 204379
+2025-06-25 23:20:40,379 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 204379
+2025-06-25 23:20:40,379 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 204379
+2025-06-25 23:20:40,669 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,738 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/historico "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,806 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,807 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 204379
+2025-06-25 23:20:40,808 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 204379
+2025-06-25 23:20:40,883 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,886 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 204379: R$ 35,579.37
+2025-06-25 23:20:40,984 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:20:40,985 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 204379
+2025-06-25 23:20:40,985 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 204379
+2025-06-25 23:20:41,102 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:20:41,103 - app.services.deputados - INFO - ✅ Deputado completo 204379 carregado com sucesso
+2025-06-25 23:20:41,104 - app.data.routes - INFO - ✅ Deputado 204379 (Acácio Favacho) encontrado e retornado
+2025-06-25 23:20:41,305 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-25 23:20:41,305 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-25 23:20:43,189 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Maria "HTTP/1.1 200 OK"
+2025-06-25 23:20:43,190 - app.services.deputados - INFO - 📊 API retornou 4 deputados
+2025-06-25 23:20:43,300 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220668 "HTTP/1.1 200 OK"
+2025-06-25 23:20:43,399 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74398 "HTTP/1.1 200 OK"
+2025-06-25 23:20:43,606 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204540 "HTTP/1.1 200 OK"
+2025-06-25 23:20:43,705 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/230762 "HTTP/1.1 200 OK"
+2025-06-25 23:20:43,706 - app.services.deputados - INFO - ✅ Retornando 4 deputados processados
+2025-06-25 23:20:43,707 - app.data.routes - INFO - ✅ Retornando 4 deputados para o frontend
+2025-06-25 23:20:52,729 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:20:52,730 - uvicorn.error - WARNING - WatchFiles detected changes in 'tests\conftest.py'. Reloading...
+2025-06-25 23:20:52,750 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:20:52,858 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:20:52,860 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:20:52,861 - uvicorn.error - INFO - Finished server process [29068]
+2025-06-25 23:20:53,288 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:20:53,487 - uvicorn.error - INFO - Started server process [40084]
+2025-06-25 23:20:53,488 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-25 23:20:53,489 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-25 23:20:53,489 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-25 23:20:53,489 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-25 23:20:53,489 - main - INFO - Rotas registradas:
+2025-06-25 23:20:53,489 - main - INFO -    GET / - Health check principal
+2025-06-25 23:20:53,489 - main - INFO -    GET /health - Health check detalhado
+2025-06-25 23:20:53,489 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-25 23:20:53,490 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-25 23:20:53,490 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-25 23:20:53,490 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-25 23:20:53,490 - uvicorn.error - INFO - Application startup complete.
+2025-06-25 23:20:54,300 - watchfiles.main - INFO - 1 change detected
+2025-06-25 23:28:04,517 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:28:04,518 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:28:05,284 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-25 23:28:05,285 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:28:05,482 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:28:05,489 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:28:05,489 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:28:35,613 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Erika, partido: None, estado: None, sexo: None
+2025-06-25 23:28:35,613 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Erika, partido: None, estado: None, sexo: None
+2025-06-25 23:28:38,336 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Erika "HTTP/1.1 200 OK"
+2025-06-25 23:28:38,337 - app.services.deputados - INFO - 📊 API retornou 2 deputados
+2025-06-25 23:28:38,459 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645 "HTTP/1.1 200 OK"
+2025-06-25 23:28:38,651 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160575 "HTTP/1.1 200 OK"
+2025-06-25 23:28:38,652 - app.services.deputados - INFO - ✅ Retornando 2 deputados processados
+2025-06-25 23:28:38,653 - app.data.routes - INFO - ✅ Retornando 2 deputados para o frontend
+2025-06-25 23:28:44,515 - app.data.routes - INFO - 🔍 Buscando deputado completo: 220645
+2025-06-25 23:28:44,516 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 220645
+2025-06-25 23:28:45,794 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645 "HTTP/1.1 200 OK"
+2025-06-25 23:28:45,797 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 220645
+2025-06-25 23:28:45,799 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 220645
+2025-06-25 23:28:45,801 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 220645
+2025-06-25 23:28:45,804 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 220645
+2025-06-25 23:28:46,201 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=220645&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,204 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 220645
+2025-06-25 23:28:46,206 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 220645
+2025-06-25 23:28:46,210 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645/historico "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,363 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,372 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,374 - app.services.deputados - INFO - 📊 Encontrados 2 eventos do deputado 220645
+2025-06-25 23:28:46,376 - app.services.deputados - INFO - ✅ Processados 2 eventos do deputado 220645
+2025-06-25 23:28:46,408 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,418 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 220645: R$ 107,247.66
+2025-06-25 23:28:46,634 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220645/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:28:46,637 - app.services.deputados - INFO - ✅ Deputado completo 220645 carregado com sucesso
+2025-06-25 23:28:46,638 - app.data.routes - INFO - ✅ Deputado 220645 (Erika Hilton) encontrado e retornado
+2025-06-25 23:42:05,765 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:42:05,765 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:42:06,248 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-25 23:42:06,249 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:42:06,444 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:42:06,444 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:42:06,444 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:42:07,562 - app.data.routes - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-25 23:42:07,562 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-25 23:42:07,877 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:42:07,879 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 178927
+2025-06-25 23:42:07,880 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 178927
+2025-06-25 23:42:07,881 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 178927
+2025-06-25 23:42:07,881 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 178927
+2025-06-25 23:42:08,245 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,246 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 178927: R$ 50,291.38
+2025-06-25 23:42:08,257 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=178927&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,260 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 178927
+2025-06-25 23:42:08,261 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 178927
+2025-06-25 23:42:08,278 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/historico "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,518 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/orgaos "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,682 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,850 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/eventos "HTTP/1.1 200 OK"
+2025-06-25 23:42:08,851 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 178927
+2025-06-25 23:42:08,851 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 178927
+2025-06-25 23:42:08,852 - app.services.deputados - INFO - ✅ Deputado completo 178927 carregado com sucesso
+2025-06-25 23:42:08,852 - app.data.routes - INFO - ✅ Deputado 178927 (Aliel Machado) encontrado e retornado
+2025-06-25 23:42:11,962 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:42:11,962 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-25 23:42:14,124 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-25 23:42:14,125 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-25 23:42:14,239 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-25 23:42:14,241 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-25 23:42:14,241 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-25 23:42:38,692 - uvicorn.error - INFO - Shutting down
+2025-06-25 23:42:38,801 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-25 23:42:38,803 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-25 23:42:38,804 - uvicorn.error - INFO - Finished server process [40084]
+2025-06-25 23:42:38,875 - uvicorn.error - INFO - Stopping reloader process [73376]
+2025-06-26 00:55:52,784 - uvicorn.error - INFO - Will watch for changes in these directories: ['C:\\Users\\KM\\Documents\\Meu Plebiscito KM\\MeuPlebiscito\\backend']
+2025-06-26 00:55:52,785 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-26 00:55:52,785 - uvicorn.error - INFO - Started reloader process [72672] using WatchFiles
+2025-06-26 00:55:53,336 - uvicorn.error - INFO - Started server process [69304]
+2025-06-26 00:55:53,338 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-26 00:55:53,338 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-26 00:55:53,338 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-26 00:55:53,338 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-26 00:55:53,339 - main - INFO - Rotas registradas:
+2025-06-26 00:55:53,339 - main - INFO -    GET / - Health check principal
+2025-06-26 00:55:53,339 - main - INFO -    GET /health - Health check detalhado
+2025-06-26 00:55:53,339 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-26 00:55:53,339 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-26 00:55:53,339 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-26 00:55:53,339 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-26 00:55:53,339 - uvicorn.error - INFO - Application startup complete.
+2025-06-26 00:56:37,723 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:38,085 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:38,441 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:38,850 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:39,256 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:39,660 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:40,063 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:40,469 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:40,873 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:41,279 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:41,684 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:42,099 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:42,123 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 00:56:42,123 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 00:56:42,454 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:42,865 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:43,268 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:43,673 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:44,091 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:44,494 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:44,897 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:45,300 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:45,411 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-26 00:56:45,411 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-26 00:56:45,527 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 00:56:45,531 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-26 00:56:45,531 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-26 00:56:45,707 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:46,111 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:46,513 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:46,917 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:47,320 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:47,724 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:48,129 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:48,531 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:48,934 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:49,339 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:49,748 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:50,152 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:50,557 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:50,963 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:51,381 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:51,785 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:52,189 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:52,593 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:52,998 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:53,401 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:53,805 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:54,212 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:54,616 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:55,019 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:55,422 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:55,824 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:56,178 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:56,588 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:56,994 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:57,401 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:57,807 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:58,212 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:58,616 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:59,023 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:59,428 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:56:59,835 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:00,291 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:00,706 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:01,064 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:01,475 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:01,878 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:02,281 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:02,689 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:03,041 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:03,399 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:03,759 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:04,116 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:04,472 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:04,830 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:05,237 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:05,642 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:05,995 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:06,402 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:06,808 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:07,212 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:07,619 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:08,024 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:08,428 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:08,834 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:09,239 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:09,604 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:10,013 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:10,419 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:10,823 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:11,230 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:11,638 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:12,042 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:12,444 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:12,854 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:13,258 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:13,666 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:14,083 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:14,442 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:14,852 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:15,258 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:15,663 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:16,066 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:16,471 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:16,878 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:17,281 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:17,684 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:18,088 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:18,495 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:18,901 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:19,305 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:19,710 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:20,067 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:20,475 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:20,881 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:21,287 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:21,692 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:22,110 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:22,514 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:22,917 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:23,321 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:23,725 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:24,132 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:24,537 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:24,905 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:25,313 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:25,720 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:26,127 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:26,532 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:26,938 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:27,343 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:27,748 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:28,154 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:28,562 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:28,967 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:29,372 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:29,778 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:30,186 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:30,593 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:30,999 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:31,409 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:31,813 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:32,217 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:32,624 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:32,981 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:33,391 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:33,796 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:34,206 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:34,611 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:35,015 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:35,420 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:35,824 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:36,230 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:36,636 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:37,041 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:37,444 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:37,851 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:38,257 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:38,663 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:39,069 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:39,475 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:39,833 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:40,241 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:40,649 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:41,054 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:41,460 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:41,864 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:42,269 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:42,624 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:43,034 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:43,438 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:43,844 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:44,247 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:44,651 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:45,057 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:45,463 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:45,872 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:46,275 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:46,683 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:47,090 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:47,495 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:47,861 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:48,272 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:48,688 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:49,043 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:49,453 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:49,856 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:50,261 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:50,663 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:51,067 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:51,523 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:51,889 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:52,298 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:52,703 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:53,109 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:53,517 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:53,922 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:54,327 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:54,735 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:55,138 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:55,541 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:55,644 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 00:57:55,644 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 00:57:55,952 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:56,355 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:56,764 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:57,167 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:57,574 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:57,976 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:58,384 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:58,523 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 00:57:58,622 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 00:57:58,735 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 00:57:58,787 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:58,856 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,058 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,191 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:59,259 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,383 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,504 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,596 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:57:59,701 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,811 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,915 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 00:57:59,999 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:00,121 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,226 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,353 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,404 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:00,475 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,591 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,707 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 00:58:00,807 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:00,906 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,015 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,147 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,213 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:01,329 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,440 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,554 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,619 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:01,670 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,782 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 00:58:01,899 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,021 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:02,097 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,210 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,325 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,426 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:02,530 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,727 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 00:58:02,828 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:02,927 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,051 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,231 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:03,252 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,364 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,481 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,594 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,649 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:03,701 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,812 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 00:58:03,927 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,046 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,052 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:04,254 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,456 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:04,465 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,580 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,785 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 00:58:04,861 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:04,982 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,177 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,264 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:05,293 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,433 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,607 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,668 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:05,719 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,850 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 00:58:05,852 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 00:58:05,853 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-26 00:58:06,060 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 00:58:06,060 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 00:58:06,074 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:06,478 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:06,882 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:07,287 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:07,642 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:08,052 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:08,457 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:08,862 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:09,268 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:09,674 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:09,948 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,052 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 00:58:10,079 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:10,166 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,280 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,390 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,486 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:10,597 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,707 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 00:58:10,890 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:10,976 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,179 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,294 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:11,332 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,472 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,578 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,701 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:11,790 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 00:58:11,944 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,059 - watchfiles.main - INFO - 3 changes detected
+2025-06-26 00:58:12,062 - uvicorn.error - WARNING - WatchFiles detected changes in 'tests\test_proposicoes.py', 'app\proposicoes\test_proposicoes.py'. Reloading...
+2025-06-26 00:58:12,113 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,161 - uvicorn.error - INFO - Shutting down
+2025-06-26 00:58:12,226 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,270 - uvicorn.error - INFO - Waiting for connections to close. (CTRL+C to force quit)
+2025-06-26 00:58:12,421 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,619 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,729 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 00:58:12,927 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,040 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,238 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,346 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,453 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,558 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,664 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,774 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 00:58:13,975 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,084 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,203 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,314 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,434 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,629 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,773 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 00:58:14,965 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,137 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,342 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,455 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,598 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,724 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 00:58:15,843 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,042 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,151 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,261 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,388 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,584 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,697 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 00:58:16,900 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 00:58:17,095 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 00:58:17,217 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 00:58:17,336 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 00:58:17,456 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 00:58:17,458 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 00:58:17,459 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-26 00:58:17,477 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-26 00:58:17,478 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-26 00:58:17,480 - uvicorn.error - INFO - Finished server process [69304]
+2025-06-26 00:58:17,905 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:18,071 - uvicorn.error - INFO - Started server process [65324]
+2025-06-26 00:58:18,073 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-26 00:58:18,074 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-26 00:58:18,074 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-26 00:58:18,074 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-26 00:58:18,074 - main - INFO - Rotas registradas:
+2025-06-26 00:58:18,074 - main - INFO -    GET / - Health check principal
+2025-06-26 00:58:18,074 - main - INFO -    GET /health - Health check detalhado
+2025-06-26 00:58:18,074 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-26 00:58:18,075 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-26 00:58:18,075 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-26 00:58:18,075 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-26 00:58:18,075 - uvicorn.error - INFO - Application startup complete.
+2025-06-26 00:58:18,523 - app.data.routes - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-26 00:58:18,524 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-26 00:58:18,817 - watchfiles.main - INFO - 1 change detected
+2025-06-26 00:58:18,875 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 00:58:18,877 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 204379
+2025-06-26 00:58:18,878 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 204379
+2025-06-26 00:58:18,879 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 204379
+2025-06-26 00:58:18,879 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 204379
+2025-06-26 00:58:19,261 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-26 00:58:19,275 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/orgaos "HTTP/1.1 200 OK"
+2025-06-26 00:58:19,276 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-26 00:58:19,279 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 204379: R$ 35,579.37
+2025-06-26 00:58:19,457 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/eventos "HTTP/1.1 200 OK"
+2025-06-26 00:58:19,458 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 204379
+2025-06-26 00:58:19,458 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 204379
+2025-06-26 00:58:19,680 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-26 00:58:19,682 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 204379
+2025-06-26 00:58:19,682 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 204379
+2025-06-26 00:58:20,296 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/historico "HTTP/1.1 200 OK"
+2025-06-26 00:58:20,298 - app.services.deputados - INFO - ✅ Deputado completo 204379 carregado com sucesso
+2025-06-26 00:58:20,298 - app.data.routes - INFO - ✅ Deputado 204379 (Acácio Favacho) encontrado e retornado
+2025-06-26 00:58:20,496 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-26 00:58:20,496 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-26 00:58:27,128 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Maria "HTTP/1.1 200 OK"
+2025-06-26 00:58:27,129 - app.services.deputados - INFO - 📊 API retornou 4 deputados
+2025-06-26 00:58:27,251 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220668 "HTTP/1.1 200 OK"
+2025-06-26 00:58:27,359 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74398 "HTTP/1.1 200 OK"
+2025-06-26 00:58:27,578 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204540 "HTTP/1.1 200 OK"
+2025-06-26 00:58:27,693 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/230762 "HTTP/1.1 200 OK"
+2025-06-26 00:58:27,694 - app.services.deputados - INFO - ✅ Retornando 4 deputados processados
+2025-06-26 00:58:27,694 - app.data.routes - INFO - ✅ Retornando 4 deputados para o frontend
+2025-06-26 01:02:51,605 - uvicorn.error - INFO - Will watch for changes in these directories: ['C:\\Users\\KM\\Documents\\Meu Plebiscito KM\\MeuPlebiscito\\backend']
+2025-06-26 01:02:51,607 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-26 01:02:51,607 - uvicorn.error - INFO - Started reloader process [61632] using WatchFiles
+2025-06-26 01:02:52,143 - uvicorn.error - INFO - Started server process [48352]
+2025-06-26 01:02:52,144 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-26 01:02:52,145 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-26 01:02:52,145 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-26 01:02:52,145 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-26 01:02:52,145 - main - INFO - Rotas registradas:
+2025-06-26 01:02:52,145 - main - INFO -    GET / - Health check principal
+2025-06-26 01:02:52,145 - main - INFO -    GET /health - Health check detalhado
+2025-06-26 01:02:52,146 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-26 01:02:52,146 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-26 01:02:52,146 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-26 01:02:52,146 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-26 01:02:52,146 - uvicorn.error - INFO - Application startup complete.
+2025-06-26 01:06:27,859 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:27,862 - uvicorn.error - WARNING - WatchFiles detected changes in 'main.py'. Reloading...
+2025-06-26 01:06:27,880 - uvicorn.error - INFO - Shutting down
+2025-06-26 01:06:27,990 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-06-26 01:06:27,992 - uvicorn.error - INFO - Application shutdown complete.
+2025-06-26 01:06:27,994 - uvicorn.error - INFO - Finished server process [48352]
+2025-06-26 01:06:28,418 - watchfiles.main - INFO - 6 changes detected
+2025-06-26 01:06:28,609 - main - ERROR - Erro ao importar rotas: cannot import name 'proposicoes_router' from 'app.proposicoes.routes' (C:\Users\KM\Documents\Meu Plebiscito KM\MeuPlebiscito\backend\app\proposicoes\routes.py)
+2025-06-26 01:06:28,775 - watchfiles.main - INFO - 12 changes detected
+2025-06-26 01:06:29,131 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:29,540 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:29,944 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:30,350 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:30,756 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:31,163 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:31,565 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:31,967 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:32,375 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:32,780 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:33,184 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:33,587 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:33,991 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:34,396 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:34,801 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:35,209 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:35,613 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:36,016 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:36,424 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:36,828 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:37,229 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:37,634 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:38,036 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:38,440 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:38,841 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:39,247 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:39,654 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:40,057 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:40,462 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:40,868 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:41,272 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:41,679 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:42,082 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:42,488 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:42,855 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:43,266 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:06:43,570 - uvicorn.error - INFO - Stopping reloader process [61632]
+2025-06-26 01:07:27,732 - main - ERROR - Erro ao importar rotas: cannot import name 'proposicoes_router' from 'app.proposicoes.routes' (C:\Users\KM\Documents\Meu Plebiscito KM\MeuPlebiscito\backend\app\proposicoes\routes.py)
+2025-06-26 01:08:53,383 - uvicorn.error - INFO - Will watch for changes in these directories: ['C:\\Users\\KM\\Documents\\Meu Plebiscito KM\\MeuPlebiscito\\backend']
+2025-06-26 01:08:53,385 - uvicorn.error - INFO - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-06-26 01:08:53,385 - uvicorn.error - INFO - Started reloader process [60500] using WatchFiles
+2025-06-26 01:08:53,884 - uvicorn.error - INFO - Started server process [71812]
+2025-06-26 01:08:53,885 - uvicorn.error - INFO - Waiting for application startup.
+2025-06-26 01:08:53,886 - main - INFO - Meu Plebiscito API iniciada!
+2025-06-26 01:08:53,886 - main - INFO - Servidor disponível em: http://127.0.0.1:8000
+2025-06-26 01:08:53,886 - main - INFO - Documentação em: http://127.0.0.1:8000/docs
+2025-06-26 01:08:53,886 - main - INFO - Rotas registradas:
+2025-06-26 01:08:53,886 - main - INFO -    GET / - Health check principal
+2025-06-26 01:08:53,886 - main - INFO -    GET /health - Health check detalhado
+2025-06-26 01:08:53,886 - main - INFO -    GET /api/deputados/ - Listar deputados
+2025-06-26 01:08:53,887 - main - INFO -    GET /api/deputados/{id} - Buscar deputado
+2025-06-26 01:08:53,887 - main - INFO -    GET /api/deputados/health/check - Health check deputados
+2025-06-26 01:08:53,887 - main - INFO -    GET /api/deputados/stats/overview - Estatísticas
+2025-06-26 01:08:53,887 - uvicorn.error - INFO - Application startup complete.
+2025-06-26 01:09:47,899 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 01:09:47,899 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 01:09:51,936 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-26 01:09:51,938 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-26 01:09:52,055 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:09:52,061 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-26 01:09:52,061 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-26 01:10:11,254 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:10:11,254 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:10:11,604 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 01:10:11,710 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 01:10:11,820 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 01:10:11,931 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,097 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,245 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,352 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,456 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,576 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,689 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,795 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 01:10:12,936 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,045 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,242 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,364 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,566 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,698 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 01:10:13,873 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,021 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,130 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,237 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,352 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,458 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,566 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,705 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 01:10:14,877 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,002 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,111 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,275 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,420 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,636 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 01:10:15,746 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,005 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,109 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,219 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,329 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,448 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,571 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,683 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,791 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 01:10:16,989 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 01:10:17,095 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 01:10:17,214 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 01:10:17,687 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 01:10:17,821 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 01:10:17,938 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,145 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,359 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,466 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,579 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,689 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,798 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 01:10:18,800 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 01:10:18,800 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-26 01:10:18,996 - app.data.routes - INFO - 📋 Requisição de listagem - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:10:18,996 - app.services.deputados - INFO - 🔍 Listando deputados - nome: None, partido: None, estado: None, sexo: None
+2025-06-26 01:10:19,367 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados "HTTP/1.1 200 OK"
+2025-06-26 01:10:19,471 - app.services.deputados - INFO - 📊 API retornou 512 deputados
+2025-06-26 01:10:19,586 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 01:10:19,708 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220714 "HTTP/1.1 200 OK"
+2025-06-26 01:10:19,830 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221328 "HTTP/1.1 200 OK"
+2025-06-26 01:10:19,943 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204560 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,066 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204528 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,181 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/121948 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,301 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74646 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,462 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/136811 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,620 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178835 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,820 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160527 "HTTP/1.1 200 OK"
+2025-06-26 01:10:20,937 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204495 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,052 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204549 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,167 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73579 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,284 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220538 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,402 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160559 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,603 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204501 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,802 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178972 "HTTP/1.1 200 OK"
+2025-06-26 01:10:21,921 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204571 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,057 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220542 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,236 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220554 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,351 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/221148 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,581 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220576 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,751 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74057 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,868 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:10:22,989 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/226708 "HTTP/1.1 200 OK"
+2025-06-26 01:10:23,188 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178937 "HTTP/1.1 200 OK"
+2025-06-26 01:10:23,301 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178881 "HTTP/1.1 200 OK"
+2025-06-26 01:10:23,502 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220707 "HTTP/1.1 200 OK"
+2025-06-26 01:10:23,618 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204356 "HTTP/1.1 200 OK"
+2025-06-26 01:10:23,823 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220715 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,042 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/107970 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,225 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220556 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,377 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220632 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,500 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220657 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,617 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204423 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,741 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/133439 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,870 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204515 "HTTP/1.1 200 OK"
+2025-06-26 01:10:24,985 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220676 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,103 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123756 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,269 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220544 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,420 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160553 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,533 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220638 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,649 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220675 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,851 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220549 "HTTP/1.1 200 OK"
+2025-06-26 01:10:25,977 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/73433 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,120 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/141391 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,247 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160541 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,365 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/160600 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,560 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74090 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,671 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/123086 "HTTP/1.1 200 OK"
+2025-06-26 01:10:26,672 - app.services.deputados - INFO - ✅ Retornando 50 deputados processados
+2025-06-26 01:10:26,673 - app.data.routes - INFO - ✅ Retornando 50 deputados para o frontend
+2025-06-26 01:10:26,866 - app.data.routes - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-26 01:10:26,866 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 204379
+2025-06-26 01:10:27,296 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379 "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,297 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 204379
+2025-06-26 01:10:27,298 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 204379
+2025-06-26 01:10:27,299 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 204379
+2025-06-26 01:10:27,300 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 204379
+2025-06-26 01:10:27,723 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/historico "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,769 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/orgaos "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,809 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=204379&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,810 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 204379
+2025-06-26 01:10:27,811 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 204379
+2025-06-26 01:10:27,836 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,849 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-26 01:10:27,851 - app.services.deputados - INFO - ✅ Processadas despesas do deputado 204379: R$ 35,579.37
+2025-06-26 01:10:42,406 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204379/eventos "HTTP/1.1 504 Gateway Timeout"
+2025-06-26 01:10:42,407 - app.services.deputados - WARNING - Erro ao buscar eventos do deputado 204379: Server error '504 Gateway Timeout' for url 'https://dadosabertos.camara.leg.br/api/v2/deputados/204379/eventos'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504
+2025-06-26 01:10:42,407 - app.services.deputados - INFO - ✅ Deputado completo 204379 carregado com sucesso
+2025-06-26 01:10:42,408 - app.data.routes - INFO - ✅ Deputado 204379 (Acácio Favacho) encontrado e retornado
+2025-06-26 01:10:42,620 - app.data.routes - INFO - 📋 Requisição de listagem - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-26 01:10:42,620 - app.services.deputados - INFO - 🔍 Listando deputados - nome: Maria, partido: None, estado: None, sexo: None
+2025-06-26 01:10:51,274 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=Maria "HTTP/1.1 200 OK"
+2025-06-26 01:10:51,275 - app.services.deputados - INFO - 📊 API retornou 4 deputados
+2025-06-26 01:10:51,780 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/220668 "HTTP/1.1 200 OK"
+2025-06-26 01:10:51,890 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/74398 "HTTP/1.1 200 OK"
+2025-06-26 01:10:52,035 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/204540 "HTTP/1.1 200 OK"
+2025-06-26 01:10:52,183 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/230762 "HTTP/1.1 200 OK"
+2025-06-26 01:10:52,185 - app.services.deputados - INFO - ✅ Retornando 4 deputados processados
+2025-06-26 01:10:52,185 - app.data.routes - INFO - ✅ Retornando 4 deputados para o frontend
+2025-06-26 01:11:04,431 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes/14999 "HTTP/1.1 200 OK"
+2025-06-26 01:11:05,169 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?id=14999&pagina=1&itens=15&ordem=ASC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-26 01:11:05,896 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes/14999/autores "HTTP/1.1 200 OK"
+2025-06-26 01:12:28,934 - watchfiles.main - INFO - 10 changes detected
+2025-06-26 01:12:29,293 - watchfiles.main - INFO - 2 changes detected
+2025-06-26 01:12:39,741 - watchfiles.main - INFO - 5 changes detected
+2025-06-26 01:12:40,102 - watchfiles.main - INFO - 6 changes detected
+2025-06-26 01:21:08,659 - app.data.routes - INFO - 📋 Requisição de listagem - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 01:21:08,659 - app.services.deputados - INFO - 🔍 Listando deputados - nome: machado, partido: None, estado: None, sexo: None
+2025-06-26 01:21:10,756 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados?nome=machado "HTTP/1.1 200 OK"
+2025-06-26 01:21:10,757 - app.services.deputados - INFO - 📊 API retornou 1 deputados
+2025-06-26 01:21:10,886 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:21:10,887 - app.services.deputados - INFO - ✅ Retornando 1 deputados processados
+2025-06-26 01:21:10,887 - app.data.routes - INFO - ✅ Retornando 1 deputados para o frontend
+2025-06-26 01:21:14,674 - app.data.routes - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-26 01:21:14,675 - app.services.deputados - INFO - 🔍 Buscando deputado completo: 178927
+2025-06-26 01:21:15,012 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927 "HTTP/1.1 200 OK"
+2025-06-26 01:21:15,014 - app.services.deputados - INFO - 🔍 Buscando eventos do deputado 178927
+2025-06-26 01:21:15,015 - app.services.deputados - INFO - 🔍 Buscando proposições do deputado 178927
+2025-06-26 01:21:15,017 - app.services.deputados - INFO - 🔍 Buscando atividades completas do deputado 178927
+2025-06-26 01:21:15,017 - app.services.deputados - INFO - 🔍 Buscando despesas do deputado 178927
+2025-06-26 01:21:15,365 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/mandatosExternos "HTTP/1.1 200 OK"
+2025-06-26 01:21:15,392 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/orgaos "HTTP/1.1 200 OK"
+2025-06-26 01:21:15,517 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/proposicoes?idDeputadoAutor=178927&itens=20&ordem=DESC&ordenarPor=id "HTTP/1.1 200 OK"
+2025-06-26 01:21:15,518 - app.services.deputados - INFO - 📊 Encontradas 20 proposições do deputado 178927
+2025-06-26 01:21:15,519 - app.services.deputados - INFO - ✅ Processadas 20 proposições do deputado 178927
+2025-06-26 01:21:15,589 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/historico "HTTP/1.1 200 OK"
+2025-06-26 01:21:17,158 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/eventos "HTTP/1.1 200 OK"
+2025-06-26 01:21:17,159 - app.services.deputados - INFO - 📊 Encontrados 1 eventos do deputado 178927
+2025-06-26 01:21:17,160 - app.services.deputados - INFO - ✅ Processados 1 eventos do deputado 178927
+2025-06-26 01:21:26,173 - httpx - INFO - HTTP Request: GET https://dadosabertos.camara.leg.br/api/v2/deputados/178927/despesas?ano=2025&ordem=ASC&ordenarPor=ano&itens=100 "HTTP/1.1 200 OK"
+2025-06-26 01:21:26,175 - app.services.deputados - INFO - Nenhuma despesa encontrada para o deputado 178927
+2025-06-26 01:21:26,176 - app.services.deputados - INFO - ✅ Deputado completo 178927 carregado com sucesso
+2025-06-26 01:21:26,176 - app.data.routes - INFO - ✅ Deputado 178927 (Aliel Machado) encontrado e retornado
+2025-06-26 01:23:04,219 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:04,586 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:11,894 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:12,254 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:14,227 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:14,589 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:18,779 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:20,856 - watchfiles.main - INFO - 1 change detected
+2025-06-26 01:23:21,214 - watchfiles.main - INFO - 1 change detected

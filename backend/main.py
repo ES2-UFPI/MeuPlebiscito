@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 # Importa as rotas antes da criação da app
 try:
     from app.data.routes import deputados_router
+    from app.ia.routes import router as ia_router
 except ImportError as e:
     logger.error(f"Erro ao importar rotas: {str(e)}")
     raise
@@ -53,6 +54,7 @@ app.add_middleware(
 
 # Inclui as rotas
 app.include_router(deputados_router, prefix="/api", tags=["Deputados"])
+app.include_router(ia_router, prefix="/api", tags=["Inteligência Artificial"])
 
 # Tratamento global de erros
 @app.exception_handler(Exception)

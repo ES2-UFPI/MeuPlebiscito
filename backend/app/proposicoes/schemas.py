@@ -111,7 +111,7 @@ class ProposicaoDetalhesResponse(BaseModel):
     dados: ProposicaoDetalhes
     links: List[Link]
 
-class DadosResponse[T](BaseModel):
+class DadosResponse(BaseModel):
     """Schema genérico para endpoints que retornam uma lista de dados."""
     dados: List[T]
     links: List[Link]
